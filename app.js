@@ -3,11 +3,16 @@ const app = document.getElementById("app");
 const STORAGE = {
   lastCourse: "woq:lastCourse",
   lastUnit: "woq:lastUnit",
-  customLesson: "woq:customLesson"
+  customLesson: "woq:customLesson",
+  mode: "woq:mode",
+  soundEnabled: "woq:soundEnabled",
+  speechRate: "woq:speechRate"
 };
 
-const ROUND_SECONDS = 30;
-const HINT_PENALTY_SECONDS = 3;
+const GAME_SECONDS = 60;
+const WRONG_PENALTY_SECONDS = 4;
+const STREAK_BONUS_SECONDS = 3;
+const STREAK_BONUS_EVERY = 3;
 
 const fallbackCourses = {
   courses: [
@@ -58,6 +63,13 @@ const fallbackCourses = {
   ]
 };
 
+const customCourse = {
+  id: "custom",
+  title: "カスタム練習",
+  description: "自分で用意したlesson JSONを貼り付けて練習します。",
+  units: []
+};
+
 const fallbackLessons = {
   "data/lessons/jhs1/be-verb.json": {
     id: "jhs1-be-verb",
@@ -78,7 +90,10 @@ const state = {
   courses: [],
   fetchWarning: "",
   currentStageIndex: 0,
-  mode: "chunk",
+  stageOrder: [],
+  stageCursor: 0,
+  correctCount: 0,
+  mode: localStorage.getItem(STORAGE.mode) || "chunk",
   tokens: [],
   bankOrder: [],
   answer: [],
@@ -86,13 +101,13 @@ const state = {
   streak: 0,
   stageLocked: false,
   lastPoppedId: null,
-  soundEnabled: true,
-  speechRate: 1,
+  soundEnabled: localStorage.getItem(STORAGE.soundEnabled) !== "false",
+  speechRate: Number(localStorage.getItem(STORAGE.speechRate) || 1),
   timerId: null,
   autoAdvanceTimerId: null,
   monsterStateTimerId: null,
   roundStartedAt: 0,
-  timeRemaining: ROUND_SECONDS
+  timeRemaining: GAME_SECONDS
 };
 
 init();
@@ -101,7 +116,7 @@ async function init() {
   state.selectedCourseId = localStorage.getItem(STORAGE.lastCourse);
   state.selectedUnitId = localStorage.getItem(STORAGE.lastUnit);
   const loaded = await loadCourses();
-  state.courses = loaded.courses;
+  state.courses = normalizeCourses(loaded.courses);
   render();
 }
 
@@ -120,12 +135,18 @@ async function fetchJson(path) {
   return response.json();
 }
 
+function normalizeCourses(courses = []) {
+  const visibleCourses = courses.filter(course => course.id !== "custom");
+  return [...visibleCourses, customCourse];
+}
+
 function render() {
   if (state.currentScreen !== "game") stopTimer();
   if (state.currentScreen === "home") renderHome();
   if (state.currentScreen === "units") renderUnits();
   if (state.currentScreen === "game") renderGame();
   if (state.currentScreen === "custom") renderCustom();
+  if (state.currentScreen === "settings") renderSettings();
 }
 
 function renderHeader(title, subtitle, stats = "") {
@@ -145,12 +166,16 @@ function renderHome() {
   app.innerHTML = `
     ${renderHeader("Word Order Quest", "英語語順を、音とテンポで覚える")}
     <section class="screen">
+      <div class="toolbar">
+        <button class="btn" id="settingsBtn">共通設定</button>
+      </div>
       ${state.fetchWarning ? `<div class="notice">${escapeHtml(state.fetchWarning)}</div>` : ""}
       <div class="grid">
         ${cards.map(course => renderCourseCard(course)).join("")}
       </div>
     </section>
   `;
+  app.querySelector("#settingsBtn").addEventListener("click", openSettings);
   app.querySelectorAll("[data-course]").forEach(button => {
     button.addEventListener("click", () => openCourse(button.dataset.course));
   });
@@ -194,6 +219,7 @@ function renderUnits() {
     <section class="screen">
       <div class="toolbar">
         <button class="btn" id="homeBtn">ホームに戻る</button>
+        <button class="btn" id="settingsBtn">共通設定</button>
       </div>
       <div class="grid">
         ${course.units.map(unit => renderUnitCard(course, unit)).join("")}
@@ -201,6 +227,7 @@ function renderUnits() {
     </section>
   `;
   app.querySelector("#homeBtn").addEventListener("click", goHome);
+  app.querySelector("#settingsBtn").addEventListener("click", openSettings);
   app.querySelectorAll("[data-unit]").forEach(button => {
     button.addEventListener("click", () => startUnit(button.dataset.unit));
   });
@@ -240,16 +267,25 @@ async function startUnit(unitId) {
 }
 
 function startLesson(lesson, courseId, unitId) {
+  stopTimer();
+  clearAutoAdvance();
+  clearMonsterStateTimer();
   state.currentLesson = validateLesson(lesson);
   state.selectedCourseId = courseId;
   state.selectedUnitId = unitId;
   state.currentScreen = "game";
-  state.currentStageIndex = 0;
   state.score = 0;
   state.streak = 0;
+  state.correctCount = 0;
+  state.stageOrder = makeStageOrder();
+  state.stageCursor = 0;
+  state.currentStageIndex = state.stageOrder[0] || 0;
+  state.timeRemaining = GAME_SECONDS;
   localStorage.setItem(STORAGE.lastCourse, courseId || "");
   localStorage.setItem(STORAGE.lastUnit, unitId || "");
-  resetStage();
+  resetQuestion();
+  renderGame();
+  startTimer();
 }
 
 function openCustom() {
@@ -266,6 +302,7 @@ function renderCustom() {
     <section class="screen custom-stack">
       <div class="toolbar">
         <button class="btn" id="homeBtn">ホームに戻る</button>
+        <button class="btn" id="settingsBtn">共通設定</button>
         <button class="btn primary" id="loadCustomBtn">このJSONで始める</button>
       </div>
       <textarea class="json-box" id="customJson" spellcheck="false">${escapeHtml(saved)}</textarea>
@@ -273,6 +310,7 @@ function renderCustom() {
     </section>
   `;
   app.querySelector("#homeBtn").addEventListener("click", goHome);
+  app.querySelector("#settingsBtn").addEventListener("click", openSettings);
   app.querySelector("#loadCustomBtn").addEventListener("click", () => {
     const textarea = app.querySelector("#customJson");
     try {
@@ -287,13 +325,64 @@ function renderCustom() {
   });
 }
 
+function openSettings() {
+  stopTimer();
+  clearAutoAdvance();
+  state.currentScreen = "settings";
+  render();
+}
+
+function renderSettings() {
+  app.innerHTML = `
+    ${renderHeader("共通設定", "Play Mode と Voice はすべての練習で共通です")}
+    <section class="screen custom-stack">
+      <div class="toolbar">
+        <button class="btn" id="homeBtn">ホームに戻る</button>
+      </div>
+      <section class="panel controls">
+        <div class="panel-head"><span>Play mode</span></div>
+        <div class="segmented">
+          <button id="chunkModeBtn" type="button">チャンク</button>
+          <button id="wordModeBtn" type="button">単語</button>
+        </div>
+      </section>
+      <section class="panel controls">
+        <div class="panel-head"><span>Voice</span></div>
+        <button class="btn" id="soundBtn" type="button"></button>
+        <div class="segmented three">
+          <button id="rate075Btn" type="button">0.75</button>
+          <button id="rate100Btn" type="button">1.0</button>
+          <button id="rate125Btn" type="button">1.25</button>
+        </div>
+      </section>
+    </section>
+  `;
+  app.querySelector("#homeBtn").addEventListener("click", goHome);
+  app.querySelector("#chunkModeBtn").addEventListener("click", () => setMode("chunk"));
+  app.querySelector("#wordModeBtn").addEventListener("click", () => setMode("word"));
+  app.querySelector("#soundBtn").addEventListener("click", toggleSound);
+  app.querySelector("#rate075Btn").addEventListener("click", () => setSpeechRate(0.75));
+  app.querySelector("#rate100Btn").addEventListener("click", () => setSpeechRate(1));
+  app.querySelector("#rate125Btn").addEventListener("click", () => setSpeechRate(1.25));
+  renderSettingsState();
+}
+
+function renderSettingsState() {
+  app.querySelector("#chunkModeBtn")?.classList.toggle("active", state.mode === "chunk");
+  app.querySelector("#wordModeBtn")?.classList.toggle("active", state.mode === "word");
+  app.querySelector("#rate075Btn")?.classList.toggle("active", state.speechRate === 0.75);
+  app.querySelector("#rate100Btn")?.classList.toggle("active", state.speechRate === 1);
+  app.querySelector("#rate125Btn")?.classList.toggle("active", state.speechRate === 1.25);
+  text("#soundBtn", state.soundEnabled ? "音声 ON" : "音声 OFF");
+}
+
 function renderGame() {
   const lesson = state.currentLesson;
   const course = selectedCourse();
   const unit = selectedUnit();
   const stats = `
     <div class="stats">
-      <div class="stat">問題<strong id="questionCount">${state.currentStageIndex + 1} / ${lesson.stages.length}</strong></div>
+      <div class="stat">正解数<strong id="questionCount">${state.correctCount}</strong></div>
       <div class="stat">スコア<strong id="score">${state.score}</strong></div>
       <div class="stat">連続正解<strong id="streak">${state.streak}</strong></div>
     </div>
@@ -305,6 +394,7 @@ function renderGame() {
       <div class="toolbar">
         <button class="btn" id="homeBtn">ホームに戻る</button>
         ${state.selectedCourseId !== "custom" ? `<button class="btn" id="unitsBtn">単元一覧に戻る</button>` : ""}
+        <button class="btn" id="settingsBtn">共通設定</button>
       </div>
       <div class="game-main">
         <div class="workbench">
@@ -327,35 +417,12 @@ function renderGame() {
           <section class="panel">
             <div class="panel-head"><span>Word bank</span><span id="bankMeta"></span></div>
             <div class="bank" id="bank"></div>
-            <div class="actions-under-bank controls">
-              <div class="panel-head"><span>Actions</span></div>
-              <div class="button-row">
-                <button class="btn" id="hintBtn" type="button">ヒント</button>
-                <button class="btn primary" id="nextBtn" type="button">次の問題</button>
-              </div>
-            </div>
           </section>
           <div class="feedback" id="feedback"></div>
         </div>
         <aside class="side">
           <section class="panel monster-panel">
             ${renderMonsterMarkup()}
-          </section>
-          <section class="panel controls">
-            <div class="panel-head"><span>Play mode</span></div>
-            <div class="segmented">
-              <button id="chunkModeBtn" type="button">チャンク</button>
-              <button id="wordModeBtn" type="button">単語</button>
-            </div>
-          </section>
-          <section class="panel controls">
-            <div class="panel-head"><span>Voice</span></div>
-            <button class="btn" id="soundBtn" type="button"></button>
-            <div class="segmented three">
-              <button id="rate075Btn" type="button">0.75</button>
-              <button id="rate100Btn" type="button">1.0</button>
-              <button id="rate125Btn" type="button">1.25</button>
-            </div>
           </section>
         </aside>
       </div>
@@ -365,14 +432,7 @@ function renderGame() {
   app.querySelector("#homeBtn").addEventListener("click", goHome);
   const unitsBtn = app.querySelector("#unitsBtn");
   if (unitsBtn) unitsBtn.addEventListener("click", goUnits);
-  app.querySelector("#hintBtn").addEventListener("click", showHint);
-  app.querySelector("#nextBtn").addEventListener("click", nextStage);
-  app.querySelector("#chunkModeBtn").addEventListener("click", () => setMode("chunk"));
-  app.querySelector("#wordModeBtn").addEventListener("click", () => setMode("word"));
-  app.querySelector("#soundBtn").addEventListener("click", toggleSound);
-  app.querySelector("#rate075Btn").addEventListener("click", () => setSpeechRate(0.75));
-  app.querySelector("#rate100Btn").addEventListener("click", () => setSpeechRate(1));
-  app.querySelector("#rate125Btn").addEventListener("click", () => setSpeechRate(1.25));
+  app.querySelector("#settingsBtn").addEventListener("click", openSettings);
 
   renderGameState();
   setMonsterHp(getMonsterHpPercent());
@@ -432,7 +492,7 @@ function renderGameState() {
   const answerIds = new Set(state.answer);
   const available = state.tokens.filter(token => !answerIds.has(token.id));
 
-  text("#questionCount", `${state.currentStageIndex + 1} / ${state.currentLesson.stages.length}`);
+  text("#questionCount", state.correctCount);
   text("#score", state.score);
   text("#streak", state.streak);
   text("#levelLabel", stage.level || `Stage ${state.currentStageIndex + 1}`);
@@ -440,13 +500,6 @@ function renderGameState() {
   text("#chunkCount", `${stage.chunks.length} parts / ${state.tokens.length} tokens`);
   text("#answerMeta", `${state.answer.length} / ${state.tokens.length}`);
   text("#bankMeta", `${available.length} left`);
-  text("#soundBtn", state.soundEnabled ? "音声 ON" : "音声 OFF");
-
-  app.querySelector("#chunkModeBtn").classList.toggle("active", state.mode === "chunk");
-  app.querySelector("#wordModeBtn").classList.toggle("active", state.mode === "word");
-  app.querySelector("#rate075Btn").classList.toggle("active", state.speechRate === 0.75);
-  app.querySelector("#rate100Btn").classList.toggle("active", state.speechRate === 1);
-  app.querySelector("#rate125Btn").classList.toggle("active", state.speechRate === 1.25);
 
   renderChunks(stage);
   renderAnswer();
@@ -486,6 +539,19 @@ function shuffle(items) {
   return next;
 }
 
+function makeStageOrder() {
+  return shuffle(state.currentLesson.stages.map((_, index) => index));
+}
+
+function advanceStageCursor() {
+  state.stageCursor += 1;
+  if (state.stageCursor >= state.stageOrder.length) {
+    state.stageOrder = makeStageOrder();
+    state.stageCursor = 0;
+  }
+  state.currentStageIndex = state.stageOrder[state.stageCursor] || 0;
+}
+
 function targetText() {
   return state.tokens.slice().sort((a, b) => a.order - b.order).map(token => token.text).join(" ");
 }
@@ -494,19 +560,14 @@ function tokenById(id) {
   return state.tokens.find(token => token.id === id);
 }
 
-function resetStage() {
-  stopTimer();
-  clearAutoAdvance();
-  clearMonsterStateTimer();
+function resetQuestion() {
   state.tokens = buildTokens(currentStage());
   state.bankOrder = shuffle(state.tokens.map(token => token.id));
   state.answer = [];
   state.stageLocked = false;
   state.lastPoppedId = null;
-  renderGame();
   setMonsterHp(100);
   setMonsterCombo(state.streak);
-  startTimer();
 }
 
 function renderChunks(stage) {
@@ -588,13 +649,16 @@ function chooseToken(token, element) {
   if (!expected) return;
   if (token.id !== expected.id) {
     state.streak = 0;
+    state.timeRemaining = Math.max(0, state.timeRemaining - WRONG_PENALTY_SECONDS);
     playEffect("wrong");
     setMonsterCombo(state.streak);
     playMonsterOnce("attack");
     markWrongChoice(element);
     shakeAnswerZone();
-    showFeedback("bad", `違います。次は <strong>${escapeHtml(expected.text)}</strong> です。`);
+    showFeedback("bad", `違います。残り時間 -${WRONG_PENALTY_SECONDS}秒。`);
     text("#streak", state.streak);
+    renderTimer();
+    if (state.timeRemaining <= 0) handleTimeUp();
     return;
   }
   playAudioToken(token);
@@ -619,47 +683,36 @@ function markWrongChoice(element) {
 }
 
 function completeQuestion() {
-  stopTimer();
   state.stageLocked = true;
   const base = state.mode === "word" ? 20 : 12;
-  const timeBonus = Math.max(0, Math.ceil(state.timeRemaining));
-  state.score += base + timeBonus;
   state.streak += 1;
+  state.correctCount += 1;
+  const timeBonus = state.streak % STREAK_BONUS_EVERY === 0 ? STREAK_BONUS_SECONDS : 0;
+  state.timeRemaining = Math.min(GAME_SECONDS, state.timeRemaining + timeBonus);
+  state.score += base + timeBonus;
   updateProgress();
   flashAnswerZone();
-  showFeedback("good", `完成。タイムボーナス +${timeBonus}<br>${escapeHtml(targetText())}`);
+  showFeedback("good", `正解。${timeBonus ? `連続正解ボーナス +${timeBonus}秒` : ""}<br>${escapeHtml(targetText())}`);
   text("#score", state.score);
   text("#streak", state.streak);
+  text("#questionCount", state.correctCount);
   setMonsterHp(0);
   setMonsterCombo(state.streak);
   setMonsterState("defeated");
-  state.autoAdvanceTimerId = setTimeout(nextStage, 1100);
+  renderTimer();
+  state.autoAdvanceTimerId = setTimeout(nextQuestion, 720);
 }
 
-function showHint() {
-  if (state.stageLocked) return;
-  reduceTime(HINT_PENALTY_SECONDS);
-  if (state.stageLocked) return;
-  const next = getNextExpectedToken();
-  if (!next) return;
-  const chunk = currentStage().chunks[next.chunkIndex];
-  showFeedback("note", `次は <strong>${escapeHtml(chunk.ja)}</strong> に対応する <strong>${escapeHtml(next.text)}</strong> です。残り時間 -${HINT_PENALTY_SECONDS}秒。`);
-}
-
-function nextStage() {
+function nextQuestion() {
   clearAutoAdvance();
-  state.currentStageIndex = (state.currentStageIndex + 1) % state.currentLesson.stages.length;
-  resetStage();
-}
-
-function setMode(nextMode) {
-  state.mode = nextMode;
-  resetStage();
+  advanceStageCursor();
+  resetQuestion();
+  renderGameState();
+  syncMonsterTimerState();
 }
 
 function startTimer() {
   state.roundStartedAt = Date.now();
-  state.timeRemaining = ROUND_SECONDS;
   renderTimer();
   state.timerId = setInterval(updateTimer, 100);
 }
@@ -687,15 +740,17 @@ function clearMonsterStateTimer() {
 
 function updateTimer() {
   if (state.stageLocked || state.currentScreen !== "game") return;
-  const elapsed = (Date.now() - state.roundStartedAt) / 1000;
-  state.timeRemaining = Math.max(0, ROUND_SECONDS - elapsed);
+  const now = Date.now();
+  const elapsed = (now - state.roundStartedAt) / 1000;
+  state.roundStartedAt = now;
+  state.timeRemaining = Math.max(0, state.timeRemaining - elapsed);
   renderTimer();
   if (state.timeRemaining <= 0) handleTimeUp();
   else if (!state.monsterStateTimerId) syncMonsterTimerState();
 }
 
 function reduceTime(seconds) {
-  state.roundStartedAt -= seconds * 1000;
+  state.timeRemaining = Math.max(0, state.timeRemaining - seconds);
   updateTimer();
 }
 
@@ -705,7 +760,7 @@ function renderTimer() {
   const timeProgress = app.querySelector("#timeProgress");
   const timeReadout = app.querySelector("#timeReadout");
   if (!progress || !timeLeft) return;
-  const percent = Math.max(0, Math.min(100, (state.timeRemaining / ROUND_SECONDS) * 100));
+  const percent = Math.max(0, Math.min(100, (state.timeRemaining / GAME_SECONDS) * 100));
   timeLeft.textContent = state.timeRemaining.toFixed(1);
   progress.style.width = `${percent}%`;
   const warning = state.timeRemaining <= 10 && state.timeRemaining > 5;
@@ -775,9 +830,40 @@ function handleTimeUp() {
   playEffect("wrong");
   playMonsterOnce("attack");
   shakeAnswerZone();
-  showFeedback("bad", `時間切れ。不正解です。<br>正解：<strong>${escapeHtml(targetText())}</strong>`);
+  updateProgress();
+  showGameOver();
   text("#streak", state.streak);
   renderTimer();
+}
+
+function showGameOver() {
+  showFeedback(
+    "bad",
+    `時間切れ。<br>` +
+      `正解数：<strong>${state.correctCount}</strong> / スコア：<strong>${state.score}</strong><br>` +
+      `最後の正解文：<strong>${escapeHtml(targetText())}</strong>` +
+      `<div class="result-actions">` +
+      `<button class="btn primary" id="retryBtn" type="button">もう一度</button>` +
+      `${state.selectedCourseId !== "custom" ? `<button class="btn" id="resultUnitsBtn" type="button">単元一覧</button>` : ""}` +
+      `<button class="btn" id="resultHomeBtn" type="button">ホーム</button>` +
+      `</div>`
+  );
+  app.querySelector("#retryBtn")?.addEventListener("click", restartGame);
+  app.querySelector("#resultUnitsBtn")?.addEventListener("click", goUnits);
+  app.querySelector("#resultHomeBtn")?.addEventListener("click", goHome);
+}
+
+function restartGame() {
+  state.score = 0;
+  state.streak = 0;
+  state.correctCount = 0;
+  state.stageOrder = makeStageOrder();
+  state.stageCursor = 0;
+  state.currentStageIndex = state.stageOrder[0] || 0;
+  state.timeRemaining = GAME_SECONDS;
+  resetQuestion();
+  renderGame();
+  startTimer();
 }
 
 function flashAnswerZone() {
@@ -828,16 +914,24 @@ function speakEnglish(value) {
   window.speechSynthesis.speak(utterance);
 }
 
+function setMode(nextMode) {
+  state.mode = nextMode;
+  localStorage.setItem(STORAGE.mode, nextMode);
+  renderSettingsState();
+}
+
 function toggleSound() {
   state.soundEnabled = !state.soundEnabled;
+  localStorage.setItem(STORAGE.soundEnabled, String(state.soundEnabled));
   if (!state.soundEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
-  renderGameState();
+  renderSettingsState();
 }
 
 function setSpeechRate(rate) {
   state.speechRate = rate;
+  localStorage.setItem(STORAGE.speechRate, String(rate));
   if ("speechSynthesis" in window) window.speechSynthesis.cancel();
-  renderGameState();
+  renderSettingsState();
 }
 
 function showFeedback(type, html) {
@@ -913,7 +1007,7 @@ function updateProgress() {
   const current = getProgressByKey(key);
   const next = {
     bestScore: Math.max(current.bestScore, state.score),
-    clearedStages: Math.max(current.clearedStages, state.currentStageIndex + 1),
+    clearedStages: Math.max(current.clearedStages, state.correctCount),
     total: state.currentLesson.stages.length
   };
   localStorage.setItem(key, JSON.stringify(next));

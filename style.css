@@ -415,6 +415,13 @@ h1 {
 .feedback.bad { color: var(--red); background: var(--red-2); border-color: #fecaca; }
 .feedback.note { color: var(--amber); background: var(--amber-2); border-color: #fde68a; }
 
+.result-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
 .button-row {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));

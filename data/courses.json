@@ -200,6 +200,12 @@
           "lessonPath": "data/lessons/jhs3/basic-subjunctive.json"
         }
       ]
+    },
+    {
+      "id": "custom",
+      "title": "カスタム練習",
+      "description": "自分で用意したlesson JSONを貼り付けて練習します。",
+      "units": []
     }
   ]
 }
