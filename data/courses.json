@@ -1,0 +1,205 @@
+{
+  "courses": [
+    {
+      "id": "jhs1",
+      "title": "中1英文法",
+      "description": "中1で学ぶ英文法コース",
+      "units": [
+        {
+          "id": "be-verb",
+          "title": "be動詞",
+          "description": "be動詞の語順練習",
+          "lessonPath": "data/lessons/jhs1/be-verb.json"
+        },
+        {
+          "id": "general-verbs",
+          "title": "一般動詞",
+          "description": "一般動詞の語順練習",
+          "lessonPath": "data/lessons/jhs1/general-verbs.json"
+        },
+        {
+          "id": "nouns-articles-plurals",
+          "title": "名詞・冠詞・複数形",
+          "description": "名詞・冠詞・複数形の語順練習",
+          "lessonPath": "data/lessons/jhs1/nouns-articles-plurals.json"
+        },
+        {
+          "id": "pronouns",
+          "title": "代名詞",
+          "description": "代名詞の語順練習",
+          "lessonPath": "data/lessons/jhs1/pronouns.json"
+        },
+        {
+          "id": "imperatives",
+          "title": "命令文",
+          "description": "命令文の語順練習",
+          "lessonPath": "data/lessons/jhs1/imperatives.json"
+        },
+        {
+          "id": "question-words",
+          "title": "疑問詞",
+          "description": "疑問詞の語順練習",
+          "lessonPath": "data/lessons/jhs1/question-words.json"
+        },
+        {
+          "id": "third-person-singular",
+          "title": "三単現",
+          "description": "三単現の語順練習",
+          "lessonPath": "data/lessons/jhs1/third-person-singular.json"
+        },
+        {
+          "id": "present-progressive",
+          "title": "現在進行形",
+          "description": "現在進行形の語順練習",
+          "lessonPath": "data/lessons/jhs1/present-progressive.json"
+        },
+        {
+          "id": "can",
+          "title": "can",
+          "description": "canの語順練習",
+          "lessonPath": "data/lessons/jhs1/can.json"
+        },
+        {
+          "id": "basic-past-tense",
+          "title": "過去形の基礎",
+          "description": "過去形の基礎の語順練習",
+          "lessonPath": "data/lessons/jhs1/basic-past-tense.json"
+        }
+      ]
+    },
+    {
+      "id": "jhs2",
+      "title": "中2英文法",
+      "description": "中2で学ぶ英文法コース",
+      "units": [
+        {
+          "id": "past-tense",
+          "title": "過去形",
+          "description": "過去形の語順練習",
+          "lessonPath": "data/lessons/jhs2/past-tense.json"
+        },
+        {
+          "id": "past-progressive",
+          "title": "過去進行形",
+          "description": "過去進行形の語順練習",
+          "lessonPath": "data/lessons/jhs2/past-progressive.json"
+        },
+        {
+          "id": "future-expressions",
+          "title": "未来表現",
+          "description": "未来表現の語順練習",
+          "lessonPath": "data/lessons/jhs2/future-expressions.json"
+        },
+        {
+          "id": "modal-verbs",
+          "title": "助動詞",
+          "description": "助動詞の語順練習",
+          "lessonPath": "data/lessons/jhs2/modal-verbs.json"
+        },
+        {
+          "id": "conjunctions",
+          "title": "接続詞",
+          "description": "接続詞の語順練習",
+          "lessonPath": "data/lessons/jhs2/conjunctions.json"
+        },
+        {
+          "id": "infinitives",
+          "title": "不定詞",
+          "description": "不定詞の語順練習",
+          "lessonPath": "data/lessons/jhs2/infinitives.json"
+        },
+        {
+          "id": "gerunds",
+          "title": "動名詞",
+          "description": "動名詞の語順練習",
+          "lessonPath": "data/lessons/jhs2/gerunds.json"
+        },
+        {
+          "id": "comparisons",
+          "title": "比較",
+          "description": "比較の語順練習",
+          "lessonPath": "data/lessons/jhs2/comparisons.json"
+        },
+        {
+          "id": "there-is-there-are",
+          "title": "there is / there are",
+          "description": "there is / there areの語順練習",
+          "lessonPath": "data/lessons/jhs2/there-is-there-are.json"
+        },
+        {
+          "id": "basic-sentence-patterns",
+          "title": "文型の基礎",
+          "description": "文型の基礎の語順練習",
+          "lessonPath": "data/lessons/jhs2/basic-sentence-patterns.json"
+        }
+      ]
+    },
+    {
+      "id": "jhs3",
+      "title": "中3英文法",
+      "description": "中3で学ぶ英文法コース",
+      "units": [
+        {
+          "id": "present-perfect",
+          "title": "現在完了",
+          "description": "現在完了の語順練習",
+          "lessonPath": "data/lessons/jhs3/present-perfect.json"
+        },
+        {
+          "id": "passive-voice",
+          "title": "受け身",
+          "description": "受け身の語順練習",
+          "lessonPath": "data/lessons/jhs3/passive-voice.json"
+        },
+        {
+          "id": "participles",
+          "title": "分詞",
+          "description": "分詞の語順練習",
+          "lessonPath": "data/lessons/jhs3/participles.json"
+        },
+        {
+          "id": "relative-pronouns",
+          "title": "関係代名詞",
+          "description": "関係代名詞の語順練習",
+          "lessonPath": "data/lessons/jhs3/relative-pronouns.json"
+        },
+        {
+          "id": "indirect-questions",
+          "title": "間接疑問文",
+          "description": "間接疑問文の語順練習",
+          "lessonPath": "data/lessons/jhs3/indirect-questions.json"
+        },
+        {
+          "id": "question-word-to",
+          "title": "疑問詞 + to",
+          "description": "疑問詞 + toの語順練習",
+          "lessonPath": "data/lessons/jhs3/question-word-to.json"
+        },
+        {
+          "id": "too-to-enough-to",
+          "title": "too ～ to / enough to",
+          "description": "too ～ to / enough toの語順練習",
+          "lessonPath": "data/lessons/jhs3/too-to-enough-to.json"
+        },
+        {
+          "id": "it-is-for-to",
+          "title": "It is ～ for 人 to …",
+          "description": "It is ～ for 人 to …の語順練習",
+          "lessonPath": "data/lessons/jhs3/it-is-for-to.json"
+        },
+        {
+          "id": "object-complement",
+          "title": "call / make / name + 目的語 + 補語",
+          "description": "call / make / name + 目的語 + 補語の語順練習",
+          "lessonPath": "data/lessons/jhs3/object-complement.json"
+        },
+        {
+          "id": "basic-subjunctive",
+          "title": "仮定法の基礎",
+          "description": "仮定法の基礎の語順練習",
+          "lessonPath": "data/lessons/jhs3/basic-subjunctive.json"
+        }
+      ]
+    }
+  ]
+}

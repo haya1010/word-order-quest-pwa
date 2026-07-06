@@ -1,0 +1,4 @@
+**/.DS_Store
+data/lessons/**/*.json
+data_example/
+data_example/lessons/**/*.json
