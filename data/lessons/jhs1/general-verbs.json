@@ -1,0 +1,641 @@
+{
+  "id": "jhs1-general-verbs",
+  "title": "中1 一般動詞",
+  "description": "一般動詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私はテニスをします",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私は英語が好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私は数学を勉強します",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "数学",
+          "en": "math"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は本を読みます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "読む",
+          "en": "read"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私は朝食を食べます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "朝食",
+          "en": "breakfast"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私は牛乳を飲みます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "飲む",
+          "en": "drink"
+        },
+        {
+          "ja": "牛乳",
+          "en": "milk"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "私はテレビを見ます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "私はコンピューターを使います",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "使う",
+          "en": "use"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "私は犬を飼っています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "私は答えを知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "答え",
+          "en": "answer"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "あなたはサッカーをします",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "あなたは英語を話します",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "あなたは音楽が好きです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "音楽",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "あなたは理科を勉強します",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "理科",
+          "en": "science"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "私たちは学校へ行きます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "私たちは昼食を食べます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼らは野球をします",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "野球",
+          "en": "baseball"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼らは映画を見ます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "映画",
+          "en": "movies"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼らはたくさんの本を持っています",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼らは日本語を話します",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "日本語",
+          "en": "Japanese"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私は玉ねぎが好きではありません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜しない",
+          "en": "do not"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "玉ねぎ",
+          "en": "onions"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "私はピアノを弾きません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜しない",
+          "en": "do not"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ピアノ",
+          "en": "piano"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "あなたは彼を知りません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "〜しない",
+          "en": "do not"
+        },
+        {
+          "ja": "知っている",
+          "en": "know"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "私たちはテレビを見ません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "〜しない",
+          "en": "do not"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "彼らは肉を食べません",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "〜しない",
+          "en": "do not"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "肉",
+          "en": "meat"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "あなたはテニスが好きですか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "あなたは英語を勉強しますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "あなたは自転車を持っていますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼らはサッカーをしますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "私たちは水が必要ですか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "私たち",
+          "en": "we"
+        },
+        {
+          "ja": "必要とする",
+          "en": "need"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        }
+      ]
+    }
+  ]
+}

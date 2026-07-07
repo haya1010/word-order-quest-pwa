@@ -1,0 +1,633 @@
+{
+  "id": "jhs1-pronouns",
+  "title": "中1 代名詞",
+  "description": "代名詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は生徒です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "生徒",
+          "en": "student"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "あなたは私の友だちです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "友だち",
+          "en": "friend"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "彼は私の兄弟です",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "彼女は私の姉妹です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "それは私の犬です",
+      "chunks": [
+        {
+          "ja": "それはです",
+          "en": "It is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私たちはクラスメートです",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "クラスメート",
+          "en": "classmates"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼らは私の友だちです",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "友だち",
+          "en": "friends"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "私はサッカーが好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "あなたはテニスをします",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "彼は英語を勉強します",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "勉強する",
+          "en": "studies"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "彼女は本を読みます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "読む",
+          "en": "reads"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "それは速く走ります",
+      "chunks": [
+        {
+          "ja": "それは",
+          "en": "It"
+        },
+        {
+          "ja": "走る",
+          "en": "runs"
+        },
+        {
+          "ja": "速く",
+          "en": "fast"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "私たちは昼食を食べます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "彼らはテレビを見ます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "これは私のかばんです",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "あれはあなたのペンです",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "これは彼の自転車です",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "あれは彼女の本です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "これは私たちの教室です",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私たちの",
+          "en": "our"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "あれは彼らの家です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "彼らの",
+          "en": "their"
+        },
+        {
+          "ja": "家",
+          "en": "house"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私の父は親切です",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "父",
+          "en": "father"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "あなたのお母さんは忙しいです",
+      "chunks": [
+        {
+          "ja": "あなたの",
+          "en": "Your"
+        },
+        {
+          "ja": "母",
+          "en": "mother"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "忙しい",
+          "en": "busy"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼の兄弟は背が高いです",
+      "chunks": [
+        {
+          "ja": "彼の",
+          "en": "His"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "背が高い",
+          "en": "tall"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼女の姉妹は賢いです",
+      "chunks": [
+        {
+          "ja": "彼女の",
+          "en": "Her"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "賢い",
+          "en": "smart"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "私は彼を知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼は私を知っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "知っている",
+          "en": "knows"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "彼女は私たちが好きです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "私たちを",
+          "en": "us"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "私たちは彼らが好きです",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "彼らを",
+          "en": "them"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼らは彼女を助けます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "あなたは私を助けます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    }
+  ]
+}

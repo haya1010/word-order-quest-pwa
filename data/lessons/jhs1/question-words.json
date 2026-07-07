@@ -1,0 +1,681 @@
+{
+  "id": "jhs1-question-words",
+  "title": "中1 疑問詞",
+  "description": "疑問詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "これは何ですか",
+      "chunks": [
+        {
+          "ja": "何",
+          "en": "What"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "あれは何ですか",
+      "chunks": [
+        {
+          "ja": "何",
+          "en": "What"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ということ",
+          "en": "that"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "あなたは何が好きですか",
+      "chunks": [
+        {
+          "ja": "何",
+          "en": "What"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "あなたは何を持っていますか",
+      "chunks": [
+        {
+          "ja": "何",
+          "en": "What"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "何時ですか",
+      "chunks": [
+        {
+          "ja": "何時",
+          "en": "What time"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "それ",
+          "en": "it"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "彼は誰ですか",
+      "chunks": [
+        {
+          "ja": "誰",
+          "en": "Who"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼女は誰ですか",
+      "chunks": [
+        {
+          "ja": "誰",
+          "en": "Who"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "あなたは誰ですか",
+      "chunks": [
+        {
+          "ja": "誰",
+          "en": "Who"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "誰がサッカーが好きですか",
+      "chunks": [
+        {
+          "ja": "誰",
+          "en": "Who"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "あなたの先生は誰ですか",
+      "chunks": [
+        {
+          "ja": "誰",
+          "en": "Who"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "あなたの誕生日はいつですか",
+      "chunks": [
+        {
+          "ja": "いつ",
+          "en": "When"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "誕生日",
+          "en": "birthday"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "あなたはいつ勉強しますか",
+      "chunks": [
+        {
+          "ja": "いつ",
+          "en": "When"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "あなたはいつテニスをしますか",
+      "chunks": [
+        {
+          "ja": "いつ",
+          "en": "When"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "学校はいつ始まりますか",
+      "chunks": [
+        {
+          "ja": "いつ",
+          "en": "When"
+        },
+        {
+          "ja": "する",
+          "en": "does"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        },
+        {
+          "ja": "始める",
+          "en": "start"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "あなたはいつ家に帰りますか",
+      "chunks": [
+        {
+          "ja": "いつ",
+          "en": "When"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "私のかばんはどこですか",
+      "chunks": [
+        {
+          "ja": "どこ",
+          "en": "Where"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "あなたはどこに住んでいますか",
+      "chunks": [
+        {
+          "ja": "どこ",
+          "en": "Where"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "住む",
+          "en": "live"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "駅はどこですか",
+      "chunks": [
+        {
+          "ja": "どこ",
+          "en": "Where"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "駅",
+          "en": "station"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "あなたはどこでサッカーをしますか",
+      "chunks": [
+        {
+          "ja": "どこ",
+          "en": "Where"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "あなたの本はどこですか",
+      "chunks": [
+        {
+          "ja": "どこ",
+          "en": "Where"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "元気ですか",
+      "chunks": [
+        {
+          "ja": "どのように",
+          "en": "How"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "あなたは何歳ですか",
+      "chunks": [
+        {
+          "ja": "何歳",
+          "en": "How old"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "あなたはどうやって学校へ行きますか",
+      "chunks": [
+        {
+          "ja": "どのように",
+          "en": "How"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "あなたは何冊の本を持っていますか",
+      "chunks": [
+        {
+          "ja": "いくつの",
+          "en": "How many"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "これはいくらですか",
+      "chunks": [
+        {
+          "ja": "いくら",
+          "en": "How much"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "これは誰のかばんですか",
+      "chunks": [
+        {
+          "ja": "誰の",
+          "en": "Whose"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "あれは誰のペンですか",
+      "chunks": [
+        {
+          "ja": "誰の",
+          "en": "Whose"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ということ",
+          "en": "that"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "これは誰の自転車ですか",
+      "chunks": [
+        {
+          "ja": "誰の",
+          "en": "Whose"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "これらは誰の靴ですか",
+      "chunks": [
+        {
+          "ja": "誰の",
+          "en": "Whose"
+        },
+        {
+          "ja": "靴",
+          "en": "shoes"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "これらの",
+          "en": "these"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "あれは誰の教室ですか",
+      "chunks": [
+        {
+          "ja": "誰の",
+          "en": "Whose"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ということ",
+          "en": "that"
+        }
+      ]
+    }
+  ]
+}

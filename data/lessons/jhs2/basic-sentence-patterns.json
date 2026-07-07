@@ -1,0 +1,637 @@
+{
+  "id": "jhs2-basic-sentence-patterns",
+  "title": "中2 文型の基礎",
+  "description": "文型の基礎の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "鳥は飛びます",
+      "chunks": [
+        {
+          "ja": "鳥は",
+          "en": "Birds"
+        },
+        {
+          "ja": "飛ぶ",
+          "en": "fly"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "犬は走ります",
+      "chunks": [
+        {
+          "ja": "犬は",
+          "en": "Dogs"
+        },
+        {
+          "ja": "走る",
+          "en": "run"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私は眠ります",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "眠る",
+          "en": "sleep"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "彼はほほえみます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "ほほえむ",
+          "en": "smiles"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "彼女は泳ぎます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "泳ぐ",
+          "en": "swims"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私たちは笑いました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "笑いました",
+          "en": "laughed"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼らは到着しました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "到着しました",
+          "en": "arrived"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "その赤ちゃんは泣きました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "赤ちゃん",
+          "en": "baby"
+        },
+        {
+          "ja": "泣きました",
+          "en": "cried"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "私は英語を勉強します",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "彼女は音楽が好きです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "音楽",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "彼はサッカーをします",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "する",
+          "en": "plays"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "私たちはテレビを見ます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼らは昼食を食べます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "私は本を読みます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "読む",
+          "en": "read"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼女はコンピューターを使います",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "使う",
+          "en": "uses"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼は犬を飼っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "私はうれしいです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "うれしい",
+          "en": "happy"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "あなたは親切です",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼は先生になりました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "なった",
+          "en": "became"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼女は疲れているように見えます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "見える",
+          "en": "looks"
+        },
+        {
+          "ja": "疲れている",
+          "en": "tired"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "このケーキはおいしいです",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "ケーキ",
+          "en": "cake"
+        },
+        {
+          "ja": "味がする",
+          "en": "tastes"
+        },
+        {
+          "ja": "よい",
+          "en": "good"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "空は青く見えます",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "空",
+          "en": "sky"
+        },
+        {
+          "ja": "見える",
+          "en": "looks"
+        },
+        {
+          "ja": "青い",
+          "en": "blue"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "私の兄弟は背が高いです",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "背が高い",
+          "en": "tall"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "私は彼に本をあげました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "あげた",
+          "en": "gave"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "彼女は私にペンをくれました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "あげた",
+          "en": "gave"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼は私たちに写真を見せました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "見せた",
+          "en": "showed"
+        },
+        {
+          "ja": "私たちを",
+          "en": "us"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "写真",
+          "en": "picture"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "私の母は私に朝食を作ってくれました",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "母",
+          "en": "mother"
+        },
+        {
+          "ja": "作った",
+          "en": "made"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "朝食",
+          "en": "breakfast"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼らは彼女に手紙を送りました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "送った",
+          "en": "sent"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "手紙",
+          "en": "letter"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "ケンは彼の姉妹にプレゼントを買いました",
+      "chunks": [
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        },
+        {
+          "ja": "買った",
+          "en": "bought"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "プレゼント",
+          "en": "present"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "私に水を少しください",
+      "chunks": [
+        {
+          "ja": "どうぞ",
+          "en": "Please"
+        },
+        {
+          "ja": "ください",
+          "en": "give"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "いくつかの",
+          "en": "some"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        }
+      ]
+    }
+  ]
+}

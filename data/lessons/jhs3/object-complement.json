@@ -1,0 +1,857 @@
+{
+  "id": "jhs3-object-complement",
+  "title": "中3 call / make / name + 目的語 + 補語",
+  "description": "call / make / name + 目的語 + 補語の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私たちは彼をケンと呼びます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        },
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "彼らは彼女をユミと呼びます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "ユミ",
+          "en": "Yumi"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私の友だちは私をハヤトと呼びます",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "友だち",
+          "en": "friends"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "ハヤト",
+          "en": "Hayato"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私をタロウと呼んでください",
+      "chunks": [
+        {
+          "ja": "どうぞ",
+          "en": "Please"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "タロウ",
+          "en": "Taro"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "みんなは彼を先生と呼びます",
+      "chunks": [
+        {
+          "ja": "みんな",
+          "en": "Everyone"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "calls"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        },
+        {
+          "ja": "先生",
+          "en": "Doctor"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私たちはこの犬をポチと呼びます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        },
+        {
+          "ja": "ポチ",
+          "en": "Pochi"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼らはあの山を富士と呼びます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "〜ということ",
+          "en": "that"
+        },
+        {
+          "ja": "山",
+          "en": "mountain"
+        },
+        {
+          "ja": "富士",
+          "en": "Fuji"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "人々はこの町を小京都と呼びます",
+      "chunks": [
+        {
+          "ja": "人々",
+          "en": "People"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "町",
+          "en": "town"
+        },
+        {
+          "ja": "小",
+          "en": "Little"
+        },
+        {
+          "ja": "京都",
+          "en": "Kyoto"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "私の兄弟は彼の猫をタマと呼びます",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "calls"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        },
+        {
+          "ja": "タマ",
+          "en": "Tama"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "生徒たちは彼らの先生をブラウン先生と呼びます",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "生徒たち",
+          "en": "students"
+        },
+        {
+          "ja": "呼ぶ",
+          "en": "call"
+        },
+        {
+          "ja": "彼らの",
+          "en": "their"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        },
+        {
+          "ja": "先生",
+          "en": "Mr"
+        },
+        {
+          "ja": "ブラウン",
+          "en": "Brown"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "その知らせは私をうれしくさせました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "知らせ",
+          "en": "news"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "うれしい",
+          "en": "happy"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "その映画は彼女を悲しくさせました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "映画",
+          "en": "movie"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "悲しい",
+          "en": "sad"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "その物語は私たちをわくわくさせました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "物語",
+          "en": "story"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "私たちを",
+          "en": "us"
+        },
+        {
+          "ja": "わくわくした",
+          "en": "excited"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "その歌は彼を有名にしました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "歌",
+          "en": "song"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "彼を",
+          "en": "him"
+        },
+        {
+          "ja": "有名",
+          "en": "famous"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "その雨は道路をぬれた状態にしました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "雨",
+          "en": "rain"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "道路",
+          "en": "road"
+        },
+        {
+          "ja": "ぬれた",
+          "en": "wet"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "その試合は子どもたちを疲れさせました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "試合",
+          "en": "game"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "子どもたち",
+          "en": "children"
+        },
+        {
+          "ja": "疲れている",
+          "en": "tired"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼の言葉は私を怒らせました",
+      "chunks": [
+        {
+          "ja": "彼の",
+          "en": "His"
+        },
+        {
+          "ja": "言葉",
+          "en": "words"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "怒った",
+          "en": "angry"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "この本は彼女に歴史への興味を持たせました",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "興味を持った",
+          "en": "interested"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "歴史",
+          "en": "history"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "その先生は授業を簡単にしました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "授業",
+          "en": "lesson"
+        },
+        {
+          "ja": "簡単",
+          "en": "easy"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "そのにおいは私を空腹にしました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "におい",
+          "en": "smell"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        },
+        {
+          "ja": "空腹",
+          "en": "hungry"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私たちはその犬をポチと名づけました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        },
+        {
+          "ja": "ポチ",
+          "en": "Pochi"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "彼らは赤ちゃんをケンと名づけました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "彼らの",
+          "en": "their"
+        },
+        {
+          "ja": "赤ちゃん",
+          "en": "baby"
+        },
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼女は猫をミミと名づけました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        },
+        {
+          "ja": "ミミ",
+          "en": "Mimi"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼は息子をトムと名づけました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "息子",
+          "en": "son"
+        },
+        {
+          "ja": "トム",
+          "en": "Tom"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "私の姉妹はその鳥をスカイと名づけました",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "鳥",
+          "en": "bird"
+        },
+        {
+          "ja": "スカイ",
+          "en": "Sky"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "私たちはチームをタイガースと名づけました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "私たちの",
+          "en": "our"
+        },
+        {
+          "ja": "チーム",
+          "en": "team"
+        },
+        {
+          "ja": "タイガース",
+          "en": "Tigers"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "彼らはその公園をグリーンパークと名づけました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        },
+        {
+          "ja": "グリーン",
+          "en": "Green"
+        },
+        {
+          "ja": "パーク",
+          "en": "Park"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "そのクラスはロボットをロボと名づけました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "クラス",
+          "en": "class"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ロボット",
+          "en": "robot"
+        },
+        {
+          "ja": "ロボ",
+          "en": "Robo"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "私の父はそのボートをサクラと名づけました",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "父",
+          "en": "father"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ボート",
+          "en": "boat"
+        },
+        {
+          "ja": "サクラ",
+          "en": "Sakura"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "生徒たちは彼らのグループをスターズと名づけました",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "生徒たち",
+          "en": "students"
+        },
+        {
+          "ja": "名づけた",
+          "en": "named"
+        },
+        {
+          "ja": "彼らの",
+          "en": "their"
+        },
+        {
+          "ja": "グループ",
+          "en": "group"
+        },
+        {
+          "ja": "スターズ",
+          "en": "Stars"
+        }
+      ]
+    }
+  ]
+}

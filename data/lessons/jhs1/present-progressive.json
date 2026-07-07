@@ -1,0 +1,765 @@
+{
+  "id": "jhs1-present-progressive",
+  "title": "中1 現在進行形",
+  "description": "現在進行形の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は英語を勉強しています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "勉強している",
+          "en": "studying"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私は本を読んでいます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "読んでいる",
+          "en": "reading"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私はテレビを見ています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "見ている",
+          "en": "watching"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は昼食を食べています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "食べている",
+          "en": "eating"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私は水を飲んでいます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "飲んでいる",
+          "en": "drinking"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "あなたはテニスをしています",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "している",
+          "en": "playing"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "あなたは音楽を聞いています",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "聞いている",
+          "en": "listening"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "音楽",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "あなたは手紙を書いています",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "書いている",
+          "en": "writing"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "手紙",
+          "en": "letter"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "あなたはコンピューターを使っています",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "使っている",
+          "en": "using"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "あなたは公園で走っています",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "走っている",
+          "en": "running"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "彼はサッカーをしています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "している",
+          "en": "playing"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼は数学を勉強しています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "勉強している",
+          "en": "studying"
+        },
+        {
+          "ja": "数学",
+          "en": "math"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼は手を洗っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "洗っている",
+          "en": "washing"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "手",
+          "en": "hands"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "彼は夕食を作っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "料理している",
+          "en": "cooking"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼は今眠っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "眠っている",
+          "en": "sleeping"
+        },
+        {
+          "ja": "今",
+          "en": "now"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼女は本を読んでいます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "読んでいる",
+          "en": "reading"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼女はケーキを作っています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "作っている",
+          "en": "making"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ケーキ",
+          "en": "cake"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼女は歌を歌っています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "歌っている",
+          "en": "singing"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "歌",
+          "en": "song"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼女は部屋を掃除しています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "掃除している",
+          "en": "cleaning"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼女は友だちと話しています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "話している",
+          "en": "talking"
+        },
+        {
+          "ja": "と",
+          "en": "with"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "友だち",
+          "en": "friend"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私たちは野球をしています",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "している",
+          "en": "playing"
+        },
+        {
+          "ja": "野球",
+          "en": "baseball"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "彼らは映画を見ています",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "見ている",
+          "en": "watching"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "映画",
+          "en": "movie"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "私は今勉強していません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "勉強している",
+          "en": "studying"
+        },
+        {
+          "ja": "今",
+          "en": "now"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼はテニスをしていません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "している",
+          "en": "playing"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "彼らは走っていません",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "走っている",
+          "en": "running"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "あなたは英語を勉強していますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "勉強している",
+          "en": "studying"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "彼は本を読んでいますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "読んでいる",
+          "en": "reading"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼女は夕食を作っていますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "料理している",
+          "en": "cooking"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼らはサッカーをしていますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "している",
+          "en": "playing"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "あなたは何をしていますか",
+      "chunks": [
+        {
+          "ja": "何",
+          "en": "What"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "している",
+          "en": "doing"
+        }
+      ]
+    }
+  ]
+}

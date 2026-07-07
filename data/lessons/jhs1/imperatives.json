@@ -1,0 +1,541 @@
+{
+  "id": "jhs1-imperatives",
+  "title": "中1 命令文",
+  "description": "命令文の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "ドアを開けなさい",
+      "chunks": [
+        {
+          "ja": "開けなさい",
+          "en": "Open"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ドア",
+          "en": "door"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "窓を閉めなさい",
+      "chunks": [
+        {
+          "ja": "閉めなさい",
+          "en": "Close"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "窓",
+          "en": "window"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "立ちなさい",
+      "chunks": [
+        {
+          "ja": "立ちなさい",
+          "en": "Stand"
+        },
+        {
+          "ja": "上へ",
+          "en": "up"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "座りなさい",
+      "chunks": [
+        {
+          "ja": "座りなさい",
+          "en": "Sit"
+        },
+        {
+          "ja": "下へ",
+          "en": "down"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "黒板を見なさい",
+      "chunks": [
+        {
+          "ja": "見なさい",
+          "en": "Look"
+        },
+        {
+          "ja": "に",
+          "en": "at"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "黒板",
+          "en": "board"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私の話を聞きなさい",
+      "chunks": [
+        {
+          "ja": "聞きなさい",
+          "en": "Listen"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "この本を読みなさい",
+      "chunks": [
+        {
+          "ja": "読みなさい",
+          "en": "Read"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "あなたの名前を書きなさい",
+      "chunks": [
+        {
+          "ja": "書きなさい",
+          "en": "Write"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "名前",
+          "en": "name"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "英語を話しなさい",
+      "chunks": [
+        {
+          "ja": "話しなさい",
+          "en": "Speak"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "ここに来なさい",
+      "chunks": [
+        {
+          "ja": "来なさい",
+          "en": "Come"
+        },
+        {
+          "ja": "ここへ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "そこへ行きなさい",
+      "chunks": [
+        {
+          "ja": "行きなさい",
+          "en": "Go"
+        },
+        {
+          "ja": "そこへ",
+          "en": "there"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "手を洗いなさい",
+      "chunks": [
+        {
+          "ja": "洗いなさい",
+          "en": "Wash"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "手",
+          "en": "hands"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "部屋を掃除しなさい",
+      "chunks": [
+        {
+          "ja": "掃除しなさい",
+          "en": "Clean"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "お母さんを手伝いなさい",
+      "chunks": [
+        {
+          "ja": "手伝いなさい",
+          "en": "Help"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "母",
+          "en": "mother"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "静かにしなさい",
+      "chunks": [
+        {
+          "ja": "〜しなさい",
+          "en": "Be"
+        },
+        {
+          "ja": "静かに",
+          "en": "quiet"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "気をつけなさい",
+      "chunks": [
+        {
+          "ja": "〜しなさい",
+          "en": "Be"
+        },
+        {
+          "ja": "気をつけて",
+          "en": "careful"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "親切にしなさい",
+      "chunks": [
+        {
+          "ja": "〜しなさい",
+          "en": "Be"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "宿題をしなさい",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Do"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "宿題",
+          "en": "homework"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "一生懸命勉強しなさい",
+      "chunks": [
+        {
+          "ja": "勉強しなさい",
+          "en": "Study"
+        },
+        {
+          "ja": "一生懸命",
+          "en": "hard"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "外で遊びなさい",
+      "chunks": [
+        {
+          "ja": "遊びなさい",
+          "en": "Play"
+        },
+        {
+          "ja": "外で",
+          "en": "outside"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "走ってはいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "走る",
+          "en": "run"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "叫んではいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "叫ぶ",
+          "en": "shout"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "これに触ってはいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "触る",
+          "en": "touch"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "遅れてはいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "である",
+          "en": "be"
+        },
+        {
+          "ja": "遅れている",
+          "en": "late"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "箱を開けてはいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "開ける",
+          "en": "open"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "箱",
+          "en": "box"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "食べすぎてはいけません",
+      "chunks": [
+        {
+          "ja": "〜してはいけません",
+          "en": "Don't"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "〜すぎる",
+          "en": "too"
+        },
+        {
+          "ja": "いくら",
+          "en": "much"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "サッカーをしましょう",
+      "chunks": [
+        {
+          "ja": "〜しましょう",
+          "en": "Let's"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "英語を勉強しましょう",
+      "chunks": [
+        {
+          "ja": "〜しましょう",
+          "en": "Let's"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "家へ帰りましょう",
+      "chunks": [
+        {
+          "ja": "〜しましょう",
+          "en": "Let's"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "昼食を食べましょう",
+      "chunks": [
+        {
+          "ja": "〜しましょう",
+          "en": "Let's"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    }
+  ]
+}

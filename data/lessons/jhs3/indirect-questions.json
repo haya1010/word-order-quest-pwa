@@ -1,0 +1,781 @@
+{
+  "id": "jhs3-indirect-questions",
+  "title": "中3 間接疑問文",
+  "description": "間接疑問文の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私はこれが何か知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私は彼が何を欲しがっているか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "欲しい",
+          "en": "wants"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私は彼女が何を好きか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は彼らが何をしているか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "している",
+          "en": "doing"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私はこの単語が何を意味するか知りません",
+      "chunks": [
+        {
+          "ja": "私は知らない",
+          "en": "I don't know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "単語",
+          "en": "word"
+        },
+        {
+          "ja": "意味する",
+          "en": "means"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "あなたは今何時か知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "時間",
+          "en": "time"
+        },
+        {
+          "ja": "それ",
+          "en": "it"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "あなたは彼が何と言ったか知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "言った",
+          "en": "said"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "これが何か私に教えてくれますか",
+      "chunks": [
+        {
+          "ja": "私に教えてくれますか",
+          "en": "Can you tell me"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "あなたが何を欲しいか教えてください",
+      "chunks": [
+        {
+          "ja": "私に教えてください",
+          "en": "Please tell me"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "欲しい",
+          "en": "want"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "私は何が起こったか知りたいです",
+      "chunks": [
+        {
+          "ja": "私は知りたい",
+          "en": "I want to know"
+        },
+        {
+          "ja": "何",
+          "en": "what"
+        },
+        {
+          "ja": "起こった",
+          "en": "happened"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私は彼が誰か知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "誰",
+          "en": "who"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "私は彼女が誰か知りません",
+      "chunks": [
+        {
+          "ja": "私は知らない",
+          "en": "I don't know"
+        },
+        {
+          "ja": "誰",
+          "en": "who"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "あなたはあの男性が誰か知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "誰",
+          "en": "who"
+        },
+        {
+          "ja": "〜ということ",
+          "en": "that"
+        },
+        {
+          "ja": "男性",
+          "en": "man"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "誰がこの本を書いたか教えてくれますか",
+      "chunks": [
+        {
+          "ja": "私に教えてくれますか",
+          "en": "Can you tell me"
+        },
+        {
+          "ja": "誰",
+          "en": "who"
+        },
+        {
+          "ja": "書いた",
+          "en": "wrote"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "誰が私に電話したか知りたいです",
+      "chunks": [
+        {
+          "ja": "私は知りたい",
+          "en": "I want to know"
+        },
+        {
+          "ja": "誰",
+          "en": "who"
+        },
+        {
+          "ja": "呼んだ",
+          "en": "called"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "私は彼がどこに住んでいるか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "どこ",
+          "en": "where"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "住んでいる",
+          "en": "lives"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "私は彼女がどこへ行ったか知りません",
+      "chunks": [
+        {
+          "ja": "私は知らない",
+          "en": "I don't know"
+        },
+        {
+          "ja": "どこ",
+          "en": "where"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "行った",
+          "en": "went"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "あなたは彼がどこに住んでいるか知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "どこ",
+          "en": "where"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "住んでいる",
+          "en": "lives"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "駅がどこにあるか教えてくれますか",
+      "chunks": [
+        {
+          "ja": "私に教えてくれますか",
+          "en": "Can you tell me"
+        },
+        {
+          "ja": "どこ",
+          "en": "where"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "駅",
+          "en": "station"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "あなたがどこでこのかばんを買ったか教えてください",
+      "chunks": [
+        {
+          "ja": "私に教えてください",
+          "en": "Please tell me"
+        },
+        {
+          "ja": "どこ",
+          "en": "where"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "買った",
+          "en": "bought"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私は彼がいつ来るか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "いつ",
+          "en": "when"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "来る",
+          "en": "come"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "私はその試合がいつ始まるか知りません",
+      "chunks": [
+        {
+          "ja": "私は知らない",
+          "en": "I don't know"
+        },
+        {
+          "ja": "いつ",
+          "en": "when"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "試合",
+          "en": "game"
+        },
+        {
+          "ja": "始まる",
+          "en": "starts"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "あなたは彼女がいつ家を出たか知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "いつ",
+          "en": "when"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "出た",
+          "en": "left"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "その電車がいつ到着するか教えてくれますか",
+      "chunks": [
+        {
+          "ja": "私に教えてくれますか",
+          "en": "Can you tell me"
+        },
+        {
+          "ja": "いつ",
+          "en": "when"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "電車",
+          "en": "train"
+        },
+        {
+          "ja": "到着する",
+          "en": "arrives"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "あなたの誕生日がいつか知りたいです",
+      "chunks": [
+        {
+          "ja": "私は知りたい",
+          "en": "I want to know"
+        },
+        {
+          "ja": "いつ",
+          "en": "when"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "誕生日",
+          "en": "birthday"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "私は彼がどのように英語を勉強するか知っています",
+      "chunks": [
+        {
+          "ja": "私は知っている",
+          "en": "I know"
+        },
+        {
+          "ja": "方法",
+          "en": "how"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "勉強する",
+          "en": "studies"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "私は彼女がどうやってこのケーキを作ったか知りません",
+      "chunks": [
+        {
+          "ja": "私は知らない",
+          "en": "I don't know"
+        },
+        {
+          "ja": "方法",
+          "en": "how"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "した",
+          "en": "made"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "ケーキ",
+          "en": "cake"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "あなたは彼がどうやって学校へ行くか知っていますか",
+      "chunks": [
+        {
+          "ja": "あなたは知っていますか",
+          "en": "Do you know"
+        },
+        {
+          "ja": "方法",
+          "en": "how"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "行く",
+          "en": "goes"
+        },
+        {
+          "ja": "〜する",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "このコンピューターの使い方を教えてくれますか",
+      "chunks": [
+        {
+          "ja": "私に教えてくれますか",
+          "en": "Can you tell me"
+        },
+        {
+          "ja": "方法",
+          "en": "how"
+        },
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "使う",
+          "en": "use"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "なぜあなたが遅れたのか教えてください",
+      "chunks": [
+        {
+          "ja": "私に教えてください",
+          "en": "Please tell me"
+        },
+        {
+          "ja": "なぜ",
+          "en": "why"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "だったら",
+          "en": "were"
+        },
+        {
+          "ja": "遅れている",
+          "en": "late"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,709 @@
+{
+  "id": "jhs1-be-verb",
+  "title": "中1 be動詞",
+  "description": "be動詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は生徒です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "生徒",
+          "en": "student"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私はうれしいです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "うれしい",
+          "en": "happy"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私は日本出身です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "出身",
+          "en": "from"
+        },
+        {
+          "ja": "日本",
+          "en": "Japan"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は教室にいます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私は12歳です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "12",
+          "en": "twelve"
+        },
+        {
+          "ja": "年",
+          "en": "years"
+        },
+        {
+          "ja": "歳",
+          "en": "old"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "あなたは私の友だちです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "友だち",
+          "en": "friend"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "あなたは親切です",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "あなたはとても背が高いです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "とても",
+          "en": "very"
+        },
+        {
+          "ja": "背が高い",
+          "en": "tall"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "あなたは公園にいます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "あなたはサッカーが得意です",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "楽しい",
+          "en": "good"
+        },
+        {
+          "ja": "に",
+          "en": "at"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "彼は私の兄弟です",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼は先生です",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼は今忙しいです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "忙しい",
+          "en": "busy"
+        },
+        {
+          "ja": "今",
+          "en": "now"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "彼は台所にいます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "台所",
+          "en": "kitchen"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼はとてもすてきです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "とても",
+          "en": "very"
+        },
+        {
+          "ja": "すてき",
+          "en": "nice"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼女は私の姉妹です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼女は看護師です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "看護師",
+          "en": "nurse"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼女は学校にいます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "に",
+          "en": "at"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼女はとても賢いです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "とても",
+          "en": "very"
+        },
+        {
+          "ja": "賢い",
+          "en": "smart"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "それは犬です",
+      "chunks": [
+        {
+          "ja": "それはです",
+          "en": "It is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私は疲れていません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "疲れている",
+          "en": "tired"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "あなたは遅れていません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "遅れている",
+          "en": "late"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼は医者ではありません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "医者",
+          "en": "doctor"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼女は怒っていません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "怒っている",
+          "en": "angry"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "それは私のかばんではありません",
+      "chunks": [
+        {
+          "ja": "それはです",
+          "en": "It is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "あなたは生徒ですか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "生徒",
+          "en": "student"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "彼はあなたのお父さんですか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "父",
+          "en": "father"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼女は家にいますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "に",
+          "en": "at"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "これは私のペンです",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "あれはあなたの机です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "机",
+          "en": "desk"
+        }
+      ]
+    }
+  ]
+}

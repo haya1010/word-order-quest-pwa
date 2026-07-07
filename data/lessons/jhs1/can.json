@@ -1,0 +1,705 @@
+{
+  "id": "jhs1-can",
+  "title": "中1 can",
+  "description": "canの基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は泳げます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "泳ぐ",
+          "en": "swim"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私は速く走れます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "走る",
+          "en": "run"
+        },
+        {
+          "ja": "速く",
+          "en": "fast"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私はテニスができます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は英語を話せます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私はカレーを作れます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "料理する",
+          "en": "cook"
+        },
+        {
+          "ja": "カレー",
+          "en": "curry"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "あなたはこのコンピューターを使えます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "使う",
+          "en": "use"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "あなたはこの本を読めます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "読む",
+          "en": "read"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "あなたはここへ来られます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "来る",
+          "en": "come"
+        },
+        {
+          "ja": "ここへ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "あなたは窓を開けられます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "開ける",
+          "en": "open"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "窓",
+          "en": "window"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "あなたは私を手伝えます",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "彼はサッカーができます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼は自転車に乗れます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "乗る",
+          "en": "ride"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼は日本語を話せます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "日本語",
+          "en": "Japanese"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "彼は昼食を作れます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "作る",
+          "en": "make"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼は上手に歌えます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "歌う",
+          "en": "sing"
+        },
+        {
+          "ja": "上手に",
+          "en": "well"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼女はピアノを弾けます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ピアノ",
+          "en": "piano"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼女は上手に踊れます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "踊る",
+          "en": "dance"
+        },
+        {
+          "ja": "上手に",
+          "en": "well"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼女は英語を読めます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "読む",
+          "en": "read"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼女は絵を描けます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "描く",
+          "en": "draw"
+        },
+        {
+          "ja": "絵",
+          "en": "pictures"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼女は漢字を書けます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "書く",
+          "en": "write"
+        },
+        {
+          "ja": "漢字",
+          "en": "kanji"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私たちは一緒に勉強できます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "一緒に",
+          "en": "together"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "彼らは野球ができます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "できる",
+          "en": "can"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "野球",
+          "en": "baseball"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "私は泳げません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "できない",
+          "en": "cannot"
+        },
+        {
+          "ja": "泳ぐ",
+          "en": "swim"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼はフランス語を話せません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "できない",
+          "en": "cannot"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "フランス語",
+          "en": "French"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "彼女はサッカーができません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "できない",
+          "en": "cannot"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "私たちはそこへ行けません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "できない",
+          "en": "cannot"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "そこへ",
+          "en": "there"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "あなたは泳げますか",
+      "chunks": [
+        {
+          "ja": "できますか",
+          "en": "Can"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "泳ぐ",
+          "en": "swim"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼はテニスができますか",
+      "chunks": [
+        {
+          "ja": "できますか",
+          "en": "Can"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼女は夕食を作れますか",
+      "chunks": [
+        {
+          "ja": "できますか",
+          "en": "Can"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "料理する",
+          "en": "cook"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "彼らは英語を話せますか",
+      "chunks": [
+        {
+          "ja": "できますか",
+          "en": "Can"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    }
+  ]
+}

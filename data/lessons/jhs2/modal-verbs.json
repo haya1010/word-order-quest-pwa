@@ -1,0 +1,765 @@
+{
+  "id": "jhs2-modal-verbs",
+  "title": "中2 助動詞",
+  "description": "助動詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は英語を勉強しなければなりません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "must"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "あなたは静かにしなければなりません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "must"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "静かな",
+          "en": "quiet"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "彼は今家へ帰らなければなりません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "must"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        },
+        {
+          "ja": "今",
+          "en": "now"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "彼女は部屋を掃除しなければなりません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "must"
+        },
+        {
+          "ja": "掃除する",
+          "en": "clean"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私たちは先生を手伝わなければなりません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "must"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "私たちの",
+          "en": "our"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私は宿題をしなければなりません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "have to"
+        },
+        {
+          "ja": "する",
+          "en": "do"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "宿題",
+          "en": "homework"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "あなたは制服を着なければなりません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "have to"
+        },
+        {
+          "ja": "着る",
+          "en": "wear"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "制服",
+          "en": "uniform"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "彼は早く起きなければなりません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "has to"
+        },
+        {
+          "ja": "着く",
+          "en": "get"
+        },
+        {
+          "ja": "起きる",
+          "en": "up"
+        },
+        {
+          "ja": "早く",
+          "en": "early"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "彼女はピアノを練習しなければなりません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "has to"
+        },
+        {
+          "ja": "練習する",
+          "en": "practice"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ピアノ",
+          "en": "piano"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "私たちは今出発しなければなりません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "しなければならない",
+          "en": "have to"
+        },
+        {
+          "ja": "出発する",
+          "en": "leave"
+        },
+        {
+          "ja": "今",
+          "en": "now"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "あなたはもっと一生懸命勉強するべきです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "するべき",
+          "en": "should"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "もっと一生懸命に",
+          "en": "harder"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼は医者に診てもらうべきです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "するべき",
+          "en": "should"
+        },
+        {
+          "ja": "見る",
+          "en": "see"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "医者",
+          "en": "doctor"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼女は水を飲むべきです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "するべき",
+          "en": "should"
+        },
+        {
+          "ja": "飲む",
+          "en": "drink"
+        },
+        {
+          "ja": "いくつかの",
+          "en": "some"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "私たちは親切にするべきです",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "するべき",
+          "en": "should"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼らは先生の話を聞くべきです",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "するべき",
+          "en": "should"
+        },
+        {
+          "ja": "聞く",
+          "en": "listen"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "彼らの",
+          "en": "their"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "あなたはこのペンを使ってもよいです",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "かもしれない",
+          "en": "may"
+        },
+        {
+          "ja": "使う",
+          "en": "use"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼は明日ここへ来るかもしれません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "かもしれない",
+          "en": "may"
+        },
+        {
+          "ja": "来る",
+          "en": "come"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        },
+        {
+          "ja": "明日",
+          "en": "tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "今日の午後は雨が降るかもしれません",
+      "chunks": [
+        {
+          "ja": "それは",
+          "en": "It"
+        },
+        {
+          "ja": "かもしれない",
+          "en": "may"
+        },
+        {
+          "ja": "雨が降る",
+          "en": "rain"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "午後",
+          "en": "afternoon"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼女は家にいるかもしれません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "かもしれない",
+          "en": "may"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "で",
+          "en": "at"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼らは答えを知っているかもしれません",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "かもしれない",
+          "en": "may"
+        },
+        {
+          "ja": "知っている",
+          "en": "know"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "答える",
+          "en": "answer"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "ここで走ってはいけません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "してはいけない",
+          "en": "must not"
+        },
+        {
+          "ja": "走る",
+          "en": "run"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "これに触ってはいけません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "してはいけない",
+          "en": "must not"
+        },
+        {
+          "ja": "触る",
+          "en": "touch"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼は遅れてはいけません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "してはいけない",
+          "en": "must not"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "遅れている",
+          "en": "late"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "私たちは大声で話してはいけません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "してはいけない",
+          "en": "must not"
+        },
+        {
+          "ja": "話す",
+          "en": "speak"
+        },
+        {
+          "ja": "大声で",
+          "en": "loudly"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "彼らはここで泳いではいけません",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "してはいけない",
+          "en": "must not"
+        },
+        {
+          "ja": "泳ぐ",
+          "en": "swim"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "あなたは急ぐ必要はありません",
+      "chunks": [
+        {
+          "ja": "あなたは",
+          "en": "You"
+        },
+        {
+          "ja": "する必要はない",
+          "en": "don't have to"
+        },
+        {
+          "ja": "急ぐ",
+          "en": "hurry"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "私はそこへ行く必要はありません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "する必要はない",
+          "en": "don't have to"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼は新しいかばんを買う必要はありません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "する必要はない",
+          "en": "doesn't have to"
+        },
+        {
+          "ja": "買う",
+          "en": "buy"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "新しい",
+          "en": "new"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼女は夕食を作る必要はありません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "する必要はない",
+          "en": "doesn't have to"
+        },
+        {
+          "ja": "料理する",
+          "en": "cook"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "私たちは今日支払う必要はありません",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "する必要はない",
+          "en": "don't have to"
+        },
+        {
+          "ja": "支払う",
+          "en": "pay"
+        },
+        {
+          "ja": "今日",
+          "en": "today"
+        }
+      ]
+    }
+  ]
+}

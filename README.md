@@ -17,6 +17,14 @@ python3 -m http.server
 http://localhost:8000/
 ```
 
+## PWAとして確認する
+
+PWAのService Workerは `file://` では動きません。
+インストールやオフライン動作を確認する場合は、上記のローカルサーバーで開いてください。
+
+Chromeなどで `http://localhost:8000/` を開くと、条件を満たした環境ではブラウザのインストールメニューからホーム画面/アプリとして追加できます。
+教材JSONは初回アクセス時にキャッシュされ、以後はオフラインでも開ける構成です。
+
 ## 教材追加
 
 1. `data/lessons/.../*.json` にlesson JSONを追加

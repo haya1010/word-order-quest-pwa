@@ -1,0 +1,729 @@
+{
+  "id": "jhs1-third-person-singular",
+  "title": "中1 三単現",
+  "description": "三単現の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "彼はサッカーをします",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "する",
+          "en": "plays"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "彼女はテニスをします",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "する",
+          "en": "plays"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私の兄弟は英語を勉強します",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "勉強する",
+          "en": "studies"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私の姉妹は本を読みます",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "姉妹",
+          "en": "sister"
+        },
+        {
+          "ja": "読む",
+          "en": "reads"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "彼は音楽が好きです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "音楽",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "彼女は犬が好きです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "犬",
+          "en": "dogs"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "トムはテレビを見ます",
+      "chunks": [
+        {
+          "ja": "トム",
+          "en": "Tom"
+        },
+        {
+          "ja": "見る",
+          "en": "watches"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "メアリーは手を洗います",
+      "chunks": [
+        {
+          "ja": "メアリー",
+          "en": "Mary"
+        },
+        {
+          "ja": "洗う",
+          "en": "washes"
+        },
+        {
+          "ja": "彼女の",
+          "en": "her"
+        },
+        {
+          "ja": "手",
+          "en": "hands"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "彼は学校へ行きます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "行く",
+          "en": "goes"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "彼女は公園へ行きます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "行く",
+          "en": "goes"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私の父は東京で働いています",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "父",
+          "en": "father"
+        },
+        {
+          "ja": "働く",
+          "en": "works"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "東京",
+          "en": "Tokyo"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "私の母は夕食を作ります",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "母",
+          "en": "mother"
+        },
+        {
+          "ja": "料理する",
+          "en": "cooks"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "ケンは自転車を持っています",
+      "chunks": [
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "ユミは猫を飼っています",
+      "chunks": [
+        {
+          "ja": "ユミ",
+          "en": "Yumi"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "その犬は速く走ります",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        },
+        {
+          "ja": "走る",
+          "en": "runs"
+        },
+        {
+          "ja": "速く",
+          "en": "fast"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼は野球をしません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "〜しない",
+          "en": "does not"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "野球",
+          "en": "baseball"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼女は数学が好きではありません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "〜しない",
+          "en": "does not"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "数学",
+          "en": "math"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "トムは理科を勉強しません",
+      "chunks": [
+        {
+          "ja": "トム",
+          "en": "Tom"
+        },
+        {
+          "ja": "〜しない",
+          "en": "does not"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "理科",
+          "en": "science"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "メアリーはテレビを見ません",
+      "chunks": [
+        {
+          "ja": "メアリー",
+          "en": "Mary"
+        },
+        {
+          "ja": "〜しない",
+          "en": "does not"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "私の兄弟は魚を食べません",
+      "chunks": [
+        {
+          "ja": "私の",
+          "en": "My"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "〜しない",
+          "en": "does not"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "魚",
+          "en": "fish"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "彼は答えを知りません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "〜しない",
+          "en": "doesn't"
+        },
+        {
+          "ja": "知っている",
+          "en": "know"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "答え",
+          "en": "answer"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "彼女はペンを持っていません",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "〜しない",
+          "en": "doesn't"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "ケンはバスで学校へ行きません",
+      "chunks": [
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        },
+        {
+          "ja": "〜しない",
+          "en": "doesn't"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        },
+        {
+          "ja": "で",
+          "en": "by"
+        },
+        {
+          "ja": "バス",
+          "en": "bus"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "ユミはピアノを弾きません",
+      "chunks": [
+        {
+          "ja": "ユミ",
+          "en": "Yumi"
+        },
+        {
+          "ja": "〜しない",
+          "en": "doesn't"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ピアノ",
+          "en": "piano"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "その犬は水が好きではありません",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        },
+        {
+          "ja": "〜しない",
+          "en": "doesn't"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼はサッカーをしますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Does"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "彼女は英語が好きですか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Does"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "トムは毎日勉強しますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Does"
+        },
+        {
+          "ja": "トム",
+          "en": "Tom"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "毎",
+          "en": "every"
+        },
+        {
+          "ja": "日",
+          "en": "day"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "メアリーは犬を飼っていますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Does"
+        },
+        {
+          "ja": "メアリー",
+          "en": "Mary"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "あなたの兄弟は本を読みますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Does"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "兄弟",
+          "en": "brother"
+        },
+        {
+          "ja": "読む",
+          "en": "read"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    }
+  ]
+}

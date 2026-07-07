@@ -1,0 +1,689 @@
+{
+  "id": "jhs1-nouns-articles-plurals",
+  "title": "中1 名詞・冠詞・複数形",
+  "description": "名詞・冠詞・複数形の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私はペンを持っています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "彼女は猫を飼っています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "彼は自転車を持っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "自転車",
+          "en": "bike"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "これはりんごです",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "an"
+        },
+        {
+          "ja": "りんご",
+          "en": "apple"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "あれはオレンジです",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "an"
+        },
+        {
+          "ja": "オレンジ",
+          "en": "orange"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私は卵を食べます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "1つの",
+          "en": "an"
+        },
+        {
+          "ja": "卵",
+          "en": "egg"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼は生徒です",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "生徒",
+          "en": "student"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "彼女は先生です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "これは太陽です",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "太陽",
+          "en": "sun"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "あれは月です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "月",
+          "en": "moon"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私はその本が好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "その犬は大きいです",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "大きい",
+          "en": "big"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "その女の子は親切です",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "女の子",
+          "en": "girl"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "親切",
+          "en": "kind"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "その男の子は背が高いです",
+      "chunks": [
+        {
+          "ja": "その",
+          "en": "The"
+        },
+        {
+          "ja": "男の子",
+          "en": "boy"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "背が高い",
+          "en": "tall"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "私は2本のペンを持っています",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "2つの",
+          "en": "two"
+        },
+        {
+          "ja": "ペン",
+          "en": "pens"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼女は3匹の猫を飼っています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "3つの",
+          "en": "three"
+        },
+        {
+          "ja": "猫",
+          "en": "cats"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼は5冊の本を持っています",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "持っている",
+          "en": "has"
+        },
+        {
+          "ja": "5つの",
+          "en": "five"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "たくさんの生徒がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "生徒たち",
+          "en": "students"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "2匹の犬がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "2つの",
+          "en": "two"
+        },
+        {
+          "ja": "犬",
+          "en": "dogs"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "4脚の椅子があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "4つの",
+          "en": "four"
+        },
+        {
+          "ja": "椅子",
+          "en": "chairs"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "これは私のかばんです",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "あれはあなたの鉛筆です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "鉛筆",
+          "en": "pencil"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "これらは私の靴です",
+      "chunks": [
+        {
+          "ja": "これらは",
+          "en": "These"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "靴",
+          "en": "shoes"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "あれらはあなたの本です",
+      "chunks": [
+        {
+          "ja": "あれらは",
+          "en": "Those"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "これは花です",
+      "chunks": [
+        {
+          "ja": "これは",
+          "en": "This"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "花",
+          "en": "flower"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "あれは木です",
+      "chunks": [
+        {
+          "ja": "あれは",
+          "en": "That"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "木",
+          "en": "tree"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "これらはりんごです",
+      "chunks": [
+        {
+          "ja": "これらは",
+          "en": "These"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "りんご",
+          "en": "apples"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "あれらはオレンジです",
+      "chunks": [
+        {
+          "ja": "あれらは",
+          "en": "Those"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "オレンジ",
+          "en": "oranges"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "私はこれらの写真が好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "これらの",
+          "en": "these"
+        },
+        {
+          "ja": "絵",
+          "en": "pictures"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "彼女はあれらの男の子たちを知っています",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "知っている",
+          "en": "knows"
+        },
+        {
+          "ja": "あれらの",
+          "en": "those"
+        },
+        {
+          "ja": "男の子たち",
+          "en": "boys"
+        }
+      ]
+    }
+  ]
+}

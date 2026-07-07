@@ -1,0 +1,749 @@
+{
+  "id": "jhs2-gerunds",
+  "title": "中2 動名詞",
+  "description": "動名詞の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "英語を勉強することは楽しいです",
+      "chunks": [
+        {
+          "ja": "勉強すること",
+          "en": "Studying"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "楽しい",
+          "en": "fun"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "サッカーをすることはわくわくします",
+      "chunks": [
+        {
+          "ja": "すること",
+          "en": "Playing"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "わくわくする",
+          "en": "exciting"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "本を読むことは大切です",
+      "chunks": [
+        {
+          "ja": "読むこと",
+          "en": "Reading"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "大切",
+          "en": "important"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "海で泳ぐことは楽しいです",
+      "chunks": [
+        {
+          "ja": "泳ぐこと",
+          "en": "Swimming"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "海",
+          "en": "sea"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "楽しい",
+          "en": "fun"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "夕食を作ることは時間がかかります",
+      "chunks": [
+        {
+          "ja": "作ること",
+          "en": "Cooking"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        },
+        {
+          "ja": "かかる",
+          "en": "takes"
+        },
+        {
+          "ja": "時間",
+          "en": "time"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私は英語を勉強することを楽しみます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "楽しむ",
+          "en": "enjoy"
+        },
+        {
+          "ja": "勉強すること",
+          "en": "studying"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼はサッカーをすることを楽しみます",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "楽しむ",
+          "en": "enjoys"
+        },
+        {
+          "ja": "すること",
+          "en": "playing"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "彼女は本を読むことを楽しみます",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "楽しむ",
+          "en": "enjoys"
+        },
+        {
+          "ja": "読むこと",
+          "en": "reading"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "私たちは映画を見ることを楽しみます",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "楽しむ",
+          "en": "enjoy"
+        },
+        {
+          "ja": "見ること",
+          "en": "watching"
+        },
+        {
+          "ja": "映画",
+          "en": "movies"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "彼らは音楽を聞くことを楽しみます",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "楽しむ",
+          "en": "enjoy"
+        },
+        {
+          "ja": "聞くこと",
+          "en": "listening"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "音楽",
+          "en": "music"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私は宿題をすることを終えました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "すること",
+          "en": "doing"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "宿題",
+          "en": "homework"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼は部屋を掃除し終えました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "掃除すること",
+          "en": "cleaning"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼女はその本を読み終えました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "読むこと",
+          "en": "reading"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "私たちは昼食を食べ終えました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "食べること",
+          "en": "eating"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼らはそのゲームをし終えました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "すること",
+          "en": "playing"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "試合",
+          "en": "game"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "私は英語を勉強することが好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "勉強すること",
+          "en": "studying"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "私は英語を勉強するのが好きです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "好き",
+          "en": "like"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼はテニスをすることが好きです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "すること",
+          "en": "playing"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "彼はテニスをするのが好きです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "好き",
+          "en": "likes"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼女は歌い始めました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "始めた",
+          "en": "started"
+        },
+        {
+          "ja": "歌うこと",
+          "en": "singing"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "彼女は歌い始めました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "始めた",
+          "en": "started"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "歌う",
+          "en": "sing"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "私はテレビを見るのをやめました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "やめた",
+          "en": "stopped"
+        },
+        {
+          "ja": "見ること",
+          "en": "watching"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼は走るのをやめました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "やめた",
+          "en": "stopped"
+        },
+        {
+          "ja": "走ること",
+          "en": "running"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "手伝ってくれてありがとう",
+      "chunks": [
+        {
+          "ja": "ありがとう",
+          "en": "Thank"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "〜してくれて",
+          "en": "for"
+        },
+        {
+          "ja": "手伝うこと",
+          "en": "helping"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "私は泳ぐのが得意です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "よい",
+          "en": "good"
+        },
+        {
+          "ja": "で",
+          "en": "at"
+        },
+        {
+          "ja": "泳ぐこと",
+          "en": "swimming"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼女は英語を学ぶことに興味があります",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "興味がある",
+          "en": "interested"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "学ぶこと",
+          "en": "learning"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "私はテニスをしたいです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "欲しい",
+          "en": "want"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "私は数学を勉強することに決めました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "決めた",
+          "en": "decided"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "数学",
+          "en": "math"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "私は数学を勉強し終えました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "終えた",
+          "en": "finished"
+        },
+        {
+          "ja": "勉強すること",
+          "en": "studying"
+        },
+        {
+          "ja": "数学",
+          "en": "math"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "私は英語を話す練習をしました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "練習した",
+          "en": "practiced"
+        },
+        {
+          "ja": "話すこと",
+          "en": "speaking"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    }
+  ]
+}

@@ -82,6 +82,169 @@ const fallbackLessons = {
   }
 };
 
+/* ---------- Haptics抽象層。振動の実装詳細はここに閉じ込める(Capacitor移行時はここだけ差し替え) ---------- */
+
+const HAPTIC_PATTERNS = {
+  tap: 10,
+  correct: 20,
+  wrong: [60, 40, 60],
+  warning: [30, 50, 30],
+  success: [20, 40, 80],
+  timeup: [100, 60, 100]
+};
+
+function playHaptic(type) {
+  const pattern = HAPTIC_PATTERNS[type];
+  if (!pattern) return;
+  if (typeof navigator !== "undefined" && typeof navigator.vibrate === "function") {
+    navigator.vibrate(pattern);
+  }
+}
+
+/* ---------- モンスターロースター(§11) ---------- */
+
+const NORMAL_SPECIES = ["inky", "dust", "tome", "pncl"];
+
+const FOE_DISPLAY_NAMES = {
+  inky: "インキー",
+  dust: "ケシカス",
+  tome: "レキシコン",
+  pncl: "カキカキ",
+  clock: "チクタク",
+  dex: "グランデックス"
+};
+
+const SKIN_TIERS = {
+  inky: { mutate: "skin--teal", rare: "skin--amber" },
+  dust: { mutate: "skin--rose", rare: "skin--crimson" },
+  tome: { mutate: "skin--jade", rare: "skin--rose" },
+  pncl: { mutate: "skin--teal", rare: "skin--jade" },
+  clock: { mutate: "skin--teal", rare: "skin--crimson" },
+  dex: { mutate: null, rare: null }
+};
+
+const MONSTER_STATE_DURATIONS = { attack: 760, entrance: 750, hit: 500 };
+
+const MONSTER_TEMPLATES = {
+  inky: () => `
+    <div id="questMonster" class="inky monster--idle" role="img" aria-label="Inky, the inkpot slime">
+      <div class="inky__shadow"></div>
+      <div class="inky__drop"></div>
+      <div class="inky__pot"><div class="inky__label">ink</div></div>
+      <div class="inky__drip inky__drip--l"></div>
+      <div class="inky__drip inky__drip--r"></div>
+      <div class="inky__blob"></div>
+      <div class="inky__eye inky__eye--l"></div>
+      <div class="inky__eye inky__eye--r"></div>
+      <div class="inky__mouth"></div>
+    </div>
+  `,
+  dust: () => `
+    <div id="questMonster" class="dust monster--idle" role="img" aria-label="Kesukasu, the eraser-dust ghost">
+      <div class="dust__shadow"></div>
+      <div class="dust__body">
+        <div class="dust__sleeve"></div>
+        <div class="dust__eye dust__eye--l"></div>
+        <div class="dust__eye dust__eye--r"></div>
+        <div class="dust__mouth"></div>
+      </div>
+      <div class="dust__bit dust__bit--1"></div>
+      <div class="dust__bit dust__bit--2"></div>
+      <div class="dust__bit dust__bit--3"></div>
+    </div>
+  `,
+  tome: () => `
+    <div id="questMonster" class="tome monster--idle" role="img" aria-label="Lexicon, the word-eating grimoire">
+      <div class="tome__shadow"></div>
+      <span class="tome__rune tome__rune--1">W</span>
+      <span class="tome__rune tome__rune--2">Q</span>
+      <span class="tome__rune tome__rune--3">a</span>
+      <div class="tome__pages"></div>
+      <div class="tome__cover">
+        <div class="tome__brow tome__brow--l"></div>
+        <div class="tome__brow tome__brow--r"></div>
+        <div class="tome__eye tome__eye--l"></div>
+        <div class="tome__eye tome__eye--r"></div>
+        <div class="tome__maw"></div>
+        <div class="tome__ribbon"></div>
+        <div class="tome__clasp"></div>
+      </div>
+    </div>
+  `,
+  pncl: () => `
+    <div id="questMonster" class="pncl monster--idle" role="img" aria-label="Kakikaki, the pencil swordsman">
+      <div class="pncl__shadow"></div>
+      <div class="pncl__scrib"></div>
+      <div class="pncl__cap"></div>
+      <div class="pncl__ring"></div>
+      <div class="pncl__body"></div>
+      <div class="pncl__collar"></div>
+      <div class="pncl__tip"></div>
+      <div class="pncl__eye pncl__eye--l"></div>
+      <div class="pncl__eye pncl__eye--r"></div>
+      <div class="pncl__mouth"></div>
+    </div>
+  `,
+  clock: () => `
+    <div id="questMonster" class="clock monster--idle" role="img" aria-label="Ticktock, the time-up monster">
+      <div class="clock__shadow"></div>
+      <span class="clock__spark clock__spark--1">!</span>
+      <span class="clock__spark clock__spark--2">5s</span>
+      <div class="clock__bell clock__bell--l"></div>
+      <div class="clock__bell clock__bell--r"></div>
+      <div class="clock__hammer"></div>
+      <div class="clock__body">
+        <div class="clock__face">
+          <div class="clock__eye clock__eye--l"></div>
+          <div class="clock__eye clock__eye--r"></div>
+          <div class="clock__hand clock__hand--h"></div>
+          <div class="clock__hand clock__hand--m"></div>
+          <div class="clock__pin"></div>
+          <div class="clock__mouth"></div>
+        </div>
+      </div>
+      <div class="clock__foot clock__foot--l"></div>
+      <div class="clock__foot clock__foot--r"></div>
+    </div>
+  `,
+  dex: () => `
+    <div id="questMonster" class="dex monster--idle" role="img" aria-label="Grandex, the great dictionary overlord">
+      <div class="dex__aura"></div>
+      <div class="dex__shadow"></div>
+      <div class="dex__arm dex__arm--l"></div>
+      <div class="dex__arm dex__arm--r"></div>
+      <div class="dex__pages"></div>
+      <div class="dex__body"></div>
+      <div class="dex__crown"></div>
+      <div class="dex__eye dex__eye--l"></div>
+      <div class="dex__eye dex__eye--r"></div>
+      <div class="dex__mouth"></div>
+      <div class="dex__title">GRAND</div>
+    </div>
+  `
+};
+
+function pickSkin(species, level) {
+  const tiers = SKIN_TIERS[species];
+  if (!tiers) return null;
+  if (level >= 5) return tiers.rare;
+  if (level >= 3) return tiers.mutate;
+  return null;
+}
+
+function pickNextFoe() {
+  if ((state.defeatCount + 1) % 5 === 0) return { species: "dex", bars: 2 };
+  if (state.timeRemaining <= 15 && Math.random() < 0.5) return { species: "clock", bars: 1 };
+  const pool = NORMAL_SPECIES.filter(species => species !== state.lastSpecies);
+  return { species: pool[Math.floor(Math.random() * pool.length)], bars: 1 };
+}
+
+function renderMonsterMarkup(species, skin) {
+  const template = MONSTER_TEMPLATES[species];
+  const inner = template ? template() : "";
+  return skin ? `<div class="skin ${escapeHtml(skin)}">${inner}</div>` : inner;
+}
+
 const state = {
   currentScreen: "home",
   selectedCourseId: null,
@@ -107,7 +270,12 @@ const state = {
   autoAdvanceTimerId: null,
   monsterStateTimerId: null,
   roundStartedAt: 0,
-  timeRemaining: GAME_SECONDS
+  timeRemaining: GAME_SECONDS,
+  paused: false,
+  dangerNotified: false,
+  currentFoe: null,
+  lastSpecies: null,
+  defeatCount: 0
 };
 
 init();
@@ -141,7 +309,10 @@ function normalizeCourses(courses = []) {
 }
 
 function render() {
-  if (state.currentScreen !== "game") stopTimer();
+  if (state.currentScreen !== "game") {
+    stopTimer();
+    exitGameBody();
+  }
   if (state.currentScreen === "home") renderHome();
   if (state.currentScreen === "units") renderUnits();
   if (state.currentScreen === "game") renderGame();
@@ -149,14 +320,16 @@ function render() {
   if (state.currentScreen === "settings") renderSettings();
 }
 
-function renderHeader(title, subtitle, stats = "") {
+function enterGameBody() { document.body.classList.add("in-game"); }
+function exitGameBody() { document.body.classList.remove("in-game"); }
+
+function renderHeader(title, subtitle) {
   return `
     <header class="app-header">
       <div>
         <h1>${escapeHtml(title)}</h1>
         <div class="subtitle">${escapeHtml(subtitle)}</div>
       </div>
-      ${stats}
     </header>
   `;
 }
@@ -277,13 +450,19 @@ function startLesson(lesson, courseId, unitId) {
   state.score = 0;
   state.streak = 0;
   state.correctCount = 0;
+  state.defeatCount = 0;
+  state.lastSpecies = null;
+  state.paused = false;
+  state.dangerNotified = false;
   state.stageOrder = makeStageOrder();
   state.stageCursor = 0;
   state.currentStageIndex = state.stageOrder[0] || 0;
   state.timeRemaining = GAME_SECONDS;
   localStorage.setItem(STORAGE.lastCourse, courseId || "");
   localStorage.setItem(STORAGE.lastUnit, unitId || "");
+  startNewFoe();
   resetQuestion();
+  enterGameBody();
   renderGame();
   startTimer();
 }
@@ -376,115 +555,101 @@ function renderSettingsState() {
   text("#soundBtn", state.soundEnabled ? "音声 ON" : "音声 OFF");
 }
 
+/* ---------- Game画面 ---------- */
+
 function renderGame() {
-  const lesson = state.currentLesson;
-  const course = selectedCourse();
-  const unit = selectedUnit();
-  const stats = `
-    <div class="stats">
-      <div class="stat">正解数<strong id="questionCount">${state.correctCount}</strong></div>
-      <div class="stat">スコア<strong id="score">${state.score}</strong></div>
-      <div class="stat">連続正解<strong id="streak">${state.streak}</strong></div>
-    </div>
-  `;
   app.innerHTML = `
-    ${renderHeader("Word Order Quest", `${course?.title || "カスタム練習"} > ${unit?.title || lesson.title}`, stats)}
-    <section class="screen">
-      ${state.fetchWarning ? `<div class="notice">${escapeHtml(state.fetchWarning)}</div>` : ""}
-      <div class="toolbar">
-        <button class="btn" id="homeBtn">ホームに戻る</button>
-        ${state.selectedCourseId !== "custom" ? `<button class="btn" id="unitsBtn">単元一覧に戻る</button>` : ""}
-        <button class="btn" id="settingsBtn">共通設定</button>
-      </div>
-      <div class="game-main">
-        <div class="workbench">
-          <section class="panel time-panel">
-            <div class="time-readout" id="timeReadout"><span>Time Attack</span><strong id="timeLeft">${state.timeRemaining.toFixed(1)}</strong></div>
-            <div class="progress" id="timeProgress"><span id="progressBar"></span></div>
-          </section>
-          <section class="panel">
-            <div class="panel-head"><span>Japanese source</span><span id="levelLabel"></span></div>
-            <p class="source-ja" id="sourceJa"></p>
-          </section>
-          <section class="panel">
-            <div class="panel-head"><span>English order rail</span><span id="chunkCount"></span></div>
-            <div class="chunk-rail" id="chunkRail"></div>
-          </section>
-          <section class="panel">
-            <div class="panel-head"><span>Your sentence</span><span id="answerMeta"></span></div>
-            <div class="answer-zone empty" id="answerZone"></div>
-          </section>
-          <section class="panel">
-            <div class="panel-head"><span>Word bank</span><span id="bankMeta"></span></div>
-            <div class="bank" id="bank"></div>
-          </section>
-          <div class="feedback" id="feedback"></div>
-        </div>
-        <aside class="side">
-          <section class="panel monster-panel">
-            ${renderMonsterMarkup()}
-          </section>
-        </aside>
-      </div>
-    </section>
-  `;
-
-  app.querySelector("#homeBtn").addEventListener("click", goHome);
-  const unitsBtn = app.querySelector("#unitsBtn");
-  if (unitsBtn) unitsBtn.addEventListener("click", goUnits);
-  app.querySelector("#settingsBtn").addEventListener("click", openSettings);
-
-  renderGameState();
-  setMonsterHp(getMonsterHpPercent());
-  setMonsterCombo(state.streak);
-  syncMonsterTimerState();
-}
-
-function renderMonsterMarkup() {
-  return `
-    <div id="questMonster" class="monster monster--idle" role="img" aria-label="Word Order Quest monster">
-      <div class="monster__aura"></div>
-      <div class="monster__shadow"></div>
-      <div class="monster__hud" aria-hidden="true">
-        <div class="monster__hud-row">
-          <div class="monster__status"></div>
-          <div class="monster__combo" id="monsterCombo">Combo x0</div>
-        </div>
-        <div class="monster__hp">
-          <div class="monster__hp-fill"></div>
-        </div>
-      </div>
-      <div class="monster__horn monster__horn--left"></div>
-      <div class="monster__horn monster__horn--right"></div>
-      <div class="monster__ear monster__ear--left"></div>
-      <div class="monster__ear monster__ear--right"></div>
-      <div class="monster__hand monster__hand--left"></div>
-      <div class="monster__hand monster__hand--right"></div>
-      <div class="monster__body">
-        <div class="monster__eye monster__eye--left"></div>
-        <div class="monster__eye monster__eye--right"></div>
-        <div class="monster__cheek monster__cheek--left"></div>
-        <div class="monster__cheek monster__cheek--right"></div>
-        <div class="monster__mouth" aria-hidden="true">
-          <svg viewBox="0 0 80 60" focusable="false">
-            <path d="M16 16 C24 42, 56 42, 64 16" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
-            <path class="monster__tooth" d="M32 30 L39 30 L35.5 40 Z" />
-            <path class="monster__tooth" d="M45 30 L52 30 L48.5 40 Z" />
+    <div class="game-root" id="gameRoot">
+      <header class="hud">
+        <button class="hud-btn" id="pauseBtn" type="button" aria-label="ポーズ">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+            <rect x="3" y="2" width="4" height="12" rx="1.5"/>
+            <rect x="9" y="2" width="4" height="12" rx="1.5"/>
           </svg>
+        </button>
+        <div class="hud-time">
+          <div class="hud-time-top time-readout" id="timeReadout">
+            <span class="hud-label">Time</span>
+            <strong id="timeLeft">${state.timeRemaining.toFixed(1)}</strong>
+          </div>
+          <div class="progress" id="timeProgress"><span id="progressBar"></span></div>
+        </div>
+        <div class="hud-stats">
+          <div class="hud-stat">
+            <span class="hud-label">Score</span>
+            <strong id="score">${state.score}</strong>
+          </div>
+          <div class="hud-combo" id="comboBadge">
+            <span class="hud-label">Combo</span>
+            <strong id="streak">×${state.streak}</strong>
+          </div>
+        </div>
+      </header>
+
+      <main class="battle-stage">
+        <div class="foe-plate" id="foePlate">
+          <div class="foe-plate-row">
+            <span class="foe-name" id="foeName"></span>
+            <span class="foe-bars" id="foeBars" hidden></span>
+          </div>
+          <div class="foe-hp"><span class="foe-hp-fill"></span></div>
+        </div>
+
+        <div class="boss-stamp" id="bossStamp" hidden><span>BOSS!!</span></div>
+
+        <div id="monsterSlot"></div>
+
+        <div class="quest-board">
+          <p class="source-ja" id="sourceJa"></p>
+          <div class="chunk-rail" id="chunkRail"></div>
+        </div>
+
+        <div class="fx-layer" id="fxLayer">
+          <div class="fx-slash" id="fxSlash"></div>
+          <div class="fx-score-pop" id="fxScorePop"></div>
+        </div>
+
+        <div class="feedback-toast" id="feedbackToast" hidden></div>
+      </main>
+
+      <section class="answer-dock">
+        <div class="answer-zone" id="answerZone"></div>
+      </section>
+
+      <section class="bank-dock">
+        <div class="bank" id="bank"></div>
+      </section>
+
+      <div class="overlay" id="pauseOverlay" hidden>
+        <div class="overlay-panel">
+          <h2 class="overlay-title">PAUSE</h2>
+          <div class="overlay-actions">
+            <button class="gbtn primary" id="resumeBtn" type="button">再開</button>
+            <button class="gbtn" id="pauseRetryBtn" type="button">もう一度</button>
+            ${state.selectedCourseId !== "custom" ? `<button class="gbtn" id="pauseUnitsBtn" type="button">単元一覧</button>` : ""}
+            <button class="gbtn" id="pauseHomeBtn" type="button">ホーム</button>
+            <button class="gbtn" id="pauseSettingsBtn" type="button">共通設定</button>
+          </div>
         </div>
       </div>
-      <div class="monster__spark monster__spark--one" aria-hidden="true">
-        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
-      </div>
-      <div class="monster__spark monster__spark--two" aria-hidden="true">
-        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
-      </div>
-      <div class="monster__spark monster__spark--three" aria-hidden="true">
-        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
-      </div>
-      <div class="monster__flash"></div>
+
+      <div class="overlay" id="resultOverlay" hidden></div>
     </div>
   `;
+
+  app.querySelector("#pauseBtn").addEventListener("click", pauseGame);
+  app.querySelector("#resumeBtn").addEventListener("click", resumeGame);
+  app.querySelector("#pauseRetryBtn").addEventListener("click", restartGame);
+  app.querySelector("#pauseUnitsBtn")?.addEventListener("click", goUnits);
+  app.querySelector("#pauseHomeBtn").addEventListener("click", goHome);
+  app.querySelector("#pauseSettingsBtn").addEventListener("click", openSettings);
+
+  renderMonster();
+  renderFoePlate();
+  renderGameState();
+  setMonsterHp(computeFoeHpPercent());
+  playMonsterOnce("entrance");
+  if (state.currentFoe.species === "dex") playBossStamp();
 }
 
 function renderGameState() {
@@ -492,19 +657,13 @@ function renderGameState() {
   const answerIds = new Set(state.answer);
   const available = state.tokens.filter(token => !answerIds.has(token.id));
 
-  text("#questionCount", state.correctCount);
   text("#score", state.score);
-  text("#streak", state.streak);
-  text("#levelLabel", stage.level || `Stage ${state.currentStageIndex + 1}`);
+  updateCombo();
   text("#sourceJa", stage.sourceJa);
-  text("#chunkCount", `${stage.chunks.length} parts / ${state.tokens.length} tokens`);
-  text("#answerMeta", `${state.answer.length} / ${state.tokens.length}`);
-  text("#bankMeta", `${available.length} left`);
 
   renderChunks(stage);
   renderAnswer();
   renderBank(available);
-  hideFeedback();
   renderTimer();
 }
 
@@ -560,14 +719,40 @@ function tokenById(id) {
   return state.tokens.find(token => token.id === id);
 }
 
+function startNewFoe() {
+  const picked = pickNextFoe();
+  const level = state.defeatCount + 1;
+  state.currentFoe = {
+    species: picked.species,
+    bars: picked.bars,
+    barsLeft: picked.bars,
+    level,
+    skin: pickSkin(picked.species, level)
+  };
+  state.lastSpecies = picked.species;
+}
+
+function computeFoeHpPercent() {
+  const foe = state.currentFoe;
+  if (!foe || !state.tokens.length) return 100;
+  const progress = state.answer.length / state.tokens.length;
+  const totalBars = foe.bars;
+  const barsCleared = totalBars - foe.barsLeft;
+  const startPct = ((totalBars - barsCleared) / totalBars) * 100;
+  const endPct = ((totalBars - barsCleared - 1) / totalBars) * 100;
+  return Math.max(0, Math.round(startPct - (startPct - endPct) * progress));
+}
+
 function resetQuestion() {
   state.tokens = buildTokens(currentStage());
   state.bankOrder = shuffle(state.tokens.map(token => token.id));
   state.answer = [];
   state.stageLocked = false;
   state.lastPoppedId = null;
-  setMonsterHp(100);
-  setMonsterCombo(state.streak);
+  state.roundStartedAt = Date.now();
+  const toast = app.querySelector("#feedbackToast");
+  if (toast) toast.hidden = true;
+  setMonsterHp(computeFoeHpPercent());
 }
 
 function renderChunks(stage) {
@@ -615,7 +800,6 @@ function renderAnswer() {
       chip.classList.add("pop");
       setTimeout(() => chip.classList.remove("pop"), 220);
     }
-    chip.classList.add("correct-piece");
     zone.appendChild(chip);
   });
 }
@@ -644,29 +828,38 @@ function makeTokenButton(token, inAnswer) {
 }
 
 function chooseToken(token, element) {
+  if (state.paused) return;
   if (state.stageLocked) return;
+  playHaptic("tap");
   const expected = getNextExpectedToken();
   if (!expected) return;
   if (token.id !== expected.id) {
     state.streak = 0;
     state.timeRemaining = Math.max(0, state.timeRemaining - WRONG_PENALTY_SECONDS);
+    playHaptic("wrong");
     playEffect("wrong");
-    setMonsterCombo(state.streak);
+    updateCombo();
     playMonsterOnce("attack");
     markWrongChoice(element);
     shakeAnswerZone();
-    showFeedback("bad", `違います。残り時間 -${WRONG_PENALTY_SECONDS}秒。`);
-    text("#streak", state.streak);
+    triggerScreenShake();
     renderTimer();
     if (state.timeRemaining <= 0) handleTimeUp();
     return;
   }
+
+  playHaptic("correct");
   playAudioToken(token);
+  const bankEl = app.querySelector("#bank");
+  const fromRect = element.getBoundingClientRect();
+  const bankRects = captureTokenRects(bankEl);
   state.answer.push(token.id);
   state.lastPoppedId = token.id;
   renderGameState();
-  setMonsterHp(getMonsterHpPercent());
-  setMonsterCombo(state.streak);
+  setMonsterHp(computeFoeHpPercent());
+  updateCombo();
+  flyTokenToAnswer(app.querySelector("#answerZone"), token.id, fromRect);
+  playBankFlip(bankEl, bankRects);
   if (state.answer.length === state.tokens.length) completeQuestion();
   else playMonsterOnce("hit");
 }
@@ -684,31 +877,66 @@ function markWrongChoice(element) {
 
 function completeQuestion() {
   state.stageLocked = true;
+  const foe = state.currentFoe;
   const base = state.mode === "word" ? 20 : 12;
   state.streak += 1;
   state.correctCount += 1;
-  const timeBonus = state.streak % STREAK_BONUS_EVERY === 0 ? STREAK_BONUS_SECONDS : 0;
+  const bossMidFight = foe.species === "dex" && foe.barsLeft > 1;
+  const comboBonus = state.streak % STREAK_BONUS_EVERY === 0 ? STREAK_BONUS_SECONDS : 0;
+  const defeatBonus = bossMidFight ? 0 : foe.species === "clock" ? 2 : foe.species === "dex" ? 5 : 0;
+  const timeBonus = comboBonus + defeatBonus;
   state.timeRemaining = Math.min(GAME_SECONDS, state.timeRemaining + timeBonus);
-  state.score += base + timeBonus;
+  const points = Math.round((base + comboBonus) * (1 + 0.1 * (foe.level - 1)));
+  state.score += points;
   updateProgress();
+  playHaptic("success");
   flashAnswerZone();
-  showFeedback("good", `正解。${timeBonus ? `連続正解ボーナス +${timeBonus}秒` : ""}<br>${escapeHtml(targetText())}`);
+  playFxSlashAndScore(points);
+
+  const bonusLabel = [
+    comboBonus ? `連続正解ボーナス +${comboBonus}秒` : "",
+    defeatBonus ? `撃破ボーナス +${defeatBonus}秒` : ""
+  ].filter(Boolean).join(" / ");
+  showFeedbackToast(`正解！${bonusLabel ? ` ${bonusLabel}` : ""}<br><strong>${escapeHtml(targetText())}</strong>`);
+
   text("#score", state.score);
-  text("#streak", state.streak);
-  text("#questionCount", state.correctCount);
-  setMonsterHp(0);
-  setMonsterCombo(state.streak);
-  setMonsterState("defeated");
+  updateCombo();
   renderTimer();
-  state.autoAdvanceTimerId = setTimeout(nextQuestion, 720);
+
+  if (bossMidFight) {
+    foe.barsLeft -= 1;
+    renderFoePlate();
+    setMonsterHp(computeFoeHpPercent());
+    playMonsterOnce("hit");
+    triggerScreenShake();
+    state.autoAdvanceTimerId = setTimeout(advanceStageKeepingFoe, 720);
+  } else {
+    state.defeatCount += 1;
+    setMonsterHp(0);
+    setMonsterState("defeated");
+    state.autoAdvanceTimerId = setTimeout(nextQuestion, 720);
+  }
+}
+
+function advanceStageKeepingFoe() {
+  clearAutoAdvance();
+  advanceStageCursor();
+  resetQuestion();
+  renderFoePlate();
+  renderGameState();
+  syncMonsterTimerState();
 }
 
 function nextQuestion() {
   clearAutoAdvance();
   advanceStageCursor();
+  startNewFoe();
   resetQuestion();
+  renderMonster();
+  renderFoePlate();
   renderGameState();
-  syncMonsterTimerState();
+  playMonsterOnce("entrance");
+  if (state.currentFoe.species === "dex") playBossStamp();
 }
 
 function startTimer() {
@@ -739,19 +967,22 @@ function clearMonsterStateTimer() {
 }
 
 function updateTimer() {
-  if (state.stageLocked || state.currentScreen !== "game") return;
+  if (state.stageLocked || state.currentScreen !== "game" || state.paused) return;
   const now = Date.now();
   const elapsed = (now - state.roundStartedAt) / 1000;
   state.roundStartedAt = now;
   state.timeRemaining = Math.max(0, state.timeRemaining - elapsed);
+  if (state.timeRemaining <= 5) {
+    if (!state.dangerNotified) {
+      playHaptic("warning");
+      state.dangerNotified = true;
+    }
+  } else {
+    state.dangerNotified = false;
+  }
   renderTimer();
   if (state.timeRemaining <= 0) handleTimeUp();
   else if (!state.monsterStateTimerId) syncMonsterTimerState();
-}
-
-function reduceTime(seconds) {
-  state.timeRemaining = Math.max(0, state.timeRemaining - seconds);
-  updateTimer();
 }
 
 function renderTimer() {
@@ -759,6 +990,7 @@ function renderTimer() {
   const timeLeft = app.querySelector("#timeLeft");
   const timeProgress = app.querySelector("#timeProgress");
   const timeReadout = app.querySelector("#timeReadout");
+  const gameRoot = app.querySelector("#gameRoot");
   if (!progress || !timeLeft) return;
   const percent = Math.max(0, Math.min(100, (state.timeRemaining / GAME_SECONDS) * 100));
   timeLeft.textContent = state.timeRemaining.toFixed(1);
@@ -769,48 +1001,111 @@ function renderTimer() {
   timeReadout.classList.toggle("danger", danger);
   timeProgress.classList.toggle("warning", warning);
   timeProgress.classList.toggle("danger", danger);
+  gameRoot?.classList.toggle("warning", warning);
+  gameRoot?.classList.toggle("danger", danger);
+}
+
+/* ---------- ポーズ ---------- */
+
+function pauseGame() {
+  if (state.paused) return;
+  stopTimer();
+  state.paused = true;
+  const overlay = app.querySelector("#pauseOverlay");
+  if (overlay) overlay.hidden = false;
+}
+
+function resumeGame() {
+  if (!state.paused) return;
+  state.paused = false;
+  const overlay = app.querySelector("#pauseOverlay");
+  if (overlay) overlay.hidden = true;
+  state.roundStartedAt = Date.now();
+  startTimer();
+}
+
+/* ---------- モンスター状態機械 ---------- */
+
+function renderMonster() {
+  const slot = app.querySelector("#monsterSlot");
+  if (!slot || !state.currentFoe) return;
+  slot.innerHTML = renderMonsterMarkup(state.currentFoe.species, state.currentFoe.skin);
+}
+
+function renderFoePlate() {
+  const foe = state.currentFoe;
+  if (!foe) return;
+  const nameEl = app.querySelector("#foeName");
+  if (nameEl) nameEl.innerHTML = `${escapeHtml(FOE_DISPLAY_NAMES[foe.species] || foe.species)} <b>Lv.${foe.level}</b>`;
+  const barsEl = app.querySelector("#foeBars");
+  if (!barsEl) return;
+  if (foe.bars > 1) {
+    barsEl.hidden = false;
+    barsEl.innerHTML = Array.from({ length: foe.bars }, (_, index) => `<i class="${index < foe.barsLeft ? "on" : ""}"></i>`).join("");
+  } else {
+    barsEl.hidden = true;
+    barsEl.innerHTML = "";
+  }
+}
+
+function playBossStamp() {
+  const stamp = app.querySelector("#bossStamp");
+  if (!stamp) return;
+  stamp.hidden = false;
+  const span = stamp.querySelector("span");
+  if (span) {
+    span.style.animation = "none";
+    void span.offsetWidth;
+    span.style.animation = "";
+  }
+  setTimeout(() => {
+    if (stamp) stamp.hidden = true;
+  }, 1100);
 }
 
 function setMonsterState(monsterState) {
   const monsterEl = app.querySelector("#questMonster");
-  if (!monsterEl) return;
-  if (monsterState === "hit" || monsterState === "attack") {
-    monsterEl.className = "monster";
+  const species = state.currentFoe?.species;
+  if (!monsterEl || !species) return;
+  if (monsterState === "hit" || monsterState === "attack" || monsterState === "entrance") {
+    monsterEl.className = species;
     void monsterEl.offsetHeight;
   }
-  monsterEl.className = `monster monster--${monsterState}`;
+  monsterEl.className = `${species} monster--${monsterState}`;
   monsterEl.setAttribute("aria-label", `Word Order Quest monster, ${monsterState} state`);
 }
 
 function setMonsterHp(percent) {
-  const monsterEl = app.querySelector("#questMonster");
-  if (!monsterEl) return;
+  const root = app.querySelector("#gameRoot");
+  if (!root) return;
   const nextPercent = Math.max(0, Math.min(100, Number(percent) || 0));
-  monsterEl.style.setProperty("--hp", `${nextPercent}%`);
+  root.style.setProperty("--hp", `${nextPercent}%`);
 }
 
-function setMonsterCombo(combo) {
-  const comboEl = app.querySelector("#monsterCombo");
-  if (!comboEl) return;
-  comboEl.textContent = `Combo x${Math.max(0, Number(combo) || 0)}`;
-}
-
-function getMonsterHpPercent() {
-  if (!state.tokens.length) return 100;
-  return Math.max(0, Math.round(((state.tokens.length - state.answer.length) / state.tokens.length) * 100));
+function updateCombo() {
+  const streakEl = app.querySelector("#streak");
+  if (streakEl) streakEl.textContent = `×${Math.max(0, Number(state.streak) || 0)}`;
+  const badge = app.querySelector("#comboBadge");
+  if (!badge) return;
+  badge.classList.remove("combo-active");
+  if (state.streak > 0) {
+    void badge.offsetWidth;
+    badge.classList.add("combo-active");
+  }
 }
 
 function playMonsterOnce(monsterState) {
   clearMonsterStateTimer();
   setMonsterState(monsterState);
+  const duration = MONSTER_STATE_DURATIONS[monsterState] ?? 500;
   state.monsterStateTimerId = setTimeout(() => {
     state.monsterStateTimerId = null;
     syncMonsterTimerState();
-  }, monsterState === "attack" ? 760 : 500);
+  }, duration);
 }
 
 function syncMonsterTimerState() {
-  if (state.currentScreen !== "game" || state.stageLocked) return;
+  if (state.currentScreen !== "game" || state.stageLocked || !state.currentFoe) return;
   if (state.timeRemaining <= 5) {
     setMonsterState("danger");
     return;
@@ -822,46 +1117,151 @@ function syncMonsterTimerState() {
   setMonsterState("idle");
 }
 
+/* ---------- 演出ヘルパー ---------- */
+
+function triggerScreenShake() {
+  const root = app.querySelector("#gameRoot");
+  if (!root) return;
+  root.classList.remove("screen-shake");
+  void root.offsetWidth;
+  root.classList.add("screen-shake");
+}
+
+function playFxSlashAndScore(points) {
+  const slash = app.querySelector("#fxSlash");
+  if (slash) {
+    slash.classList.remove("play");
+    void slash.offsetWidth;
+    slash.classList.add("play");
+  }
+  const scorePop = app.querySelector("#fxScorePop");
+  if (scorePop) {
+    scorePop.textContent = `+${points}`;
+    scorePop.classList.remove("play");
+    void scorePop.offsetWidth;
+    scorePop.classList.add("play");
+  }
+}
+
+function showFeedbackToast(html) {
+  const toast = app.querySelector("#feedbackToast");
+  if (!toast) return;
+  toast.innerHTML = html;
+  toast.hidden = false;
+}
+
+/* ---------- カード飛翔演出(docs/game-mock.html 「=== 移植対象 ===」の移植) ---------- */
+
+const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+function captureTokenRects(container) {
+  const rects = new Map();
+  container.querySelectorAll(".token[data-id]").forEach(el => rects.set(el.dataset.id, el.getBoundingClientRect()));
+  return rects;
+}
+
+function flyTokenToAnswer(zone, tokenId, fromRect) {
+  const chip = zone.querySelector(`[data-id="${CSS.escape(tokenId)}"]`);
+  if (!chip || REDUCED_MOTION.matches || typeof chip.animate !== "function") return;
+  const toRect = chip.getBoundingClientRect();
+  const clone = chip.cloneNode(true);
+  clone.classList.add("fly-clone");
+  clone.style.left = `${toRect.left}px`;
+  clone.style.top = `${toRect.top}px`;
+  clone.style.width = `${toRect.width}px`;
+  clone.style.height = `${toRect.height}px`;
+  document.body.appendChild(clone);
+  chip.style.visibility = "hidden";
+  const dx = fromRect.left + fromRect.width / 2 - (toRect.left + toRect.width / 2);
+  const dy = fromRect.top + fromRect.height / 2 - (toRect.top + toRect.height / 2);
+  const startScale = fromRect.height / toRect.height;
+  const flight = clone.animate([
+    { transform: `translate(${dx}px, ${dy}px) scale(${startScale})` },
+    { transform: `translate(${dx * 0.45}px, ${dy * 0.45 - 42}px) scale(${(1 + startScale) / 2})`, offset: 0.55 },
+    { transform: "translate(0, 0) scale(1)" }
+  ], { duration: 330, easing: "cubic-bezier(0.25, 0.7, 0.3, 1)" });
+  const land = () => {
+    clone.remove();
+    chip.style.visibility = "";
+    chip.classList.remove("pop");
+    void chip.offsetWidth;
+    chip.classList.add("pop");
+  };
+  flight.onfinish = land;
+  flight.oncancel = land;
+}
+
+function playBankFlip(container, prevRects) {
+  if (REDUCED_MOTION.matches) return;
+  container.querySelectorAll(".token[data-id]").forEach(el => {
+    const prev = prevRects.get(el.dataset.id);
+    if (!prev || typeof el.animate !== "function") return;
+    const now = el.getBoundingClientRect();
+    const dx = prev.left - now.left;
+    const dy = prev.top - now.top;
+    if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+    el.animate(
+      [{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "translate(0, 0)" }],
+      { duration: 260, easing: "cubic-bezier(0.3, 0.8, 0.3, 1)" }
+    );
+  });
+}
+
 function handleTimeUp() {
   stopTimer();
   state.stageLocked = true;
   state.streak = 0;
   state.timeRemaining = 0;
+  playHaptic("timeup");
   playEffect("wrong");
   playMonsterOnce("attack");
   shakeAnswerZone();
+  triggerScreenShake();
   updateProgress();
-  showGameOver();
-  text("#streak", state.streak);
+  updateCombo();
   renderTimer();
+  showGameOver();
 }
 
 function showGameOver() {
-  showFeedback(
-    "bad",
-    `時間切れ。<br>` +
-      `正解数：<strong>${state.correctCount}</strong> / スコア：<strong>${state.score}</strong><br>` +
-      `最後の正解文：<strong>${escapeHtml(targetText())}</strong>` +
-      `<div class="result-actions">` +
-      `<button class="btn primary" id="retryBtn" type="button">もう一度</button>` +
-      `${state.selectedCourseId !== "custom" ? `<button class="btn" id="resultUnitsBtn" type="button">単元一覧</button>` : ""}` +
-      `<button class="btn" id="resultHomeBtn" type="button">ホーム</button>` +
-      `</div>`
-  );
-  app.querySelector("#retryBtn")?.addEventListener("click", restartGame);
-  app.querySelector("#resultUnitsBtn")?.addEventListener("click", goUnits);
-  app.querySelector("#resultHomeBtn")?.addEventListener("click", goHome);
+  const overlay = app.querySelector("#resultOverlay");
+  if (!overlay) return;
+  overlay.innerHTML = `
+    <div class="overlay-panel">
+      <h2 class="overlay-title timeup">TIME UP</h2>
+      <div class="result-stats">
+        <div class="result-stat"><span class="hud-label">Score</span><strong>${state.score}</strong></div>
+        <div class="result-stat"><span class="hud-label">正解数</span><strong>${state.correctCount}</strong></div>
+      </div>
+      <p class="result-sentence">最後の正解文<br><strong>${escapeHtml(targetText())}</strong></p>
+      <div class="overlay-actions">
+        <button class="gbtn primary" id="retryBtn" type="button">もう一度</button>
+        ${state.selectedCourseId !== "custom" ? `<button class="gbtn" id="resultUnitsBtn" type="button">単元一覧</button>` : ""}
+        <button class="gbtn" id="resultHomeBtn" type="button">ホーム</button>
+      </div>
+    </div>
+  `;
+  overlay.hidden = false;
+  overlay.querySelector("#retryBtn")?.addEventListener("click", restartGame);
+  overlay.querySelector("#resultUnitsBtn")?.addEventListener("click", goUnits);
+  overlay.querySelector("#resultHomeBtn")?.addEventListener("click", goHome);
 }
 
 function restartGame() {
   state.score = 0;
   state.streak = 0;
   state.correctCount = 0;
+  state.defeatCount = 0;
+  state.lastSpecies = null;
+  state.paused = false;
+  state.dangerNotified = false;
   state.stageOrder = makeStageOrder();
   state.stageCursor = 0;
   state.currentStageIndex = state.stageOrder[0] || 0;
   state.timeRemaining = GAME_SECONDS;
+  startNewFoe();
   resetQuestion();
+  enterGameBody();
   renderGame();
   startTimer();
 }
@@ -932,20 +1332,6 @@ function setSpeechRate(rate) {
   localStorage.setItem(STORAGE.speechRate, String(rate));
   if ("speechSynthesis" in window) window.speechSynthesis.cancel();
   renderSettingsState();
-}
-
-function showFeedback(type, html) {
-  const feedback = app.querySelector("#feedback");
-  if (!feedback) return;
-  feedback.className = `feedback show ${type}`;
-  feedback.innerHTML = html;
-}
-
-function hideFeedback() {
-  const feedback = app.querySelector("#feedback");
-  if (!feedback) return;
-  feedback.className = "feedback";
-  feedback.textContent = "";
 }
 
 function selectedCourse() {

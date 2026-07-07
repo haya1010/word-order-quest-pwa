@@ -1,0 +1,869 @@
+{
+  "id": "jhs2-future-expressions",
+  "title": "中2 未来表現",
+  "description": "未来表現の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は明日英語を勉強するつもりです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        },
+        {
+          "ja": "明日",
+          "en": "tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私は今夜あなたに電話します",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "電話する",
+          "en": "call"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "今夜",
+          "en": "tonight"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "私はあなたを手伝います",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私は自分の部屋を掃除します",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "掃除する",
+          "en": "clean"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "私は図書館へ行きます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "図書館",
+          "en": "library"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "彼は明日サッカーをするつもりです",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        },
+        {
+          "ja": "明日",
+          "en": "tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼女は昼食を作るつもりです",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "作る",
+          "en": "make"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "私たちは来週京都を訪れるつもりです",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "訪れる",
+          "en": "visit"
+        },
+        {
+          "ja": "京都",
+          "en": "Kyoto"
+        },
+        {
+          "ja": "次の",
+          "en": "next"
+        },
+        {
+          "ja": "週",
+          "en": "week"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "彼らはすぐここへ来るでしょう",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "来る",
+          "en": "come"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        },
+        {
+          "ja": "すぐ",
+          "en": "soon"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "明日は雨が降るでしょう",
+      "chunks": [
+        {
+          "ja": "それは",
+          "en": "It"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "雨が降る",
+          "en": "rain"
+        },
+        {
+          "ja": "明日",
+          "en": "tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私は今夜英語を勉強する予定です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        },
+        {
+          "ja": "今夜",
+          "en": "tonight"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "私は映画を見る予定です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "映画",
+          "en": "movie"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼はテニスをする予定です",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "彼女は夕食を作る予定です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "料理する",
+          "en": "cook"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "私たちは祖母を訪ねる予定です",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "訪れる",
+          "en": "visit"
+        },
+        {
+          "ja": "私たちの",
+          "en": "our"
+        },
+        {
+          "ja": "祖母",
+          "en": "grandmother"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "彼らは新しい自転車を買う予定です",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "買う",
+          "en": "buy"
+        },
+        {
+          "ja": "新しい",
+          "en": "new"
+        },
+        {
+          "ja": "自転車",
+          "en": "bikes"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "まもなく雨が降りそうです",
+      "chunks": [
+        {
+          "ja": "それはです",
+          "en": "It is"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "雨が降る",
+          "en": "rain"
+        },
+        {
+          "ja": "すぐ",
+          "en": "soon"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "私は先生になるつもりです",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "先生",
+          "en": "teacher"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "あなたは今夜勉強する予定ですか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "今夜",
+          "en": "tonight"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼はサッカーをする予定ですか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私は明日は晴れると思います",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "思う",
+          "en": "think"
+        },
+        {
+          "ja": "それ",
+          "en": "it"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "なる",
+          "en": "be"
+        },
+        {
+          "ja": "晴れ",
+          "en": "sunny"
+        },
+        {
+          "ja": "明日",
+          "en": "tomorrow"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "私はドアを開けます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "開ける",
+          "en": "open"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ドア",
+          "en": "door"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "私はその質問に答えます",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "答える",
+          "en": "answer"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "質問",
+          "en": "question"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "雲を見て。雨が降りそうです",
+      "chunks": [
+        {
+          "ja": "見なさい",
+          "en": "Look"
+        },
+        {
+          "ja": "で",
+          "en": "at"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "雲",
+          "en": "clouds"
+        },
+        {
+          "ja": "それはです",
+          "en": "It is"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "雨が降る",
+          "en": "rain"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "私は放課後ケンに会う予定です",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "です",
+          "en": "am"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "会う",
+          "en": "meet"
+        },
+        {
+          "ja": "ケン",
+          "en": "Ken"
+        },
+        {
+          "ja": "後で",
+          "en": "after"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼女はピアノを練習する予定です",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "練習する",
+          "en": "practice"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "ピアノ",
+          "en": "piano"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "私を手伝ってくれますか",
+      "chunks": [
+        {
+          "ja": "〜しますか",
+          "en": "Will"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "助ける",
+          "en": "help"
+        },
+        {
+          "ja": "私を",
+          "en": "me"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼らはパーティーに来る予定ですか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "来る",
+          "en": "come"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "パーティー",
+          "en": "party"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "私はあなたの誕生日を忘れません",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜でしょう",
+          "en": "will"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "忘れる",
+          "en": "forget"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "誕生日",
+          "en": "birthday"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "彼は昼食を食べる予定ではありません",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "〜する予定",
+          "en": "going to"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    }
+  ]
+}

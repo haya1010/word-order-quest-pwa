@@ -1,0 +1,745 @@
+{
+  "id": "jhs2-past-tense",
+  "title": "中2 過去形",
+  "description": "過去形の基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "私は昨日テニスをしました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "した",
+          "en": "played"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        },
+        {
+          "ja": "昨日",
+          "en": "yesterday"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "彼女は昨夜テレビを見ました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "見た",
+          "en": "watched"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        },
+        {
+          "ja": "この前の",
+          "en": "last"
+        },
+        {
+          "ja": "夜",
+          "en": "night"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "彼は祖母を訪ねました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "訪れた",
+          "en": "visited"
+        },
+        {
+          "ja": "彼の",
+          "en": "his"
+        },
+        {
+          "ja": "祖母",
+          "en": "grandmother"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私たちは教室を掃除しました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "掃除した/掃除された",
+          "en": "cleaned"
+        },
+        {
+          "ja": "私たちの",
+          "en": "our"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "彼らは学校まで歩きました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "歩きました",
+          "en": "walked"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "私は夕食後に英語を勉強しました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "勉強した",
+          "en": "studied"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        },
+        {
+          "ja": "後で",
+          "en": "after"
+        },
+        {
+          "ja": "夕食",
+          "en": "dinner"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "彼はこのコンピューターを使いました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "使った/使われる",
+          "en": "used"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "コンピューター",
+          "en": "computer"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "彼女は昨日カレーを作りました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "料理した",
+          "en": "cooked"
+        },
+        {
+          "ja": "カレー",
+          "en": "curry"
+        },
+        {
+          "ja": "昨日",
+          "en": "yesterday"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "私たちは授業の後で話しました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "話しました",
+          "en": "talked"
+        },
+        {
+          "ja": "後で",
+          "en": "after"
+        },
+        {
+          "ja": "クラス",
+          "en": "class"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "彼らは窓を開けました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "開けた/開けられた",
+          "en": "opened"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "窓",
+          "en": "window"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "私は昨日学校へ行きました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "行った",
+          "en": "went"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        },
+        {
+          "ja": "昨日",
+          "en": "yesterday"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "彼女は7時に朝食を食べました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "食べた",
+          "en": "ate"
+        },
+        {
+          "ja": "朝食",
+          "en": "breakfast"
+        },
+        {
+          "ja": "で",
+          "en": "at"
+        },
+        {
+          "ja": "7時",
+          "en": "seven"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "彼は大きな犬を見ました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "見た",
+          "en": "saw"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "大きい",
+          "en": "big"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "私たちは一緒に昼食を食べました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "持っていた",
+          "en": "had"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        },
+        {
+          "ja": "一緒に",
+          "en": "together"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "彼らは新しい靴を買いました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "買った",
+          "en": "bought"
+        },
+        {
+          "ja": "新しい",
+          "en": "new"
+        },
+        {
+          "ja": "靴",
+          "en": "shoes"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "私は早く家に帰りました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "来た",
+          "en": "came"
+        },
+        {
+          "ja": "家",
+          "en": "home"
+        },
+        {
+          "ja": "早く",
+          "en": "early"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "彼はケーキを作りました",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "作った",
+          "en": "made"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ケーキ",
+          "en": "cake"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "彼女は手紙を書きました",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "書いた",
+          "en": "wrote"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "手紙",
+          "en": "letter"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "私たちはたくさんの写真を撮りました",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "撮った",
+          "en": "took"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "写真",
+          "en": "pictures"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "彼らは公園で走りました",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "走った",
+          "en": "ran"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "私は宿題をしました",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "した",
+          "en": "did"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "宿題",
+          "en": "homework"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "私は昨日サッカーをしませんでした",
+      "chunks": [
+        {
+          "ja": "私は",
+          "en": "I"
+        },
+        {
+          "ja": "〜しなかった",
+          "en": "didn't"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "サッカー",
+          "en": "soccer"
+        },
+        {
+          "ja": "昨日",
+          "en": "yesterday"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "彼女はテレビを見ませんでした",
+      "chunks": [
+        {
+          "ja": "彼女は",
+          "en": "She"
+        },
+        {
+          "ja": "〜しなかった",
+          "en": "didn't"
+        },
+        {
+          "ja": "見る",
+          "en": "watch"
+        },
+        {
+          "ja": "テレビ",
+          "en": "TV"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "彼は朝食を食べませんでした",
+      "chunks": [
+        {
+          "ja": "彼は",
+          "en": "He"
+        },
+        {
+          "ja": "〜しなかった",
+          "en": "didn't"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "朝食",
+          "en": "breakfast"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "私たちは公園へ行きませんでした",
+      "chunks": [
+        {
+          "ja": "私たちは",
+          "en": "We"
+        },
+        {
+          "ja": "〜しなかった",
+          "en": "didn't"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "彼らは犬を飼っていませんでした",
+      "chunks": [
+        {
+          "ja": "彼らは",
+          "en": "They"
+        },
+        {
+          "ja": "〜しなかった",
+          "en": "didn't"
+        },
+        {
+          "ja": "持っている",
+          "en": "have"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "犬",
+          "en": "dog"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "あなたは昨日テニスをしましたか",
+      "chunks": [
+        {
+          "ja": "〜しましたか",
+          "en": "Did"
+        },
+        {
+          "ja": "あなた",
+          "en": "you"
+        },
+        {
+          "ja": "する",
+          "en": "play"
+        },
+        {
+          "ja": "テニス",
+          "en": "tennis"
+        },
+        {
+          "ja": "昨日",
+          "en": "yesterday"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "彼は英語を勉強しましたか",
+      "chunks": [
+        {
+          "ja": "〜しましたか",
+          "en": "Did"
+        },
+        {
+          "ja": "彼",
+          "en": "he"
+        },
+        {
+          "ja": "勉強する",
+          "en": "study"
+        },
+        {
+          "ja": "英語",
+          "en": "English"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "彼女は昼食を食べましたか",
+      "chunks": [
+        {
+          "ja": "〜しましたか",
+          "en": "Did"
+        },
+        {
+          "ja": "彼女",
+          "en": "she"
+        },
+        {
+          "ja": "食べる",
+          "en": "eat"
+        },
+        {
+          "ja": "昼食",
+          "en": "lunch"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "彼らは学校へ行きましたか",
+      "chunks": [
+        {
+          "ja": "〜しましたか",
+          "en": "Did"
+        },
+        {
+          "ja": "彼ら",
+          "en": "they"
+        },
+        {
+          "ja": "行く",
+          "en": "go"
+        },
+        {
+          "ja": "へ",
+          "en": "to"
+        },
+        {
+          "ja": "学校",
+          "en": "school"
+        }
+      ]
+    }
+  ]
+}

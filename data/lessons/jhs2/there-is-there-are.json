@@ -1,0 +1,1061 @@
+{
+  "id": "jhs2-there-is-there-are",
+  "title": "中2 there is / there are",
+  "description": "there is / there areの基本例文を使って英語の語順を練習します",
+  "stages": [
+    {
+      "id": "s1",
+      "level": "Stage 1",
+      "sourceJa": "机の上に本があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "机",
+          "en": "desk"
+        }
+      ]
+    },
+    {
+      "id": "s2",
+      "level": "Stage 2",
+      "sourceJa": "私のかばんの中にペンがあります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s3",
+      "level": "Stage 3",
+      "sourceJa": "テーブルの下に猫がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        },
+        {
+          "ja": "下に",
+          "en": "under"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "テーブル",
+          "en": "table"
+        }
+      ]
+    },
+    {
+      "id": "s4",
+      "level": "Stage 4",
+      "sourceJa": "私の家の近くに公園があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        },
+        {
+          "ja": "近くに",
+          "en": "near"
+        },
+        {
+          "ja": "私の",
+          "en": "my"
+        },
+        {
+          "ja": "家",
+          "en": "house"
+        }
+      ]
+    },
+    {
+      "id": "s5",
+      "level": "Stage 5",
+      "sourceJa": "この町には病院があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "病院",
+          "en": "hospital"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "町",
+          "en": "town"
+        }
+      ]
+    },
+    {
+      "id": "s6",
+      "level": "Stage 6",
+      "sourceJa": "テーブルの上にりんごがあります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "an"
+        },
+        {
+          "ja": "りんご",
+          "en": "apple"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "テーブル",
+          "en": "table"
+        }
+      ]
+    },
+    {
+      "id": "s7",
+      "level": "Stage 7",
+      "sourceJa": "教室に生徒がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "生徒",
+          "en": "student"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        }
+      ]
+    },
+    {
+      "id": "s8",
+      "level": "Stage 8",
+      "sourceJa": "グラスの中に水が少しあります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "いくつかの",
+          "en": "some"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "グラス",
+          "en": "glass"
+        }
+      ]
+    },
+    {
+      "id": "s9",
+      "level": "Stage 9",
+      "sourceJa": "壁に絵があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "写真",
+          "en": "picture"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "壁",
+          "en": "wall"
+        }
+      ]
+    },
+    {
+      "id": "s10",
+      "level": "Stage 10",
+      "sourceJa": "この近くにバス停があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "バス",
+          "en": "bus"
+        },
+        {
+          "ja": "停留所",
+          "en": "stop"
+        },
+        {
+          "ja": "近くに",
+          "en": "near"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s11",
+      "level": "Stage 11",
+      "sourceJa": "教室にたくさんの生徒がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "生徒",
+          "en": "students"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "教室",
+          "en": "classroom"
+        }
+      ]
+    },
+    {
+      "id": "s12",
+      "level": "Stage 12",
+      "sourceJa": "公園に2匹の犬がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "二つの",
+          "en": "two"
+        },
+        {
+          "ja": "犬",
+          "en": "dogs"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "公園",
+          "en": "park"
+        }
+      ]
+    },
+    {
+      "id": "s13",
+      "level": "Stage 13",
+      "sourceJa": "部屋に3脚の椅子があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "三つの",
+          "en": "three"
+        },
+        {
+          "ja": "椅子",
+          "en": "chairs"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s14",
+      "level": "Stage 14",
+      "sourceJa": "机の上に5冊の本があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "五つの",
+          "en": "five"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "机",
+          "en": "desk"
+        }
+      ]
+    },
+    {
+      "id": "s15",
+      "level": "Stage 15",
+      "sourceJa": "庭にたくさんの花があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "花",
+          "en": "flowers"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "庭",
+          "en": "garden"
+        }
+      ]
+    },
+    {
+      "id": "s16",
+      "level": "Stage 16",
+      "sourceJa": "かごの中にりんごがいくつかあります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "いくつかの",
+          "en": "some"
+        },
+        {
+          "ja": "りんご",
+          "en": "apples"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "かご",
+          "en": "basket"
+        }
+      ]
+    },
+    {
+      "id": "s17",
+      "level": "Stage 17",
+      "sourceJa": "体育館に10人の男の子がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "十の",
+          "en": "ten"
+        },
+        {
+          "ja": "男の子",
+          "en": "boys"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "体育館",
+          "en": "gym"
+        }
+      ]
+    },
+    {
+      "id": "s18",
+      "level": "Stage 18",
+      "sourceJa": "この部屋には2つの窓があります",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "二つの",
+          "en": "two"
+        },
+        {
+          "ja": "窓",
+          "en": "windows"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s19",
+      "level": "Stage 19",
+      "sourceJa": "駅にたくさんの人がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "人々",
+          "en": "people"
+        },
+        {
+          "ja": "で",
+          "en": "at"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "駅",
+          "en": "station"
+        }
+      ]
+    },
+    {
+      "id": "s20",
+      "level": "Stage 20",
+      "sourceJa": "木に何羽かの鳥がいます",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "いくつかの",
+          "en": "some"
+        },
+        {
+          "ja": "鳥",
+          "en": "birds"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "木",
+          "en": "tree"
+        }
+      ]
+    },
+    {
+      "id": "s21",
+      "level": "Stage 21",
+      "sourceJa": "机の上に本はありません",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "本",
+          "en": "book"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "机",
+          "en": "desk"
+        }
+      ]
+    },
+    {
+      "id": "s22",
+      "level": "Stage 22",
+      "sourceJa": "テーブルの下に猫はいません",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "ありません",
+          "en": "isn't"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "猫",
+          "en": "cat"
+        },
+        {
+          "ja": "下に",
+          "en": "under"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "テーブル",
+          "en": "table"
+        }
+      ]
+    },
+    {
+      "id": "s23",
+      "level": "Stage 23",
+      "sourceJa": "部屋に生徒は一人もいません",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "〜ない",
+          "en": "not"
+        },
+        {
+          "ja": "少しも",
+          "en": "any"
+        },
+        {
+          "ja": "生徒",
+          "en": "students"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    },
+    {
+      "id": "s24",
+      "level": "Stage 24",
+      "sourceJa": "かごの中にりんごは一つもありません",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "ありません",
+          "en": "aren't"
+        },
+        {
+          "ja": "少しも",
+          "en": "any"
+        },
+        {
+          "ja": "りんご",
+          "en": "apples"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "かご",
+          "en": "basket"
+        }
+      ]
+    },
+    {
+      "id": "s25",
+      "level": "Stage 25",
+      "sourceJa": "グラスの中に水はありません",
+      "chunks": [
+        {
+          "ja": "そこに",
+          "en": "There"
+        },
+        {
+          "ja": "です",
+          "en": "is"
+        },
+        {
+          "ja": "ない",
+          "en": "no"
+        },
+        {
+          "ja": "水",
+          "en": "water"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "グラス",
+          "en": "glass"
+        }
+      ]
+    },
+    {
+      "id": "s26",
+      "level": "Stage 26",
+      "sourceJa": "この近くに図書館はありますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "図書館",
+          "en": "library"
+        },
+        {
+          "ja": "近くに",
+          "en": "near"
+        },
+        {
+          "ja": "ここ",
+          "en": "here"
+        }
+      ]
+    },
+    {
+      "id": "s27",
+      "level": "Stage 27",
+      "sourceJa": "あなたのかばんの中にペンはありますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Is"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        },
+        {
+          "ja": "1つの",
+          "en": "a"
+        },
+        {
+          "ja": "ペン",
+          "en": "pen"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "かばん",
+          "en": "bag"
+        }
+      ]
+    },
+    {
+      "id": "s28",
+      "level": "Stage 28",
+      "sourceJa": "机の上に本はありますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        },
+        {
+          "ja": "少しも",
+          "en": "any"
+        },
+        {
+          "ja": "本",
+          "en": "books"
+        },
+        {
+          "ja": "に",
+          "en": "on"
+        },
+        {
+          "ja": "その",
+          "en": "the"
+        },
+        {
+          "ja": "机",
+          "en": "desk"
+        }
+      ]
+    },
+    {
+      "id": "s29",
+      "level": "Stage 29",
+      "sourceJa": "あなたのクラスにはたくさんの生徒がいますか",
+      "chunks": [
+        {
+          "ja": "〜ですか",
+          "en": "Are"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        },
+        {
+          "ja": "たくさんの",
+          "en": "many"
+        },
+        {
+          "ja": "生徒",
+          "en": "students"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "あなたの",
+          "en": "your"
+        },
+        {
+          "ja": "クラス",
+          "en": "class"
+        }
+      ]
+    },
+    {
+      "id": "s30",
+      "level": "Stage 30",
+      "sourceJa": "この部屋には椅子がいくつありますか",
+      "chunks": [
+        {
+          "ja": "いくつの",
+          "en": "How many"
+        },
+        {
+          "ja": "椅子",
+          "en": "chairs"
+        },
+        {
+          "ja": "です",
+          "en": "are"
+        },
+        {
+          "ja": "そこ",
+          "en": "there"
+        },
+        {
+          "ja": "に",
+          "en": "in"
+        },
+        {
+          "ja": "この",
+          "en": "this"
+        },
+        {
+          "ja": "部屋",
+          "en": "room"
+        }
+      ]
+    }
+  ]
+}
