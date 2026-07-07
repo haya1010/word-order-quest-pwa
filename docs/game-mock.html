@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Word Order Quest — Game画面デザインカンプ</title>
+<style>
+/* ============================================================
+   Word Order Quest — Game画面リデザイン デザインカンプ
+   このファイルが「見た目の正」。統合時はこのCSSを原則コピーする。
+   .mock-controls とファイル末尾の<script>はモック確認用で統合対象外。
+   ============================================================ */
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+:root {
+  --g-bg-0: #0b0e1f;
+  --g-bg-1: #161233;
+  --g-bg-2: #1e1440;
+  --g-line: rgba(255, 255, 255, 0.1);
+  --g-line-strong: rgba(255, 255, 255, 0.18);
+  --g-text: #f1f2fa;
+  --g-muted: #9aa0c3;
+  --g-gold: #ffd166;
+  --g-gold-deep: #f59e0b;
+  --g-green: #34d399;
+  --g-red: #ef4444;
+  --g-red-soft: #fb7185;
+  --card-face: linear-gradient(180deg, #3a4170, #262d52);
+  --card-edge: #141936;
+  --chip-face: linear-gradient(180deg, #10b981, #059669);
+  --chip-glow: rgba(16, 185, 129, 0.35);
+}
+
+html, body { height: 100%; }
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--g-text);
+  background: #06070f;
+  -webkit-font-smoothing: antialiased;
+}
+
+button { font: inherit; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+/* ---------- ゲーム画面ルート ---------- */
+
+.game-root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  height: 100dvh;
+  max-width: 520px;
+  margin: 0 auto;
+  overflow: hidden;
+  background:
+    radial-gradient(120% 55% at 50% 26%, rgba(124, 92, 255, 0.22), transparent 62%),
+    radial-gradient(1.5px 1.5px at 18% 14%, rgba(255, 255, 255, 0.5), transparent 100%),
+    radial-gradient(1px 1px at 72% 9%, rgba(255, 255, 255, 0.42), transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 30%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1px 1px at 8% 38%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1.5px 1.5px at 34% 6%, rgba(255, 209, 102, 0.45), transparent 100%),
+    radial-gradient(1px 1px at 55% 20%, rgba(255, 255, 255, 0.35), transparent 100%),
+    linear-gradient(180deg, var(--g-bg-0) 0%, var(--g-bg-1) 52%, var(--g-bg-2) 100%);
+}
+
+/* dangerビネット(残り5秒)。pointer-events:noneで操作を妨げない */
+.game-root::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 60;
+  pointer-events: none;
+  opacity: 0;
+  box-shadow: inset 0 0 52px 16px rgba(239, 68, 68, 0.55);
+  transition: opacity 240ms ease;
+}
+
+.game-root.danger::after {
+  opacity: 1;
+  animation: dangerVignette 0.6s ease-in-out infinite alternate;
+}
+
+/* 誤答時に #gameRoot へ一瞬付与(void offsetWidth で再生) */
+.game-root.screen-shake { animation: screenShake 260ms ease-in-out; }
+
+/* ---------- 上部HUD ---------- */
+
+.hud {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 12px;
+  padding: calc(10px + env(safe-area-inset-top)) 14px 10px;
+  background: rgba(11, 14, 31, 0.72);
+  border-bottom: 1px solid var(--g-line);
+  backdrop-filter: blur(10px);
+  z-index: 20;
+}
+
+.hud-label {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--g-muted);
+}
+
+.hud-btn {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--g-line-strong);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--g-text);
+  cursor: pointer;
+  transition: background 120ms ease, transform 120ms ease;
+}
+
+.hud-btn:active { transform: scale(0.94); background: rgba(255, 255, 255, 0.12); }
+.hud-btn svg { width: 16px; height: 16px; display: block; }
+
+.hud-time { display: grid; gap: 5px; min-width: 0; }
+
+.hud-time-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.hud-time-top strong {
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  color: var(--g-text);
+  text-shadow: 0 0 12px rgba(52, 211, 153, 0.35);
+}
+
+.time-readout.warning strong { color: var(--g-gold); text-shadow: 0 0 12px rgba(255, 209, 102, 0.45); }
+.time-readout.danger strong { color: var(--g-red-soft); text-shadow: 0 0 14px rgba(239, 68, 68, 0.6); }
+
+.progress {
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.progress span {
+  display: block;
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--g-green), #a3e635 60%, var(--g-gold));
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition: width 180ms ease, background 200ms ease;
+}
+
+.progress.warning span {
+  background: linear-gradient(90deg, var(--g-gold-deep), var(--g-gold));
+  box-shadow: 0 0 10px rgba(255, 209, 102, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+.progress.danger span {
+  background: linear-gradient(90deg, #b91c1c, var(--g-red), var(--g-red-soft));
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  animation: dangerBarPulse 0.5s ease-in-out infinite alternate;
+}
+
+.hud-stats { display: flex; align-items: center; gap: 10px; }
+
+.hud-stat { display: grid; justify-items: end; gap: 2px; }
+
+.hud-stat strong {
+  font-size: 19px;
+  line-height: 1;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  color: var(--g-gold);
+  text-shadow: 0 0 10px rgba(255, 209, 102, 0.35);
+}
+
+.hud-combo {
+  display: grid;
+  justify-items: center;
+  gap: 2px;
+  min-width: 52px;
+  padding: 5px 9px 6px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 209, 102, 0.35);
+  background: linear-gradient(180deg, rgba(255, 209, 102, 0.16), rgba(245, 158, 11, 0.08));
+}
+
+.hud-combo strong {
+  font-size: 17px;
+  line-height: 1;
+  font-weight: 900;
+  font-style: italic;
+  background: linear-gradient(180deg, #ffe9a8, var(--g-gold) 55%, var(--g-gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hud-combo.combo-active { animation: comboPulse 0.5s ease-out; box-shadow: 0 0 16px rgba(255, 209, 102, 0.35); }
+
+/* ---------- 中央バトルステージ ---------- */
+
+.battle-stage {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 14px 10px;
+}
+
+/* 敵ネームプレート: 全モンスター種共通。ロースター統合時は .monster__hud の代替(指示書§11) */
+.foe-plate { width: min(100%, 320px); display: grid; gap: 5px; z-index: 6; }
+.foe-plate-row { display: flex; justify-content: space-between; align-items: baseline; padding: 0 2px; }
+.foe-name { font-size: 12px; font-weight: 900; letter-spacing: 0.05em; color: var(--g-text); }
+.foe-name b { color: var(--g-gold); font-style: italic; margin-left: 5px; }
+.foe-bars { display: inline-flex; gap: 5px; }
+.foe-bars i { width: 9px; height: 9px; border-radius: 50%; background: rgba(255, 255, 255, 0.16);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5); }
+.foe-bars i.on { background: var(--g-gold); box-shadow: 0 0 8px rgba(255, 209, 102, 0.7); }
+.foe-hp { height: 13px; padding: 3px; border-radius: 999px; background: rgba(0, 0, 0, 0.42);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12); overflow: hidden; }
+.foe-hp-fill { display: block; width: var(--hp, 60%); height: 100%; border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #a3e635 58%, #facc15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 0 14px rgba(34, 197, 94, 0.35);
+  transition: width 240ms ease; }
+.game-root.danger .foe-hp-fill { background: linear-gradient(90deg, #f87171, #ef4444);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), 0 0 14px rgba(239, 68, 68, 0.45); }
+/* BOSS登場スタンプ(1.1s単発。ボス出現問のみ) */
+.boss-stamp { position: absolute; inset: 0; display: grid; place-items: center; z-index: 30; pointer-events: none; }
+.boss-stamp span { font-size: 56px; font-weight: 900; font-style: italic; letter-spacing: 0.06em;
+  color: var(--g-gold); -webkit-text-stroke: 2px #7c2d12;
+  text-shadow: 0 0 26px rgba(245, 158, 11, 0.85), 0 6px 0 rgba(0, 0, 0, 0.35);
+  animation: bossStamp 1.1s cubic-bezier(0.2, 1.4, 0.3, 1) both; }
+@keyframes bossStamp { 0% { transform: scale(3) rotate(-6deg); opacity: 0; }
+  30% { transform: scale(1) rotate(-6deg); opacity: 1; }
+  78% { transform: scale(1) rotate(-6deg); opacity: 1; }
+  100% { transform: scale(0.9) rotate(-6deg); opacity: 0; } }
+
+.quest-board {
+  width: 100%;
+  display: grid;
+  gap: 8px;
+  padding: 12px 13px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 209, 102, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  z-index: 5;
+}
+
+.source-ja {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 1.6;
+  text-align: center;
+  color: var(--g-text);
+}
+
+.chunk-rail {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5px 0;
+  line-height: 1.5;
+}
+
+.chunk-inline {
+  display: inline-grid;
+  justify-items: center;
+  gap: 3px;
+  padding: 4px 7px;
+  border-radius: 9px;
+  border: 1px solid transparent;
+  color: rgba(241, 242, 250, 0.72);
+  text-align: center;
+}
+
+.chunk-inline.active {
+  border-color: rgba(255, 209, 102, 0.55);
+  background: rgba(255, 209, 102, 0.13);
+  color: var(--g-gold);
+  animation: chunkGlow 1.1s ease-in-out infinite alternate;
+}
+
+.chunk-ja { font-size: 14px; font-weight: 850; line-height: 1.25; overflow-wrap: anywhere; }
+
+.chunk-shape {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 3px;
+  min-height: 7px;
+}
+
+.word-mark {
+  display: inline-block;
+  height: 0;
+  border-bottom: 2px solid currentColor;
+  opacity: 0.5;
+}
+
+.slash { padding: 0 6px; color: rgba(154, 160, 195, 0.7); font-weight: 900; align-self: center; }
+
+/* 攻撃エフェクト層(最前面・操作透過) */
+.fx-layer { position: absolute; inset: 0; z-index: 30; pointer-events: none; overflow: hidden; }
+
+.fx-slash { position: absolute; inset: 0; opacity: 0; }
+
+.fx-slash::before,
+.fx-slash::after {
+  content: "";
+  position: absolute;
+  top: 34%;
+  left: -30%;
+  width: 160%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent, #ffffff 45%, #ffe9a8 55%, transparent);
+  box-shadow: 0 0 18px rgba(255, 233, 168, 0.9);
+  transform: rotate(-24deg) translateX(-40%);
+}
+
+.fx-slash::after {
+  top: 44%;
+  height: 3px;
+  transform: rotate(18deg) translateX(40%);
+}
+
+.fx-slash.play { animation: slashFade 0.5s ease-out both; }
+.fx-slash.play::before { animation: slashSweepA 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+.fx-slash.play::after { animation: slashSweepB 0.5s cubic-bezier(0.2, 0.7, 0.3, 1) both; }
+
+.fx-score-pop {
+  position: absolute;
+  left: 50%;
+  top: 30%;
+  transform: translateX(-50%);
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic;
+  color: var(--g-gold);
+  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.4), 0 0 16px rgba(255, 209, 102, 0.6);
+  opacity: 0;
+}
+
+.fx-score-pop.play { animation: scorePop 0.72s ease-out both; }
+
+/* 正解トースト(バトルステージ中央・絶対配置でレイアウトを跳ねさせない。
+   撃破されたモンスターの位置に重なる想定) */
+.feedback-toast {
+  position: absolute;
+  left: 50%;
+  top: 34%;
+  transform: translate(-50%, -50%);
+  z-index: 35;
+  max-width: calc(100% - 40px);
+  padding: 12px 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(52, 211, 153, 0.45);
+  background: rgba(6, 78, 59, 0.86);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 18px var(--chip-glow);
+  font-size: 13px;
+  font-weight: 800;
+  text-align: center;
+  line-height: 1.6;
+  color: #d1fae5;
+  animation: toastIn 240ms ease-out both;
+}
+
+.feedback-toast strong { color: #ffffff; font-size: 15px; }
+
+/* ---------- 解答エリア ---------- */
+
+.answer-dock { padding: 0 14px 8px; z-index: 10; }
+
+.answer-zone {
+  min-height: 104px;
+  padding: 10px;
+  display: flex;
+  align-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 7px;
+  border-radius: 14px;
+  border: 2px dashed rgba(255, 255, 255, 0.22);
+  background: rgba(0, 0, 0, 0.28);
+  box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.answer-zone.empty::before {
+  content: "下のカードを順番にタップ";
+  width: 100%;
+  text-align: center;
+  color: rgba(154, 160, 195, 0.8);
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 80px;
+}
+
+.answer-zone.success-flash { animation: successFlash 620ms ease-out; }
+.answer-zone.shake { animation: screenShake 240ms ease-in-out; }
+
+/* 解答欄に置かれたチップ(表示専用・バンクのカードより小さい) */
+.token.in-answer {
+  min-height: 40px;
+  padding: 7px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 11px;
+  background: var(--chip-face);
+  box-shadow: 0 3px 0 #065f46, 0 0 12px var(--chip-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+  color: #ffffff;
+  cursor: default;
+}
+
+/* ---------- 下部単語カード ---------- */
+
+.bank-dock {
+  padding: 10px 14px calc(14px + env(safe-area-inset-bottom));
+  border-top: 1px solid var(--g-line);
+  background: linear-gradient(180deg, rgba(11, 14, 31, 0.55), rgba(6, 7, 15, 0.85));
+  z-index: 10;
+}
+
+.bank {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  min-height: 122px;
+  align-content: flex-start;
+}
+
+.token {
+  position: relative;
+  min-height: 56px;
+  display: inline-grid;
+  place-items: center;
+  padding: 10px 18px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 15px;
+  background: var(--card-face);
+  box-shadow: 0 5px 0 var(--card-edge), 0 8px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+  color: var(--g-text);
+  font-size: 17px;
+  font-weight: 850;
+  cursor: pointer;
+  user-select: none;
+  transition: transform 90ms ease, box-shadow 90ms ease;
+}
+
+.token:active:not(.in-answer) {
+  transform: translateY(4px);
+  box-shadow: 0 1px 0 var(--card-edge), 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.token.pop { animation: tokenPop 180ms ease-out; }
+
+.token.wrong-choice {
+  animation: tokenWrong 240ms ease-in-out;
+  border-color: var(--g-red);
+  background: linear-gradient(180deg, #7f1d1d, #450a0a);
+  box-shadow: 0 5px 0 #2c0505, 0 0 14px rgba(239, 68, 68, 0.5);
+}
+
+/* バンク→解答欄へ飛ぶクローン(WAAPIで移動し、着地後に除去される) */
+.token.fly-clone {
+  position: fixed;
+  margin: 0;
+  z-index: 90;
+  pointer-events: none;
+  box-shadow: 0 3px 0 #065f46, 0 0 22px var(--chip-glow), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* ---------- オーバーレイ(ポーズ / リザルト共通) ---------- */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 80;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: rgba(5, 7, 18, 0.8);
+  backdrop-filter: blur(6px);
+}
+
+.overlay-panel {
+  width: min(340px, 100%);
+  display: grid;
+  gap: 14px;
+  padding: 22px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 209, 102, 0.25);
+  background: linear-gradient(180deg, #1c1740, #131030);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  text-align: center;
+  animation: panelIn 260ms cubic-bezier(0.2, 0.9, 0.3, 1.2) both;
+}
+
+.overlay-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.06em;
+  background: linear-gradient(180deg, #ffe9a8, var(--g-gold) 55%, var(--g-gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 24px rgba(255, 209, 102, 0.2);
+}
+
+.overlay-title.timeup {
+  background: linear-gradient(180deg, #fecaca, var(--g-red-soft) 55%, var(--g-red));
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.result-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+
+.result-stat {
+  display: grid;
+  gap: 3px;
+  padding: 10px;
+  border-radius: 12px;
+  border: 1px solid var(--g-line);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.result-stat .hud-label { justify-self: center; }
+
+.result-stat strong {
+  font-size: 24px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  color: var(--g-gold);
+}
+
+.result-sentence {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(52, 211, 153, 0.3);
+  background: rgba(6, 78, 59, 0.35);
+  font-size: 14px;
+  font-weight: 800;
+  color: #d1fae5;
+  line-height: 1.5;
+}
+
+.overlay-actions { display: grid; gap: 8px; }
+
+.gbtn {
+  min-height: 48px;
+  border-radius: 14px;
+  border: 1px solid var(--g-line-strong);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--g-text);
+  font-size: 15px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 90ms ease, background 120ms ease;
+}
+
+.gbtn:active { transform: scale(0.97); background: rgba(255, 255, 255, 0.14); }
+
+.gbtn.primary {
+  border-color: var(--g-gold-deep);
+  background: linear-gradient(180deg, #ffe089, var(--g-gold) 45%, var(--g-gold-deep));
+  box-shadow: 0 4px 0 #92400e, 0 8px 18px rgba(245, 158, 11, 0.3);
+  color: #431407;
+}
+
+.gbtn.primary:active { transform: translateY(3px); box-shadow: 0 1px 0 #92400e; }
+
+/* ---------- keyframes(新設分) ---------- */
+
+@keyframes dangerVignette {
+  from { box-shadow: inset 0 0 40px 10px rgba(239, 68, 68, 0.4); }
+  to { box-shadow: inset 0 0 64px 20px rgba(239, 68, 68, 0.68); }
+}
+
+@keyframes dangerBarPulse {
+  from { filter: brightness(1); }
+  to { filter: brightness(1.45); }
+}
+
+@keyframes screenShake {
+  0%, 100% { transform: translate(0, 0); }
+  20% { transform: translate(-7px, 2px); }
+  40% { transform: translate(6px, -2px); }
+  60% { transform: translate(-4px, 1px); }
+  80% { transform: translate(3px, -1px); }
+}
+
+@keyframes chunkGlow {
+  from { box-shadow: 0 0 0 rgba(255, 209, 102, 0); }
+  to { box-shadow: 0 0 14px rgba(255, 209, 102, 0.45); }
+}
+
+@keyframes slashSweepA {
+  from { transform: rotate(-24deg) translateX(-60%); }
+  to { transform: rotate(-24deg) translateX(55%); }
+}
+
+@keyframes slashSweepB {
+  from { transform: rotate(18deg) translateX(60%); }
+  to { transform: rotate(18deg) translateX(-55%); }
+}
+
+@keyframes slashFade {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@keyframes scorePop {
+  0% { opacity: 0; transform: translate(-50%, 12px) scale(0.7); }
+  25% { opacity: 1; transform: translate(-50%, -6px) scale(1.15); }
+  100% { opacity: 0; transform: translate(-50%, -44px) scale(1); }
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translate(-50%, calc(-50% + 12px)) scale(0.92); }
+  to { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+}
+
+@keyframes panelIn {
+  from { opacity: 0; transform: translateY(16px) scale(0.94); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes comboPulse {
+  0% { transform: scale(1); }
+  40% { transform: scale(1.18); }
+  100% { transform: scale(1); }
+}
+
+@keyframes successFlash {
+  0% { border-color: var(--g-green); box-shadow: inset 0 0 0 rgba(52, 211, 153, 0); }
+  42% { border-color: var(--g-green); box-shadow: inset 0 0 24px rgba(52, 211, 153, 0.35); }
+  100% { border-color: rgba(255, 255, 255, 0.22); box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.35); }
+}
+
+@keyframes tokenPop {
+  0% { transform: scale(1); }
+  48% { transform: scale(1.08); }
+  100% { transform: scale(1); }
+}
+
+@keyframes tokenWrong {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* ============================================================
+   モンスター(style.cssからの移植 + ダーク背景向け調整)
+   変更点: サイズ縮小 / 影を濃く / combo pill非表示(HUDへ移設済み)
+   ============================================================ */
+
+.monster {
+  --monster-main: #7c5cff;
+  --monster-main-dark: #5b3be7;
+  --monster-main-light: #a895ff;
+  --monster-belly: #f8f2ff;
+  --monster-eye: #ffffff;
+  --monster-pupil: #172033;
+  --monster-mouth: #3f255f;
+  --monster-cheek: #ff9fc9;
+  --monster-aura: rgba(124, 92, 255, 0.3);
+  --monster-warning: #ffd166;
+  --monster-danger: #ff4d6d;
+  --monster-shadow: rgba(0, 0, 0, 0.55);
+  --hp: 100%;
+  --status-label: "IDLE";
+  --status-bg: #ecfdf5;
+  --status-fg: #047857;
+
+  position: relative;
+  width: min(195px, 44vw);
+  aspect-ratio: 1 / 1.22;
+  display: grid;
+  place-items: center;
+  isolation: isolate;
+  transform-origin: 50% 78%;
+  animation: monsterFloat 2.6s ease-in-out infinite;
+  z-index: 3;
+}
+
+.monster, .monster * { -webkit-tap-highlight-color: transparent; }
+
+.monster__aura {
+  position: absolute;
+  inset: 16% 9% 13%;
+  border-radius: 44% 46% 48% 42%;
+  background: radial-gradient(circle at 50% 52%, var(--monster-aura), transparent 68%);
+  filter: blur(2px);
+  opacity: 0.9;
+  z-index: -2;
+  transform: scale(1.06);
+  pointer-events: none;
+}
+
+.monster__shadow {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  bottom: 9%;
+  height: 8%;
+  border-radius: 999px;
+  background: var(--monster-shadow);
+  filter: blur(8px);
+  opacity: 0.65;
+  transform-origin: center;
+  animation: shadowPulse 2.6s ease-in-out infinite;
+  z-index: -1;
+}
+
+.monster__body {
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  top: 24%;
+  height: 52%;
+  border-radius: 48% 48% 42% 42% / 50% 50% 44% 44%;
+  background:
+    radial-gradient(circle at 33% 24%, rgba(255, 255, 255, 0.52), transparent 16%),
+    radial-gradient(circle at 70% 75%, rgba(91, 59, 231, 0.42), transparent 28%),
+    linear-gradient(145deg, var(--monster-main-light), var(--monster-main) 42%, var(--monster-main-dark));
+  box-shadow:
+    inset -14px -18px 0 rgba(34, 25, 85, 0.12),
+    inset 9px 11px 0 rgba(255, 255, 255, 0.15),
+    0 18px 30px rgba(0, 0, 0, 0.4);
+  transform-origin: 50% 82%;
+  overflow: visible;
+}
+
+.monster__body::after {
+  content: "";
+  position: absolute;
+  left: 23%;
+  right: 23%;
+  bottom: 11%;
+  height: 34%;
+  border-radius: 50% 50% 45% 45%;
+  background:
+    radial-gradient(circle at 50% 20%, rgba(255, 255, 255, 0.78), transparent 28%),
+    var(--monster-belly);
+  opacity: 0.92;
+}
+
+.monster__horn {
+  position: absolute;
+  top: 17%;
+  width: 19%;
+  aspect-ratio: 1 / 1.15;
+  background: linear-gradient(140deg, #fff8d6, #ffd166 58%, #f59e0b);
+  clip-path: polygon(50% 0, 92% 100%, 8% 100%);
+  border-radius: 42% 42% 18% 18%;
+  box-shadow: inset 5px 0 0 rgba(255, 255, 255, 0.34), 0 5px 10px rgba(146, 64, 14, 0.14);
+  transform-origin: 50% 100%;
+  z-index: 2;
+}
+
+.monster__horn--left { left: 27%; rotate: -18deg; }
+.monster__horn--right { right: 27%; rotate: 18deg; }
+
+.monster__ear {
+  position: absolute;
+  top: 31%;
+  width: 21%;
+  aspect-ratio: 1;
+  border-radius: 55% 45% 52% 48%;
+  background:
+    radial-gradient(circle at 48% 50%, #ffb7dc 0 35%, transparent 36%),
+    linear-gradient(145deg, var(--monster-main-light), var(--monster-main-dark));
+  box-shadow: inset -5px -6px 0 rgba(34, 25, 85, 0.14);
+  z-index: -1;
+}
+
+.monster__ear--left { left: 9%; transform: rotate(-23deg); }
+.monster__ear--right { right: 9%; transform: rotate(23deg); }
+
+.monster__eye {
+  position: absolute;
+  top: 25%;
+  width: 18%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle at 34% 28%, #ffffff 0 14%, transparent 15%), var(--monster-eye);
+  box-shadow: inset 0 -4px 0 rgba(15, 23, 42, 0.09), 0 4px 8px rgba(15, 23, 42, 0.1);
+  z-index: 4;
+  overflow: hidden;
+}
+
+.monster__eye::before {
+  content: "";
+  position: absolute;
+  left: 38%;
+  top: 36%;
+  width: 36%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: var(--monster-pupil);
+  box-shadow: 0 0 0 3px rgba(23, 32, 51, 0.04);
+  transition: transform 180ms ease, width 180ms ease, height 180ms ease;
+}
+
+.monster__eye::after {
+  content: "";
+  position: absolute;
+  inset: -10% -8% auto;
+  height: 0%;
+  background: rgba(124, 92, 255, 0.28);
+  border-radius: 0 0 50% 50%;
+  transition: height 180ms ease;
+}
+
+.monster__eye--left { left: 26%; }
+.monster__eye--right { right: 26%; }
+
+.monster__cheek {
+  position: absolute;
+  top: 43%;
+  width: 12%;
+  height: 7%;
+  border-radius: 999px;
+  background: var(--monster-cheek);
+  opacity: 0.58;
+  z-index: 3;
+}
+
+.monster__cheek--left { left: 20%; rotate: 8deg; }
+.monster__cheek--right { right: 20%; rotate: -8deg; }
+
+.monster__mouth {
+  position: absolute;
+  left: 36%;
+  right: 36%;
+  top: 45%;
+  height: 16%;
+  color: var(--monster-mouth);
+  z-index: 4;
+  transition: transform 160ms ease, color 160ms ease;
+}
+
+.monster__mouth svg { width: 100%; height: 100%; display: block; overflow: visible; }
+.monster__tooth { fill: #ffffff; opacity: 0.95; }
+
+.monster__hand {
+  position: absolute;
+  top: 49%;
+  width: 16%;
+  aspect-ratio: 1 / 1.18;
+  border-radius: 48% 48% 54% 54%;
+  background:
+    radial-gradient(circle at 35% 28%, rgba(255, 255, 255, 0.35), transparent 23%),
+    linear-gradient(145deg, var(--monster-main-light), var(--monster-main-dark));
+  box-shadow: inset -5px -7px 0 rgba(34, 25, 85, 0.13), 0 8px 15px rgba(0, 0, 0, 0.3);
+  transform-origin: 50% 16%;
+  z-index: 1;
+}
+
+.monster__hand::after {
+  content: "";
+  position: absolute;
+  left: 18%;
+  right: 18%;
+  bottom: -4%;
+  height: 26%;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.monster__hand--left { left: 9%; rotate: 28deg; animation: handWaveLeft 2.6s ease-in-out infinite; }
+.monster__hand--right { right: 9%; rotate: -28deg; animation: handWaveRight 2.6s ease-in-out infinite; }
+
+.monster__spark {
+  position: absolute;
+  width: 12%;
+  aspect-ratio: 1;
+  color: var(--monster-warning);
+  opacity: 0;
+  transform: scale(0.6);
+  z-index: 7;
+  pointer-events: none;
+}
+
+.monster__spark svg { width: 100%; height: 100%; display: block; filter: drop-shadow(0 4px 8px rgba(245, 158, 11, 0.25)); }
+.monster__spark--one { top: 18%; left: 13%; }
+.monster__spark--two { top: 16%; right: 14%; width: 9%; }
+.monster__spark--three { top: 63%; right: 10%; width: 8%; }
+
+.monster__hud {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  top: 1%;
+  display: none; /* foe-plate(ステージ共通プレート)へ移設 */
+  gap: 7px;
+  z-index: 10;
+}
+
+.monster__hud-row { display: flex; justify-content: space-between; align-items: center; gap: 8px; }
+
+.monster__status {
+  display: inline-flex;
+  align-items: center;
+  min-height: 22px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  background: var(--status-bg);
+  color: var(--status-fg);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.7), 0 6px 14px rgba(0, 0, 0, 0.35);
+}
+
+.monster__status::before { content: var(--status-label); }
+
+/* コンボ表示はHUDへ移設したため非表示 */
+.monster__combo { display: none; }
+
+.monster__hp {
+  width: 100%;
+  height: 14px;
+  padding: 3px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.42);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+}
+
+.monster__hp-fill {
+  width: var(--hp);
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #22c55e, #a3e635 58%, #facc15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55), 0 0 14px rgba(34, 197, 94, 0.35);
+  transition: width 240ms ease, background 160ms ease, box-shadow 160ms ease;
+}
+
+.monster__flash {
+  position: absolute;
+  inset: 18% 14% 19%;
+  border-radius: 46% 46% 43% 43%;
+  background: #ffffff;
+  opacity: 0;
+  mix-blend-mode: screen;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.monster--idle { --status-label: "IDLE"; --status-bg: #ecfdf5; --status-fg: #047857; }
+
+.monster--warning {
+  --monster-main: #8b5cf6;
+  --monster-main-dark: #6d28d9;
+  --monster-main-light: #c4b5fd;
+  --monster-aura: rgba(255, 209, 102, 0.35);
+  --status-label: "WARNING";
+  --status-bg: #fff7ed;
+  --status-fg: #c2410c;
+  animation: monsterFloat 1.45s ease-in-out infinite, warningGlow 0.9s ease-in-out infinite alternate;
+}
+
+.monster--warning .monster__spark { animation: sparkPop 0.85s ease-in-out infinite; }
+.monster--warning .monster__spark--two { animation-delay: 0.16s; }
+.monster--warning .monster__spark--three { animation-delay: 0.32s; }
+.monster--warning .monster__eye::before { transform: translateX(7%); }
+
+.monster--danger {
+  --monster-main: #ff4d6d;
+  --monster-main-dark: #be123c;
+  --monster-main-light: #fb7185;
+  --monster-belly: #fff1f2;
+  --monster-cheek: #ffffff;
+  --monster-aura: rgba(255, 77, 109, 0.5);
+  --status-label: "DANGER";
+  --status-bg: #fee2e2;
+  --status-fg: #b91c1c;
+  animation: dangerShake 0.38s linear infinite, dangerPulse 0.62s ease-in-out infinite alternate;
+}
+
+.monster--danger .monster__body {
+  box-shadow:
+    inset -14px -18px 0 rgba(80, 7, 36, 0.16),
+    inset 9px 11px 0 rgba(255, 255, 255, 0.12),
+    0 0 0 8px rgba(255, 77, 109, 0.1),
+    0 18px 30px rgba(190, 18, 60, 0.35);
+}
+
+.monster--danger .monster__hp-fill {
+  background: linear-gradient(90deg, #fb7185, #ef4444, #b91c1c);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.48), 0 0 16px rgba(239, 68, 68, 0.42);
+}
+
+.monster--danger .monster__eye { transform: scaleY(0.84); }
+.monster--danger .monster__eye::before { width: 46%; transform: translate(-3%, 4%); }
+.monster--danger .monster__mouth { transform: translateY(4%) scaleX(1.2) scaleY(1.12); color: #4a0f1f; }
+.monster--danger .monster__hand--left { animation: chargeLeft 0.52s ease-in-out infinite alternate; }
+.monster--danger .monster__hand--right { animation: chargeRight 0.52s ease-in-out infinite alternate; }
+.monster--danger .monster__spark { color: #ff4d6d; animation: sparkPop 0.52s ease-in-out infinite; }
+
+.monster--hit {
+  --monster-main: #7c5cff;
+  --monster-main-dark: #5b3be7;
+  --monster-main-light: #c4b5fd;
+  --monster-aura: rgba(255, 255, 255, 0.48);
+  --status-label: "HIT!";
+  --status-bg: #eef2ff;
+  --status-fg: #4338ca;
+  animation: monsterHit 0.46s ease-in-out both;
+}
+
+.monster--hit .monster__body { animation: bodySquash 0.46s ease-in-out both; }
+.monster--hit .monster__flash { animation: flashHit 0.46s ease-out both; }
+.monster--hit .monster__eye::after { height: 52%; }
+.monster--hit .monster__mouth { transform: translateY(-5%) scaleX(0.8) rotate(180deg); }
+.monster--hit .monster__hp-fill { background: linear-gradient(90deg, #38bdf8, #818cf8, #a78bfa); }
+
+.monster--attack {
+  --monster-main: #fb923c;
+  --monster-main-dark: #ea580c;
+  --monster-main-light: #fed7aa;
+  --monster-belly: #fff7ed;
+  --monster-aura: rgba(251, 146, 60, 0.38);
+  --status-label: "ATTACK";
+  --status-bg: #ffedd5;
+  --status-fg: #9a3412;
+  animation: monsterAttack 0.72s cubic-bezier(0.3, 0, 0.2, 1) both;
+}
+
+.monster--attack .monster__body { animation: bodyAttack 0.72s cubic-bezier(0.3, 0, 0.2, 1) both; }
+.monster--attack .monster__hand--left { animation: attackHandLeft 0.72s cubic-bezier(0.3, 0, 0.2, 1) both; }
+.monster--attack .monster__hand--right { animation: attackHandRight 0.72s cubic-bezier(0.3, 0, 0.2, 1) both; }
+.monster--attack .monster__eye::before { transform: translateY(10%) scale(1.18); }
+.monster--attack .monster__mouth { transform: translateY(10%) scale(1.35); color: #431407; }
+
+.monster--defeated {
+  --monster-main: #94a3b8;
+  --monster-main-dark: #64748b;
+  --monster-main-light: #cbd5e1;
+  --monster-belly: #f8fafc;
+  --monster-cheek: #cbd5e1;
+  --monster-aura: rgba(148, 163, 184, 0.18);
+  --status-label: "DEFEATED";
+  --status-bg: #f1f5f9;
+  --status-fg: #475569;
+  animation: monsterDefeated 0.95s ease-in forwards;
+}
+
+.monster--defeated .monster__body { filter: grayscale(0.15); }
+.monster--defeated .monster__eye { background: #f8fafc; transform: scaleY(0.18); }
+.monster--defeated .monster__eye::before { opacity: 0; }
+.monster--defeated .monster__cheek { opacity: 0.2; }
+.monster--defeated .monster__mouth { transform: translateY(10%) scaleX(0.75) rotate(180deg); opacity: 0.55; }
+.monster--defeated .monster__hp-fill { background: linear-gradient(90deg, #94a3b8, #cbd5e1); box-shadow: none; }
+
+/* 次の問題への切替時: 上から降ってきて着地(squash)→復帰。約750msでidleへ戻す */
+.monster--entrance {
+  --status-label: "READY";
+  --status-bg: #eef2ff;
+  --status-fg: #4338ca;
+  animation: monsterEntrance 0.75s cubic-bezier(0.24, 1.1, 0.35, 1) both;
+}
+
+.monster--entrance .monster__shadow { animation: entranceShadow 0.75s ease-out both; }
+.monster--entrance .monster__hud { animation: entranceHud 0.35s ease-out 0.42s both; }
+
+@keyframes monsterEntrance {
+  0% { opacity: 0; transform: translateY(-64%) scale(0.92); }
+  50% { opacity: 1; transform: translateY(4%) scale(1.08, 0.84); }
+  72% { transform: translateY(-4%) scale(0.96, 1.06); }
+  88% { transform: translateY(1%) scale(1.02, 0.98); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes entranceShadow {
+  0% { opacity: 0; transform: scaleX(0.25); }
+  50% { opacity: 0.72; transform: scaleX(1.2); }
+  100% { opacity: 0.65; transform: scaleX(1); }
+}
+
+@keyframes entranceHud {
+  from { opacity: 0; transform: translateY(-7px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes monsterFloat { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-9px); } }
+@keyframes shadowPulse { 0%, 100% { transform: scaleX(0.95); opacity: 0.52; } 50% { transform: scaleX(1.08); opacity: 0.34; } }
+@keyframes handWaveLeft { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(-8deg) translateY(-3%); } }
+@keyframes handWaveRight { 0%, 100% { transform: rotate(0deg); } 50% { transform: rotate(8deg) translateY(-3%); } }
+@keyframes warningGlow { from { filter: drop-shadow(0 0 0 rgba(255, 209, 102, 0)); } to { filter: drop-shadow(0 0 18px rgba(255, 209, 102, 0.72)); } }
+@keyframes dangerShake { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(-2px, 1px) rotate(-1deg); } 50% { transform: translate(2px, -1px) rotate(1deg); } 75% { transform: translate(-1px, -1px) rotate(-0.7deg); } }
+@keyframes dangerPulse { from { filter: drop-shadow(0 0 0 rgba(239, 68, 68, 0)); } to { filter: drop-shadow(0 0 20px rgba(239, 68, 68, 0.72)); } }
+@keyframes sparkPop { 0%, 100% { opacity: 0; transform: scale(0.45) rotate(0deg); } 48% { opacity: 1; transform: scale(1) rotate(14deg); } }
+@keyframes chargeLeft { from { transform: rotate(0deg) translate(0, 0); } to { transform: rotate(-20deg) translate(10%, -8%); } }
+@keyframes chargeRight { from { transform: rotate(0deg) translate(0, 0); } to { transform: rotate(20deg) translate(-10%, -8%); } }
+@keyframes monsterHit { 0% { transform: translateX(0) scale(1); } 18% { transform: translateX(-13px) scale(1.03, 0.97); } 36% { transform: translateX(12px) scale(0.98, 1.03); } 54% { transform: translateX(-8px) scale(1.02, 0.98); } 72% { transform: translateX(5px) scale(0.99, 1.01); } 100% { transform: translateX(0) scale(1); } }
+@keyframes bodySquash { 0%, 100% { transform: scale(1); } 45% { transform: scale(1.07, 0.9); } }
+@keyframes flashHit { 0% { opacity: 0; } 18% { opacity: 0.92; } 100% { opacity: 0; } }
+@keyframes monsterAttack { 0% { transform: translateY(0) scale(1); } 34% { transform: translateY(14px) scale(1.08, 0.9); } 58% { transform: translateY(-30px) scale(0.96, 1.08); } 100% { transform: translateY(0) scale(1); } }
+@keyframes bodyAttack { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.12, 0.92); } }
+@keyframes attackHandLeft { 0% { transform: rotate(0deg) translate(0, 0); } 45% { transform: rotate(-38deg) translate(16%, -14%); } 100% { transform: rotate(18deg) translate(12%, 18%); } }
+@keyframes attackHandRight { 0% { transform: rotate(0deg) translate(0, 0); } 45% { transform: rotate(38deg) translate(-16%, -14%); } 100% { transform: rotate(-18deg) translate(-12%, 18%); } }
+@keyframes monsterDefeated { 0% { opacity: 1; transform: translateY(0) scale(1) rotate(0deg); } 35% { opacity: 1; transform: translateY(8px) scale(0.9, 1.04) rotate(-3deg); } 72% { opacity: 0.72; transform: translateY(32px) scale(0.56) rotate(5deg); } 100% { opacity: 0; transform: translateY(48px) scale(0.16) rotate(12deg); } }
+
+/* 縦が狭い端末ではモンスターを縮小 */
+@media (max-height: 700px) {
+  .monster { width: min(150px, 38vw); }
+  .answer-zone { min-height: 92px; }
+  .bank { min-height: 108px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .monster, .monster *,
+  .game-root::after,
+  .game-root.screen-shake,
+  .fx-slash, .fx-slash::before, .fx-slash::after,
+  .fx-score-pop,
+  .chunk-inline.active,
+  .progress.danger span,
+  .hud-combo.combo-active {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+
+/* ---------- モック確認用コントロール(統合対象外) ---------- */
+
+.mock-controls {
+  position: fixed;
+  top: 74px;
+  right: 8px;
+  z-index: 200;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+}
+
+.mock-controls .mock-title {
+  color: #94a3b8;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* 折りたたみ時はタイトルだけ表示(HUDやステージを隠さないため) */
+.mock-controls.collapsed button { display: none; }
+body.bare .mock-controls { display: none; }
+
+.mock-controls button {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-controls button.active { background: #ffd166; color: #431407; border-color: #f59e0b; }
+</style>
+</head>
+<body>
+
+<!-- モック確認用(統合対象外)。タイトルをタップで開閉、URLに ?bare で非表示 -->
+<div class="mock-controls collapsed" id="mockControls">
+  <span class="mock-title" id="mockTitle">▸ MOCK STATE</span>
+  <button data-state="normal" class="active">通常</button>
+  <button data-state="entrance">登場</button>
+  <button data-state="boss">ボス出現</button>
+  <button data-state="correct">正解演出</button>
+  <button data-state="danger">danger(残5秒)</button>
+  <button data-state="pause">ポーズ</button>
+  <button data-state="result">リザルト</button>
+</div>
+
+<div class="game-root" id="gameRoot">
+
+  <!-- ========== 上部HUD ========== -->
+  <header class="hud">
+    <button class="hud-btn" id="pauseBtn" type="button" aria-label="ポーズ">
+      <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
+        <rect x="3" y="2" width="4" height="12" rx="1.5"/>
+        <rect x="9" y="2" width="4" height="12" rx="1.5"/>
+      </svg>
+    </button>
+    <div class="hud-time">
+      <div class="hud-time-top time-readout" id="timeReadout">
+        <span class="hud-label">Time</span>
+        <strong id="timeLeft">42.7</strong>
+      </div>
+      <div class="progress" id="timeProgress"><span id="progressBar" style="width:71%"></span></div>
+    </div>
+    <div class="hud-stats">
+      <div class="hud-stat">
+        <span class="hud-label">Score</span>
+        <strong id="score">128</strong>
+      </div>
+      <div class="hud-combo combo-active" id="comboBadge">
+        <span class="hud-label">Combo</span>
+        <strong id="streak">×3</strong>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========== 中央バトルステージ ========== -->
+  <main class="battle-stage">
+
+    <!-- 敵ネームプレート(全モンスター種共通) -->
+    <div class="foe-plate" id="foePlate">
+      <div class="foe-plate-row">
+        <span class="foe-name" id="foeName">インキー <b>Lv.3</b></span>
+        <span class="foe-bars" id="foeBars" hidden><i class="on"></i><i class="on"></i></span>
+      </div>
+      <div class="foe-hp"><span class="foe-hp-fill"></span></div>
+    </div>
+
+    <!-- BOSS登場スタンプ(#boss 状態で再生) -->
+    <div class="boss-stamp" id="bossStamp" hidden><span>BOSS!!</span></div>
+
+    <!-- モンスター: renderMonsterMarkup() と同一構造(combo pillはCSSで非表示) -->
+    <div id="questMonster" class="monster monster--idle" role="img" aria-label="Word Order Quest monster">
+      <div class="monster__aura"></div>
+      <div class="monster__shadow"></div>
+      <div class="monster__hud" aria-hidden="true">
+        <div class="monster__hud-row">
+          <div class="monster__status"></div>
+          <div class="monster__combo" id="monsterCombo">Combo x0</div>
+        </div>
+        <div class="monster__hp"><div class="monster__hp-fill"></div></div>
+      </div>
+      <div class="monster__horn monster__horn--left"></div>
+      <div class="monster__horn monster__horn--right"></div>
+      <div class="monster__ear monster__ear--left"></div>
+      <div class="monster__ear monster__ear--right"></div>
+      <div class="monster__hand monster__hand--left"></div>
+      <div class="monster__hand monster__hand--right"></div>
+      <div class="monster__body">
+        <div class="monster__eye monster__eye--left"></div>
+        <div class="monster__eye monster__eye--right"></div>
+        <div class="monster__cheek monster__cheek--left"></div>
+        <div class="monster__cheek monster__cheek--right"></div>
+        <div class="monster__mouth" aria-hidden="true">
+          <svg viewBox="0 0 80 60" focusable="false">
+            <path d="M16 16 C24 42, 56 42, 64 16" fill="none" stroke="currentColor" stroke-width="8" stroke-linecap="round" />
+            <path class="monster__tooth" d="M32 30 L39 30 L35.5 40 Z" />
+            <path class="monster__tooth" d="M45 30 L52 30 L48.5 40 Z" />
+          </svg>
+        </div>
+      </div>
+      <div class="monster__spark monster__spark--one" aria-hidden="true">
+        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
+      </div>
+      <div class="monster__spark monster__spark--two" aria-hidden="true">
+        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
+      </div>
+      <div class="monster__spark monster__spark--three" aria-hidden="true">
+        <svg viewBox="0 0 64 64" focusable="false"><path d="M32 2 L39 23 L61 32 L39 41 L32 62 L25 41 L3 32 L25 23 Z" fill="currentColor" /></svg>
+      </div>
+      <div class="monster__flash"></div>
+    </div>
+
+    <!-- クエストボード: 日本語原文 + 語順チャンクレール -->
+    <div class="quest-board">
+      <p class="source-ja" id="sourceJa">私は毎日図書館で英語を勉強します。</p>
+      <div class="chunk-rail" id="chunkRail"></div>
+    </div>
+
+    <!-- 攻撃エフェクト層 -->
+    <div class="fx-layer" id="fxLayer">
+      <div class="fx-slash" id="fxSlash"></div>
+      <div class="fx-score-pop" id="fxScorePop">+15</div>
+    </div>
+
+    <!-- 正解トースト(絶対配置) -->
+    <div class="feedback-toast" id="feedbackToast" hidden>
+      正解！ 連続正解ボーナス +3秒<br><strong>I study English every day in the library</strong>
+    </div>
+  </main>
+
+  <!-- ========== 解答エリア ========== -->
+  <section class="answer-dock">
+    <div class="answer-zone" id="answerZone"></div>
+  </section>
+
+  <!-- ========== 下部単語カード ========== -->
+  <section class="bank-dock">
+    <div class="bank" id="bank"></div>
+  </section>
+
+  <!-- ========== ポーズオーバーレイ ========== -->
+  <div class="overlay" id="pauseOverlay" hidden>
+    <div class="overlay-panel">
+      <h2 class="overlay-title">PAUSE</h2>
+      <div class="overlay-actions">
+        <button class="gbtn primary" type="button">再開</button>
+        <button class="gbtn" type="button">もう一度</button>
+        <button class="gbtn" type="button">単元一覧</button>
+        <button class="gbtn" type="button">ホーム</button>
+        <button class="gbtn" type="button">共通設定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== リザルトオーバーレイ ========== -->
+  <div class="overlay" id="resultOverlay" hidden>
+    <div class="overlay-panel">
+      <h2 class="overlay-title timeup">TIME UP</h2>
+      <div class="result-stats">
+        <div class="result-stat"><span class="hud-label">Score</span><strong>128</strong></div>
+        <div class="result-stat"><span class="hud-label">正解数</span><strong>9</strong></div>
+      </div>
+      <p class="result-sentence">最後の正解文<br><strong>I study English every day in the library</strong></p>
+      <div class="overlay-actions">
+        <button class="gbtn primary" type="button">もう一度</button>
+        <button class="gbtn" type="button">単元一覧</button>
+        <button class="gbtn" type="button">ホーム</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- モック確認用スクリプト。
+     「=== 移植対象 ===」で囲まれたカード飛翔演出の3関数だけはapp.jsへ移植する。
+     それ以外は状態切替デモ用であり統合対象外(実装は app.js の既存関数を使うこと)。 -->
+<script>
+const CHUNKS = [
+  { ja: "私は", en: "I" },
+  { ja: "勉強します", en: "study" },
+  { ja: "英語を", en: "English" },
+  { ja: "毎日", en: "every day" },
+  { ja: "図書館で", en: "in the library" }
+];
+const BANK_ORDER = [3, 0, 2, 1, 4]; // バンクの並び(シャッフル済み想定)。解答済みのチャンクは除外される
+
+const root = document.getElementById("gameRoot");
+const monster = document.getElementById("questMonster");
+const answerZone = document.getElementById("answerZone");
+const bank = document.getElementById("bank");
+const toast = document.getElementById("feedbackToast");
+const pauseOverlay = document.getElementById("pauseOverlay");
+const resultOverlay = document.getElementById("resultOverlay");
+const timeReadout = document.getElementById("timeReadout");
+const timeProgress = document.getElementById("timeProgress");
+
+function renderChunkRail(activeIndex) {
+  const rail = document.getElementById("chunkRail");
+  rail.innerHTML = "";
+  CHUNKS.forEach((chunk, i) => {
+    const item = document.createElement("span");
+    item.className = "chunk-inline" + (i === activeIndex ? " active" : "");
+    const ja = document.createElement("span");
+    ja.className = "chunk-ja";
+    ja.textContent = chunk.ja;
+    const shape = document.createElement("span");
+    shape.className = "chunk-shape";
+    chunk.en.split(/\s+/).forEach(word => {
+      const mark = document.createElement("span");
+      mark.className = "word-mark";
+      mark.style.width = Math.max(10, Math.min(38, word.length * 4 + 8)) + "px";
+      shape.appendChild(mark);
+    });
+    item.append(ja, shape);
+    rail.appendChild(item);
+    if (i < CHUNKS.length - 1) {
+      const slash = document.createElement("span");
+      slash.className = "slash";
+      slash.textContent = "/";
+      rail.appendChild(slash);
+    }
+  });
+}
+
+// === 移植対象: カード飛翔演出(FLIP + Web Animations API。外部ライブラリ不使用) ===
+// app.js への組み込み手順は docs/game-ui-redesign-instructions.md 8章参照。
+const REDUCED_MOTION = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+// 再描画「前」に呼び、コンテナ内の全カードの位置を data-id キーで記録する
+function captureTokenRects(container) {
+  const rects = new Map();
+  container.querySelectorAll(".token[data-id]").forEach(el => rects.set(el.dataset.id, el.getBoundingClientRect()));
+  return rects;
+}
+
+// 再描画「後」に呼ぶ。解答欄に現れた tokenId のチップへ、fromRect(タップ時のカード位置)からクローンを飛ばす。
+// 飛翔中は実チップを visibility:hidden にし、着地時に .pop を再発火する
+function flyTokenToAnswer(zone, tokenId, fromRect) {
+  const chip = zone.querySelector(`[data-id="${CSS.escape(tokenId)}"]`);
+  if (!chip || REDUCED_MOTION.matches || typeof chip.animate !== "function") return;
+  const toRect = chip.getBoundingClientRect();
+  const clone = chip.cloneNode(true);
+  clone.classList.add("fly-clone");
+  clone.style.left = `${toRect.left}px`;
+  clone.style.top = `${toRect.top}px`;
+  clone.style.width = `${toRect.width}px`;
+  clone.style.height = `${toRect.height}px`;
+  document.body.appendChild(clone);
+  chip.style.visibility = "hidden";
+  const dx = fromRect.left + fromRect.width / 2 - (toRect.left + toRect.width / 2);
+  const dy = fromRect.top + fromRect.height / 2 - (toRect.top + toRect.height / 2);
+  const startScale = fromRect.height / toRect.height;
+  const flight = clone.animate([
+    { transform: `translate(${dx}px, ${dy}px) scale(${startScale})` },
+    { transform: `translate(${dx * 0.45}px, ${dy * 0.45 - 42}px) scale(${(1 + startScale) / 2})`, offset: 0.55 },
+    { transform: "translate(0, 0) scale(1)" }
+  ], { duration: 330, easing: "cubic-bezier(0.25, 0.7, 0.3, 1)" });
+  const land = () => {
+    clone.remove();
+    chip.style.visibility = "";
+    chip.classList.remove("pop");
+    void chip.offsetWidth;
+    chip.classList.add("pop");
+  };
+  flight.onfinish = land;
+  flight.oncancel = land;
+}
+
+// 再描画「後」に呼ぶ。残ったバンクカードが旧位置から新位置へ滑って隙間を詰める
+function playBankFlip(container, prevRects) {
+  if (REDUCED_MOTION.matches) return;
+  container.querySelectorAll(".token[data-id]").forEach(el => {
+    const prev = prevRects.get(el.dataset.id);
+    if (!prev || typeof el.animate !== "function") return;
+    const now = el.getBoundingClientRect();
+    const dx = prev.left - now.left;
+    const dy = prev.top - now.top;
+    if (Math.abs(dx) < 1 && Math.abs(dy) < 1) return;
+    el.animate(
+      [{ transform: `translate(${dx}px, ${dy}px)` }, { transform: "translate(0, 0)" }],
+      { duration: 260, easing: "cubic-bezier(0.3, 0.8, 0.3, 1)" }
+    );
+  });
+}
+// === 移植対象ここまで ==========================================================
+
+let mockCount = 0;
+let mockTimers = [];
+
+function later(fn, ms) { mockTimers.push(setTimeout(fn, ms)); }
+
+function renderTokens(answerCount) {
+  mockCount = answerCount;
+  answerZone.innerHTML = "";
+  bank.innerHTML = "";
+  answerZone.classList.toggle("empty", answerCount === 0);
+  for (let i = 0; i < answerCount; i++) {
+    const chip = document.createElement("div");
+    chip.className = "token in-answer";
+    chip.dataset.id = String(i);
+    chip.textContent = CHUNKS[i].en;
+    answerZone.appendChild(chip);
+  }
+  BANK_ORDER.filter(i => i >= answerCount).forEach(i => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "token";
+    btn.dataset.id = String(i);
+    btn.textContent = CHUNKS[i].en;
+    btn.addEventListener("click", () => mockChoose(i, btn)); // モックでも実際にタップして遊べる
+    bank.appendChild(btn);
+  });
+}
+
+// デモ用の簡易ゲームループ(統合対象外): 正解=次のチャンク、間違い=反撃演出
+function mockChoose(index, element) {
+  if (index !== mockCount) {
+    element.classList.remove("wrong-choice");
+    void element.offsetWidth;
+    element.classList.add("wrong-choice");
+    root.classList.remove("screen-shake");
+    void root.offsetWidth;
+    root.classList.add("screen-shake");
+    setMonster("attack");
+    later(() => setMonster("idle"), 760);
+    return;
+  }
+  const fromRect = element.getBoundingClientRect();
+  const bankRects = captureTokenRects(bank);
+  const next = mockCount + 1;
+  renderTokens(next);
+  renderChunkRail(next >= CHUNKS.length ? -1 : next);
+  flyTokenToAnswer(answerZone, String(index), fromRect);
+  playBankFlip(bank, bankRects);
+  monster.style.setProperty("--hp", `${Math.round(((CHUNKS.length - next) / CHUNKS.length) * 100)}%`);
+  if (next === CHUNKS.length) {
+    later(() => {
+      setMonster("defeated");
+      toast.hidden = false;
+      answerZone.classList.remove("success-flash");
+      void answerZone.offsetWidth;
+      answerZone.classList.add("success-flash");
+      replayFx();
+    }, 320);
+    later(() => setState("entrance"), 2200); // 撃破→次のモンスター登場までのループデモ
+  } else {
+    setMonster("hit");
+    later(() => setMonster("idle"), 500);
+  }
+}
+
+function setTime(seconds, total) {
+  document.getElementById("timeLeft").textContent = seconds.toFixed(1);
+  document.getElementById("progressBar").style.width = Math.max(0, Math.min(100, (seconds / total) * 100)) + "%";
+  const warning = seconds <= 10 && seconds > 5;
+  const danger = seconds <= 5;
+  timeReadout.classList.toggle("warning", warning);
+  timeReadout.classList.toggle("danger", danger);
+  timeProgress.classList.toggle("warning", warning);
+  timeProgress.classList.toggle("danger", danger);
+  root.classList.toggle("warning", warning);
+  root.classList.toggle("danger", danger);
+}
+
+function setMonster(state) {
+  monster.className = "monster";
+  void monster.offsetHeight; // 同一状態でもアニメを再発火させる(app.jsのsetMonsterStateと同じ作法)
+  monster.className = "monster monster--" + state;
+}
+
+function replayFx() {
+  ["fxSlash", "fxScorePop"].forEach(id => {
+    const el = document.getElementById(id);
+    el.classList.remove("play");
+    void el.offsetWidth;
+    el.classList.add("play");
+  });
+}
+
+function setHp(v) {
+  monster.style.setProperty("--hp", v);
+  root.style.setProperty("--hp", v); // .foe-plate のHPバー用
+}
+
+const STATES = {
+  normal() {
+    setTime(42.7, 60);
+    setMonster("idle");
+    setHp("60%");
+    renderChunkRail(2);
+    renderTokens(2);
+  },
+  entrance() {
+    // 新しい問題の開始: モンスター登場 + HP全回復 + バンク全カード
+    setTime(48.2, 60);
+    setMonster("entrance");
+    setHp("100%");
+    renderChunkRail(0);
+    renderTokens(0);
+  },
+  correct() {
+    setTime(45.7, 60);
+    setMonster("defeated");
+    setHp("0%");
+    renderChunkRail(-1);
+    renderTokens(5);
+    toast.hidden = false;
+    answerZone.classList.add("success-flash");
+    replayFx();
+  },
+  danger() {
+    setTime(3.4, 60);
+    setMonster("danger");
+    setHp("60%");
+    renderChunkRail(2);
+    renderTokens(2);
+  },
+  boss() {
+    // ボス出現問: 5体撃破ごと。実際の個体はグランデックス(monster-mock.html参照)に置き換わる
+    setTime(38.5, 60);
+    setMonster("entrance");
+    setHp("100%");
+    renderChunkRail(0);
+    renderTokens(0);
+    document.getElementById("foeName").innerHTML = 'グランデックス <b>Lv.5</b>';
+    document.getElementById("foeBars").hidden = false;
+    document.getElementById("bossStamp").hidden = false;
+    const stamp = document.querySelector("#bossStamp span");
+    stamp.style.animation = "none"; void stamp.offsetWidth; stamp.style.animation = "";
+  },
+  pause() {
+    STATES.normal();
+    pauseOverlay.hidden = false;
+  },
+  result() {
+    setTime(0, 60);
+    setMonster("idle");
+    renderChunkRail(2);
+    renderTokens(2);
+    resultOverlay.hidden = true;
+    resultOverlay.hidden = false;
+  }
+};
+
+function setState(name) {
+  mockTimers.forEach(clearTimeout);
+  mockTimers = [];
+  document.querySelectorAll(".fly-clone").forEach(el => el.remove());
+  toast.hidden = true;
+  pauseOverlay.hidden = true;
+  resultOverlay.hidden = true;
+  answerZone.classList.remove("success-flash");
+  root.classList.remove("screen-shake");
+  document.getElementById("bossStamp").hidden = true;
+  document.getElementById("foeBars").hidden = true;
+  document.getElementById("foeName").innerHTML = 'インキー <b>Lv.3</b>';
+  document.querySelectorAll(".mock-controls button").forEach(b => b.classList.toggle("active", b.dataset.state === name));
+  STATES[name]();
+}
+
+document.querySelectorAll(".mock-controls button").forEach(btn => {
+  btn.addEventListener("click", () => setState(btn.dataset.state));
+});
+
+const mockControls = document.getElementById("mockControls");
+document.getElementById("mockTitle").addEventListener("click", () => {
+  const collapsed = mockControls.classList.toggle("collapsed");
+  document.getElementById("mockTitle").textContent = (collapsed ? "▸" : "▾") + " MOCK STATE";
+});
+
+// URLで制御可能: #danger 等で初期状態、?bare でモックUI非表示(スクリーンショット用)
+if (location.search.includes("bare")) document.body.classList.add("bare");
+setState(Object.hasOwn(STATES, location.hash.slice(1)) ? location.hash.slice(1) : "normal");
+</script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Word Order Quest — Home/Unit画面デザインカンプ</title>
+<style>
+/* ============================================================
+   Word Order Quest — Home/Unit画面 ダークテーマ デザインカンプ
+   Game画面(game-mock.html)と同じデザイントークンで全画面を統一する。
+   DOM構造は app.js の renderHome()/renderUnits() の出力と同一。
+   .mock-controls と末尾<script>はモック確認用で統合対象外。
+   ============================================================ */
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+
+:root {
+  --g-bg-0: #0b0e1f;
+  --g-bg-1: #161233;
+  --g-bg-2: #1e1440;
+  --g-line: rgba(255, 255, 255, 0.1);
+  --g-line-strong: rgba(255, 255, 255, 0.18);
+  --g-text: #f1f2fa;
+  --g-muted: #9aa0c3;
+  --g-gold: #ffd166;
+  --g-gold-deep: #f59e0b;
+  --g-green: #34d399;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: var(--g-text);
+  -webkit-font-smoothing: antialiased;
+  background:
+    radial-gradient(120% 40% at 50% 0%, rgba(124, 92, 255, 0.18), transparent 62%),
+    radial-gradient(1.5px 1.5px at 18% 10%, rgba(255, 255, 255, 0.5), transparent 100%),
+    radial-gradient(1px 1px at 72% 6%, rgba(255, 255, 255, 0.42), transparent 100%),
+    radial-gradient(1.5px 1.5px at 88% 22%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1px 1px at 8% 30%, rgba(255, 255, 255, 0.3), transparent 100%),
+    radial-gradient(1.5px 1.5px at 34% 4%, rgba(255, 209, 102, 0.45), transparent 100%),
+    radial-gradient(1px 1px at 55% 16%, rgba(255, 255, 255, 0.35), transparent 100%),
+    linear-gradient(180deg, var(--g-bg-0) 0%, var(--g-bg-1) 58%, var(--g-bg-2) 100%);
+  background-attachment: fixed;
+}
+
+button { font: inherit; -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+
+/* app-shell: ダークでは「浮いた白い箱」をやめ、背景に溶け込む全幅レイアウトにする */
+.app-shell {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: center;
+  padding: calc(18px + env(safe-area-inset-top)) 18px 14px;
+  border-bottom: 1px solid var(--g-line);
+  background: rgba(11, 14, 31, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(21px, 2.6vw, 28px);
+  font-weight: 900;
+  font-style: italic;
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #ffe9a8, var(--g-gold) 55%, var(--g-gold-deep));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(255, 209, 102, 0.18));
+}
+
+.subtitle, .muted {
+  color: var(--g-muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.screen { padding: 16px 16px calc(24px + env(safe-area-inset-bottom)); }
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+
+.notice {
+  margin-bottom: 14px;
+  padding: 12px;
+  border: 1px solid rgba(255, 209, 102, 0.3);
+  background: rgba(255, 209, 102, 0.08);
+  color: #fcd34d;
+  border-radius: 12px;
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+/* コース/単元カード: クエスト掲示板のパネル */
+.card {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  align-content: start;
+  padding: 16px 15px 15px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 209, 102, 0.16);
+  background: linear-gradient(180deg, #201a4a, #151233);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.38), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  overflow: hidden;
+  transition: transform 140ms ease, border-color 140ms ease, box-shadow 140ms ease;
+}
+
+/* カード上端の金のアクセントライン(DOM追加なしの装飾) */
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(255, 209, 102, 0.65), transparent);
+  opacity: 0.7;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 209, 102, 0.4);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.5), 0 0 22px rgba(255, 209, 102, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+.card h2, .card h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+  color: var(--g-text);
+}
+
+.card p {
+  margin: 0;
+  color: var(--g-muted);
+  line-height: 1.55;
+  font-size: 13px;
+}
+
+.progress-line {
+  height: 9px;
+  margin-top: 5px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  width: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--g-green), #a3e635 60%, var(--g-gold));
+  box-shadow: 0 0 8px rgba(52, 211, 153, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+
+/* ボタン: Game画面の .gbtn と同じ言語 */
+.btn {
+  min-height: 42px;
+  padding: 9px 12px;
+  border-radius: 13px;
+  border: 1px solid var(--g-line-strong);
+  background: rgba(255, 255, 255, 0.07);
+  color: var(--g-text);
+  font-size: 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 90ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.btn:hover { background: rgba(255, 255, 255, 0.12); }
+.btn:active { transform: scale(0.97); }
+
+.btn.primary {
+  border-color: var(--g-gold-deep);
+  background: linear-gradient(180deg, #ffe089, var(--g-gold) 45%, var(--g-gold-deep));
+  box-shadow: 0 4px 0 #92400e, 0 8px 18px rgba(245, 158, 11, 0.25);
+  color: #431407;
+}
+
+.btn.primary:hover { background: linear-gradient(180deg, #fff0b3, #ffd97a 45%, var(--g-gold-deep)); }
+.btn.primary:active { transform: translateY(3px); box-shadow: 0 1px 0 #92400e; }
+
+.btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+@media (max-width: 560px) {
+  .screen { padding: 12px 12px calc(20px + env(safe-area-inset-bottom)); }
+  .app-header { padding: calc(14px + env(safe-area-inset-top)) 14px 12px; }
+}
+
+/* ---------- モック確認用コントロール(統合対象外) ---------- */
+
+.mock-controls {
+  position: fixed;
+  top: 74px;
+  right: 8px;
+  z-index: 200;
+  display: grid;
+  gap: 4px;
+  padding: 8px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 10px;
+}
+
+.mock-controls .mock-title {
+  color: #94a3b8;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  user-select: none;
+}
+
+.mock-controls.collapsed button { display: none; }
+body.bare .mock-controls { display: none; }
+
+.mock-controls button {
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-size: 11px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.mock-controls button.active { background: #ffd166; color: #431407; border-color: #f59e0b; }
+</style>
+</head>
+<body>
+
+<!-- モック確認用(統合対象外)。タイトルをタップで開閉、URLに ?bare で非表示 -->
+<div class="mock-controls collapsed" id="mockControls">
+  <span class="mock-title" id="mockTitle">▸ MOCK STATE</span>
+  <button data-view="home" class="active">Home</button>
+  <button data-view="units">Units</button>
+</div>
+
+<div class="app-shell">
+
+  <!-- ========== Home画面 ========== -->
+  <div id="viewHome">
+    <header class="app-header">
+      <div>
+        <h1>Word Order Quest</h1>
+        <div class="subtitle">英語語順を、音とテンポで覚える</div>
+      </div>
+    </header>
+    <section class="screen">
+      <div class="toolbar">
+        <button class="btn" type="button">共通設定</button>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h2>中1英文法</h2>
+          <p>be動詞・一般動詞・疑問文・否定文など、英語語順の基礎を練習します。</p>
+          <div>
+            <div class="muted">学習進捗 4/6</div>
+            <div class="progress-line"><span style="width:67%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h2>中2英文法</h2>
+          <p>過去形・未来表現・助動詞・不定詞など、文を広げる語順を練習します。</p>
+          <div>
+            <div class="muted">学習進捗 2/6</div>
+            <div class="progress-line"><span style="width:33%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h2>中3英文法</h2>
+          <p>受動態・現在完了・関係代名詞など、複雑な英語語順を練習します。</p>
+          <div>
+            <div class="muted">学習進捗 0/5</div>
+            <div class="progress-line"><span style="width:0%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h2>カスタム練習</h2>
+          <p>自分で用意したlesson JSONを貼り付けて練習します。</p>
+          <div>
+            <div class="muted">学習進捗 1/1</div>
+            <div class="progress-line"><span style="width:100%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+      </div>
+    </section>
+  </div>
+
+  <!-- ========== Unit画面 ========== -->
+  <div id="viewUnits" hidden>
+    <header class="app-header">
+      <div>
+        <h1>中1英文法</h1>
+        <div class="subtitle">be動詞・一般動詞・疑問文・否定文など、英語語順の基礎を練習します。</div>
+      </div>
+    </header>
+    <section class="screen">
+      <div class="toolbar">
+        <button class="btn" type="button">ホームに戻る</button>
+        <button class="btn" type="button">共通設定</button>
+      </div>
+      <div class="grid">
+        <article class="card">
+          <h3>be動詞</h3>
+          <p>I am / You are / He is の基本語順</p>
+          <div>
+            <div class="muted">Best 128 / Clear 9</div>
+            <div class="progress-line"><span style="width:90%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h3>一般動詞</h3>
+          <p>I play / You like / They study などの基本語順</p>
+          <div>
+            <div class="muted">Best 96 / Clear 6</div>
+            <div class="progress-line"><span style="width:60%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h3>疑問文</h3>
+          <p>Do you / Are you など、疑問文の語順</p>
+          <div>
+            <div class="muted">Best 44 / Clear 3</div>
+            <div class="progress-line"><span style="width:30%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h3>否定文</h3>
+          <p>do not / is not など、否定文の語順</p>
+          <div>
+            <div class="muted">Best 0 / Clear 0</div>
+            <div class="progress-line"><span style="width:0%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h3>三単現</h3>
+          <p>He plays / She likes など、三人称単数現在</p>
+          <div>
+            <div class="muted">Best 0 / Clear 0</div>
+            <div class="progress-line"><span style="width:0%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+        <article class="card">
+          <h3>現在進行形</h3>
+          <p>be + 動詞ing の基本語順</p>
+          <div>
+            <div class="muted">Best 0 / Clear 0</div>
+            <div class="progress-line"><span style="width:0%"></span></div>
+          </div>
+          <button class="btn primary" type="button">始める</button>
+        </article>
+      </div>
+    </section>
+  </div>
+
+</div>
+
+<!-- モック確認用スクリプト(統合対象外) -->
+<script>
+const views = { home: document.getElementById("viewHome"), units: document.getElementById("viewUnits") };
+
+function setView(name) {
+  Object.entries(views).forEach(([key, el]) => { el.hidden = key !== name; });
+  document.querySelectorAll(".mock-controls button").forEach(b => b.classList.toggle("active", b.dataset.view === name));
+}
+
+document.querySelectorAll(".mock-controls button").forEach(btn => {
+  btn.addEventListener("click", () => setView(btn.dataset.view));
+});
+
+const mockControls = document.getElementById("mockControls");
+document.getElementById("mockTitle").addEventListener("click", () => {
+  const collapsed = mockControls.classList.toggle("collapsed");
+  document.getElementById("mockTitle").textContent = (collapsed ? "▸" : "▾") + " MOCK STATE";
+});
+
+// URLで制御可能: #units で初期ビュー、?bare でモックUI非表示(スクリーンショット用)
+if (location.search.includes("bare")) document.body.classList.add("bare");
+setView(location.hash.slice(1) === "units" ? "units" : "home");
+</script>
+</body>
+</html>
