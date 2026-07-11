@@ -1,4 +1,4 @@
-const CACHE_NAME = "word-order-quest-v1";
+const CACHE_NAME = "word-order-quest-v2";
 
 const PRECACHE_URLS = [
   "./",
@@ -7,6 +7,7 @@ const PRECACHE_URLS = [
   "./app.js",
   "./pwa.js",
   "./manifest.webmanifest",
+  "./data/audio/manifest.json",
   "./icons/icon-192.png",
   "./icons/icon-512.png",
   "./icons/maskable-512.png",

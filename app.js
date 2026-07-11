@@ -14,6 +14,14 @@ const WRONG_PENALTY_SECONDS = 4;
 const STREAK_BONUS_SECONDS = 3;
 const STREAK_BONUS_EVERY = 3;
 
+// init()より前に評価される必要がある(発音音声の状態。実装は speakEnglish 周辺)
+const speech = {
+  base: "data/audio/",
+  manifest: null,
+  urls: new Map(),
+  player: null
+};
+
 const fallbackCourses = {
   courses: [
     {
@@ -84,12 +92,12 @@ const fallbackLessons = {
 
 /* ---------- Haptics抽象層。振動の実装詳細はここに閉じ込める(Capacitor移行時はここだけ差し替え) ---------- */
 
+// 正解=軽快な2連パルス / 不正解=重い3連ブザー、と質感で区別する
 const HAPTIC_PATTERNS = {
-  tap: 10,
-  correct: 20,
+  correct: [14, 28, 14],
   wrong: [60, 40, 60],
   warning: [30, 50, 30],
-  success: [20, 40, 80],
+  success: [20, 40, 90],
   timeup: [100, 60, 100]
 };
 
@@ -283,7 +291,7 @@ init();
 async function init() {
   state.selectedCourseId = localStorage.getItem(STORAGE.lastCourse);
   state.selectedUnitId = localStorage.getItem(STORAGE.lastUnit);
-  const loaded = await loadCourses();
+  const [loaded] = await Promise.all([loadCourses(), loadAudioManifest()]);
   state.courses = normalizeCourses(loaded.courses);
   render();
 }
@@ -660,6 +668,7 @@ function renderGameState() {
   text("#score", state.score);
   updateCombo();
   text("#sourceJa", stage.sourceJa);
+  app.querySelector("#gameRoot")?.classList.toggle("dense", state.tokens.length >= 10);
 
   renderChunks(stage);
   renderAnswer();
@@ -750,6 +759,7 @@ function resetQuestion() {
   state.stageLocked = false;
   state.lastPoppedId = null;
   state.roundStartedAt = Date.now();
+  preloadStageAudio();
   const toast = app.querySelector("#feedbackToast");
   if (toast) toast.hidden = true;
   setMonsterHp(computeFoeHpPercent());
@@ -802,6 +812,7 @@ function renderAnswer() {
     }
     zone.appendChild(chip);
   });
+  zone.scrollTop = zone.scrollHeight;
 }
 
 function renderBank(available) {
@@ -830,10 +841,13 @@ function makeTokenButton(token, inAnswer) {
 function chooseToken(token, element) {
   if (state.paused) return;
   if (state.stageLocked) return;
-  playHaptic("tap");
   const expected = getNextExpectedToken();
   if (!expected) return;
-  if (token.id !== expected.id) {
+  if (token.id !== expected.id && token.text === expected.text) {
+    // 同じテキストのカードはどれを選んでも正解。役割(order/chunkIndex)を入れ替えて、タップしたカードを期待トークンとして扱う
+    [token.order, expected.order] = [expected.order, token.order];
+    [token.chunkIndex, expected.chunkIndex] = [expected.chunkIndex, token.chunkIndex];
+  } else if (token.id !== expected.id) {
     state.streak = 0;
     state.timeRemaining = Math.max(0, state.timeRemaining - WRONG_PENALTY_SECONDS);
     playHaptic("wrong");
@@ -1305,13 +1319,73 @@ function playEffect(type) {
   setTimeout(() => context.close(), 260);
 }
 
+/* ---------- 発音音声。事前生成TTS(data/audio/)を優先し、未生成テキストのみWeb Speechにフォールバック ---------- */
+
+async function loadAudioManifest() {
+  try {
+    speech.manifest = await fetchJson(`${speech.base}manifest.json`);
+  } catch {
+    speech.manifest = {};
+  }
+}
+
+function audioFileFor(text) {
+  return (speech.manifest && speech.manifest[text]) || null;
+}
+
+async function audioUrlFor(text) {
+  const file = audioFileFor(text);
+  if (!file) return null;
+  if (speech.urls.has(text)) return speech.urls.get(text);
+  const response = await fetch(speech.base + file);
+  if (!response.ok) throw new Error(`Audio fetch failed: ${file}`);
+  const url = URL.createObjectURL(await response.blob());
+  speech.urls.set(text, url);
+  return url;
+}
+
+function preloadStageAudio() {
+  state.tokens.forEach(token => {
+    audioUrlFor(token.text).catch(() => {});
+  });
+}
+
 function speakEnglish(value) {
-  if (!state.soundEnabled || !("speechSynthesis" in window)) return;
+  if (!state.soundEnabled) return;
+  if (audioFileFor(value)) {
+    playPregeneratedAudio(value);
+    return;
+  }
+  speakWithSynthesis(value);
+}
+
+async function playPregeneratedAudio(text) {
+  try {
+    const url = await audioUrlFor(text);
+    if (!speech.player) speech.player = new Audio();
+    const player = speech.player;
+    player.pause();
+    player.src = url;
+    player.playbackRate = state.speechRate;
+    if ("preservesPitch" in player) player.preservesPitch = true;
+    await player.play();
+  } catch {
+    speakWithSynthesis(text);
+  }
+}
+
+function speakWithSynthesis(value) {
+  if (!("speechSynthesis" in window)) return;
   window.speechSynthesis.cancel();
   const utterance = new SpeechSynthesisUtterance(value);
   utterance.lang = "en-US";
   utterance.rate = state.speechRate;
   window.speechSynthesis.speak(utterance);
+}
+
+function stopSpeech() {
+  speech.player?.pause();
+  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
 }
 
 function setMode(nextMode) {
@@ -1323,14 +1397,14 @@ function setMode(nextMode) {
 function toggleSound() {
   state.soundEnabled = !state.soundEnabled;
   localStorage.setItem(STORAGE.soundEnabled, String(state.soundEnabled));
-  if (!state.soundEnabled && "speechSynthesis" in window) window.speechSynthesis.cancel();
+  if (!state.soundEnabled) stopSpeech();
   renderSettingsState();
 }
 
 function setSpeechRate(rate) {
   state.speechRate = rate;
   localStorage.setItem(STORAGE.speechRate, String(rate));
-  if ("speechSynthesis" in window) window.speechSynthesis.cancel();
+  stopSpeech();
   renderSettingsState();
 }
 

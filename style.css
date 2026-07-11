@@ -481,6 +481,7 @@ h1 {
   justify-content: center;
   gap: 6px;
   padding: 6px 14px 10px;
+  container: battle / size;
 }
 
 .foe-plate { width: min(100%, 320px); display: grid; gap: 5px; z-index: 6; }
@@ -520,6 +521,10 @@ h1 {
 
 .quest-board {
   width: 100%;
+  flex: 0 1 auto;
+  min-height: 58px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
   display: grid;
   gap: 8px;
   padding: 12px 13px;
@@ -656,6 +661,9 @@ h1 {
 
 .answer-zone {
   min-height: 104px;
+  max-height: clamp(96px, 24dvh, 200px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   padding: 10px;
   display: flex;
   align-content: flex-start;
@@ -705,12 +713,18 @@ h1 {
   justify-content: center;
   gap: 10px;
   min-height: 122px;
+  max-height: clamp(122px, 30dvh, 260px);
+  overflow-y: auto;
+  overscroll-behavior: contain;
   align-content: flex-start;
 }
 
 .token {
   position: relative;
   min-height: 56px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
   display: inline-grid;
   place-items: center;
   padding: 10px 18px;
@@ -939,6 +953,35 @@ h1 {
   #monsterSlot { transform: scale(0.78); transform-origin: 50% 60%; }
   .answer-zone { min-height: 92px; }
   .bank { min-height: 108px; }
+}
+
+/* トークンが多い問題(word modeの長文など)はカードを一回り小さくして収める */
+.game-root.dense .token {
+  min-height: 44px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-size: 15px;
+}
+
+.game-root.dense .token.in-answer {
+  min-height: 34px;
+  padding: 5px 9px;
+}
+
+.game-root.dense .bank { gap: 7px; }
+.game-root.dense .answer-zone { gap: 6px; }
+.game-root.dense .source-ja { font-size: 15px; line-height: 1.5; }
+.game-root.dense .chunk-ja { font-size: 13px; }
+.game-root.dense .quest-board { padding: 9px 11px; gap: 6px; }
+
+/* 長文でbattle-stageが狭くなったらモンスターの占有高さごと縮める
+   (transformだけではレイアウト高さが残り、quest-boardと重なるため height も絞る) */
+@container battle (max-height: 420px) {
+  #monsterSlot { height: 130px; transform: scale(0.68); transform-origin: 50% 50%; }
+}
+
+@container battle (max-height: 320px) {
+  #monsterSlot { height: 96px; transform: scale(0.5); transform-origin: 50% 50%; }
 }
 
 /* ============================================================
