@@ -13,6 +13,8 @@
 import argparse
 import hashlib
 import json
+import shutil
+import subprocess
 import sys
 import time
 import urllib.request
@@ -72,6 +74,7 @@ def synthesize(api_key, text, out_path):
                 audio = response.read()
             tmp = out_path.with_suffix(".tmp")
             tmp.write_bytes(audio)
+            trim_leading_silence(tmp)
             tmp.rename(out_path)
             return
         except Exception as error:
@@ -79,6 +82,38 @@ def synthesize(api_key, text, out_path):
                 raise
             time.sleep(2 ** attempt * 2)
             last = error  # noqa: F841
+
+
+def audio_duration(path):
+    result = subprocess.run(
+        ["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", str(path)],
+        capture_output=True, text=True,
+    )
+    try:
+        return float(result.stdout.strip())
+    except ValueError:
+        return -1.0
+
+
+def trim_leading_silence(path):
+    """先頭無音を30ms残して除去。TTS出力は先頭に最大0.7秒の無音が入り、タップ→発音の体感遅延になる。
+
+    静かな音声を丸ごと消してしまわないよう、トリム後が0.15秒未満なら元のまま残す。
+    ffmpegが無い環境ではスキップ(無音付きでも動作はする)。
+    """
+    if shutil.which("ffmpeg") is None:
+        return
+    trimmed = path.with_name(path.name + ".trimmed.mp3")
+    result = subprocess.run(
+        ["ffmpeg", "-y", "-loglevel", "error", "-i", str(path),
+         "-af", "silenceremove=start_periods=1:start_threshold=-50dB:start_silence=0.03",
+         "-c:a", "libmp3lame", "-b:a", "128k", "-ar", "24000", str(trimmed)],
+        capture_output=True,
+    )
+    if result.returncode == 0 and audio_duration(trimmed) >= 0.15:
+        trimmed.rename(path)
+    else:
+        trimmed.unlink(missing_ok=True)
 
 
 def main():

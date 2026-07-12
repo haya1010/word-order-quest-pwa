@@ -1,4 +1,4 @@
-const CACHE_NAME = "word-order-quest-v2";
+const CACHE_NAME = "word-order-quest-v3";
 
 const PRECACHE_URLS = [
   "./",

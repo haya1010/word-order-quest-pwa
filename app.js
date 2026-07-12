@@ -19,7 +19,8 @@ const speech = {
   base: "data/audio/",
   manifest: null,
   urls: new Map(),
-  player: null
+  players: new Map(),
+  current: null
 };
 
 const fallbackCourses = {
@@ -1344,9 +1345,21 @@ async function audioUrlFor(text) {
   return url;
 }
 
+// タップ→発音の遅延をなくすため、ステージ開始時にAudio要素まで作って読み込み済みにしておく
+async function playerFor(text) {
+  if (speech.players.has(text)) return speech.players.get(text);
+  const url = await audioUrlFor(text);
+  if (!url) return null;
+  if (speech.players.has(text)) return speech.players.get(text);
+  const player = new Audio(url);
+  player.preload = "auto";
+  speech.players.set(text, player);
+  return player;
+}
+
 function preloadStageAudio() {
   state.tokens.forEach(token => {
-    audioUrlFor(token.text).catch(() => {});
+    playerFor(token.text).catch(() => {});
   });
 }
 
@@ -1361,11 +1374,11 @@ function speakEnglish(value) {
 
 async function playPregeneratedAudio(text) {
   try {
-    const url = await audioUrlFor(text);
-    if (!speech.player) speech.player = new Audio();
-    const player = speech.player;
-    player.pause();
-    player.src = url;
+    const player = await playerFor(text);
+    if (!player) throw new Error(`No audio for: ${text}`);
+    if (speech.current && speech.current !== player) speech.current.pause();
+    speech.current = player;
+    player.currentTime = 0;
     player.playbackRate = state.speechRate;
     if ("preservesPitch" in player) player.preservesPitch = true;
     await player.play();
@@ -1384,7 +1397,7 @@ function speakWithSynthesis(value) {
 }
 
 function stopSpeech() {
-  speech.player?.pause();
+  speech.current?.pause();
   if ("speechSynthesis" in window) window.speechSynthesis.cancel();
 }
 
